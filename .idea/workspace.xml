@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="a">
-      <change afterPath="$PROJECT_DIR$/docs/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/TCL_202500718.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TCL_202500718.md" afterDir="false" />
-    </list>
+    <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="a" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,8 +92,8 @@
       <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\gmall" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\dragon_storehouse\python_project" />
       <recent name="D:\workspace\dragon_storehouse\docs\imgs" />
+      <recent name="D:\workspace\dragon_storehouse\python_project" />
       <recent name="D:\workspace\dragon_storehouse\Offline-pyspark" />
     </key>
   </component>
@@ -250,7 +247,7 @@
       <workItem from="1752841803438" duration="2899000" />
       <workItem from="1752844976756" duration="457000" />
       <workItem from="1752845944473" duration="577000" />
-      <workItem from="1752846993929" duration="755000" />
+      <workItem from="1752846993929" duration="860000" />
     </task>
     <task id="LOCAL-00001" summary="add python">
       <created>1752740355346</created>
@@ -301,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1752847647305</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="a">
+      <created>1752847759174</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1752847759174</updated>
+    </task>
+    <task id="LOCAL-00009" summary="a">
+      <created>1752847782687</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752847782687</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
