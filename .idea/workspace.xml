@@ -4,55 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="add python">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_coupon_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_coupon_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_new_order_user_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_new_order_user_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_by_province.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_by_province.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_continuously_user_count.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_continuously_user_count.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_stats_by_cate.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_stats_by_cate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_stats_by_tm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_stats_by_tm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_to_pay_interval_avg.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_to_pay_interval_avg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_page_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_page_path.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_repeat_purchase_by_tm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_repeat_purchase_by_tm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_sku_cart_num_top3_by_cate.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_sku_cart_num_top3_by_cate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_sku_favor_count_top3_by_tm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_sku_favor_count_top3_by_tm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_traffic_stats_by_channel.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_traffic_stats_by_channel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_action.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_action.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_change.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_change.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_retention.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_retention.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_activity_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_activity_full.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_coupon_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_coupon_full.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_promotion_pos_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_promotion_pos_full.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_promotion_refer_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_promotion_refer_full.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_province_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_province_full.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_sku_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_sku_full.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_user_zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_user_zip.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_interaction_favor_add_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_interaction_favor_add_inc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_tool_coupon_used_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_tool_coupon_used_inc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_cart_add_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_cart_add_inc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_cart_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_cart_full.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_order_detail_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_order_detail_inc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_pay_detail_suc_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_pay_detail_suc_inc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_trade_flow_acc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_trade_flow_acc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_traffic_page_view_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_traffic_page_view_inc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_user_login_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_user_login_inc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_user_register_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_user_register_inc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_interaction_sku_favor_add_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_interaction_sku_favor_add_1d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_tool_user_coupon_coupon_used_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_tool_user_coupon_coupon_used_1d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_province_order_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_province_order_1d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_province_order_nd.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_province_order_nd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_cart_add_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_cart_add_1d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_order_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_order_1d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_order_td.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_order_td.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_payment_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_payment_1d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_sku_order_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_sku_order_1d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_sku_order_nd.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_sku_order_nd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_traffic_page_visitor_page_view_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_traffic_page_visitor_page_view_1d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_traffic_session_page_view_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_traffic_session_page_view_1d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_user_user_login_td.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_user_user_login_td.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/qwen/0.6B.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/qwen/0.6B.py" afterDir="false" />
+    <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="a">
+      <change afterPath="$PROJECT_DIR$/docs/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TCL_202500718.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TCL_202500718.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "F:/Auser/anaconda/envs/python",
+    "last_opened_file_path": "D:/workspace/dragon_storehouse/docs/imgs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -134,6 +88,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\dragon_storehouse\docs\imgs" />
+      <recent name="D:\workspace\dragon_storehouse\docs" />
       <recent name="C:\Users\24927\AppData\Roaming\JetBrains\IntelliJIdea2022.2\consoles\db\853a6dfa-4222-41ec-89dc-9f6aa19cd817" />
       <recent name="D:\workspace\dragon_storehouse\python_project" />
       <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\gmall" />
@@ -294,7 +250,7 @@
       <workItem from="1752841803438" duration="2899000" />
       <workItem from="1752844976756" duration="457000" />
       <workItem from="1752845944473" duration="577000" />
-      <workItem from="1752846993929" duration="429000" />
+      <workItem from="1752846993929" duration="755000" />
     </task>
     <task id="LOCAL-00001" summary="add python">
       <created>1752740355346</created>
@@ -331,7 +287,21 @@
       <option name="project" value="LOCAL" />
       <updated>1752846258383</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="a">
+      <created>1752847474953</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752847474953</updated>
+    </task>
+    <task id="LOCAL-00007" summary="a">
+      <created>1752847647305</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1752847647305</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,9 +332,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="a" />
     <MESSAGE value="add python" />
-    <option name="LAST_COMMIT_MESSAGE" value="add python" />
+    <MESSAGE value="a" />
+    <option name="LAST_COMMIT_MESSAGE" value="a" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
