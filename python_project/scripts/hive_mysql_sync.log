@@ -1,0 +1,32 @@
+2025-07-18 19:39:56,859 - INFO - 发现 15 张待同步表
+2025-07-18 19:39:57,270 - INFO - 表 ads_city_stats 结构同步成功
+2025-07-18 19:39:58,952 - INFO - 表 ads_city_stats 数据同步完成，记录数: 87
+2025-07-18 19:39:59,223 - INFO - 表 ads_driver_stats 结构同步成功
+2025-07-18 19:40:00,893 - INFO - 表 ads_driver_stats 数据同步完成，记录数: 2196
+2025-07-18 19:40:01,153 - INFO - 表 ads_express_city_stats 结构同步成功
+2025-07-18 19:40:01,567 - INFO - 表 ads_express_city_stats 数据同步完成，记录数: 83
+2025-07-18 19:40:01,760 - INFO - 表 ads_express_org_stats 结构同步成功
+2025-07-18 19:40:01,971 - INFO - 表 ads_express_org_stats 数据同步完成，记录数: 165
+2025-07-18 19:40:02,141 - INFO - 表 ads_express_province_stats 结构同步成功
+2025-07-18 19:40:02,519 - INFO - 表 ads_express_province_stats 数据同步完成，记录数: 79
+2025-07-18 19:40:02,767 - INFO - 表 ads_express_stats 结构同步成功
+2025-07-18 19:40:02,900 - INFO - 表 ads_express_stats 数据同步完成，记录数: 3
+2025-07-18 19:40:03,088 - INFO - 表 ads_line_stats 结构同步成功
+2025-07-18 19:40:04,264 - INFO - 表 ads_line_stats 数据同步完成，记录数: 1732
+2025-07-18 19:40:04,491 - INFO - 表 ads_order_cargo_type_stats 结构同步成功
+2025-07-18 19:40:04,601 - INFO - 表 ads_order_cargo_type_stats 数据同步完成，记录数: 18
+2025-07-18 19:40:04,771 - INFO - 表 ads_order_stats 结构同步成功
+2025-07-18 19:40:04,883 - INFO - 表 ads_order_stats 数据同步完成，记录数: 3
+2025-07-18 19:40:05,066 - INFO - 表 ads_org_stats 结构同步成功
+2025-07-18 19:40:05,143 - INFO - 表 ads_org_stats 数据同步完成，记录数: 0
+2025-07-18 19:40:05,324 - INFO - 表 ads_shift_stats 结构同步成功
+2025-07-18 19:40:07,880 - INFO - 表 ads_shift_stats 数据同步完成，记录数: 3848
+2025-07-18 19:40:08,066 - INFO - 表 ads_trans_order_stats 结构同步成功
+2025-07-18 19:40:08,245 - INFO - 表 ads_trans_order_stats 数据同步完成，记录数: 3
+2025-07-18 19:40:08,430 - INFO - 表 ads_trans_order_stats_td 结构同步成功
+2025-07-18 19:40:08,561 - INFO - 表 ads_trans_order_stats_td 数据同步完成，记录数: 1
+2025-07-18 19:40:08,767 - INFO - 表 ads_trans_stats 结构同步成功
+2025-07-18 19:40:08,883 - INFO - 表 ads_trans_stats 数据同步完成，记录数: 3
+2025-07-18 19:40:09,097 - INFO - 表 ads_truck_stats 结构同步成功
+2025-07-18 19:40:09,217 - INFO - 表 ads_truck_stats 数据同步完成，记录数: 4
+2025-07-18 19:40:09,616 - INFO - Closing down clientserver connection
