@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="add python">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_coupon_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_coupon_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_new_order_user_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_new_order_user_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_by_province.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_by_province.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_continuously_user_count.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_continuously_user_count.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_stats_by_cate.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_stats_by_cate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_stats_by_tm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_stats_by_tm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_to_pay_interval_avg.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_order_to_pay_interval_avg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_page_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_page_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_repeat_purchase_by_tm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_repeat_purchase_by_tm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_sku_cart_num_top3_by_cate.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_sku_cart_num_top3_by_cate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_sku_favor_count_top3_by_tm.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_sku_favor_count_top3_by_tm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_traffic_stats_by_channel.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_traffic_stats_by_channel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_action.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_action.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_change.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_change.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_retention.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_retention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_user_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_activity_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_activity_full.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_coupon_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_coupon_full.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_promotion_pos_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_promotion_pos_full.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_promotion_refer_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_promotion_refer_full.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_province_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_province_full.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_sku_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_sku_full.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_user_zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dim/dim_user_zip.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_interaction_favor_add_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_interaction_favor_add_inc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_tool_coupon_used_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_tool_coupon_used_inc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_cart_add_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_cart_add_inc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_cart_full.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_cart_full.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_order_detail_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_order_detail_inc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_pay_detail_suc_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_pay_detail_suc_inc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_trade_flow_acc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_trade_trade_flow_acc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_traffic_page_view_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_traffic_page_view_inc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_user_login_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_user_login_inc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_user_register_inc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dwd/dwd_user_register_inc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_interaction_sku_favor_add_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_interaction_sku_favor_add_1d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_tool_user_coupon_coupon_used_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_tool_user_coupon_coupon_used_1d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_province_order_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_province_order_1d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_province_order_nd.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_province_order_nd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_cart_add_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_cart_add_1d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_order_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_order_1d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_order_td.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_order_td.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_payment_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_payment_1d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_sku_order_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_sku_order_1d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_sku_order_nd.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_trade_user_sku_order_nd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_traffic_page_visitor_page_view_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_traffic_page_visitor_page_view_1d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_traffic_session_page_view_1d.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_traffic_session_page_view_1d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_user_user_login_td.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/dws/dws_user_user_login_td.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/qwen/0.6B.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/qwen/0.6B.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\major\apache-maven-3.8.3\apache-maven-3.8.3\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../major/apache-maven-3.8.3/apache-maven-3.8.3" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\major\apache-maven-3.8.3\apache-maven-3.8.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2zzen5ks5QOqeGWy87FmVtiirJ6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "F:/Auser/anaconda/envs/python",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.44942528",
+    "settings.editor.selected.configurable": "PyConsoleConfigurable.Python 控制台"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "hive",
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="python_project" sdk-home="D:\ANACONDA\envs\python_project\python.exe" working-directory="$PROJECT_DIR$">
+        <option name="mySdkHome" value="D:\ANACONDA\envs\python_project\python.exe" />
+        <option name="myModuleName" value="python_project" />
+        <option name="myWorkingDirectory" value="$PROJECT_DIR$" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\24927\AppData\Roaming\JetBrains\IntelliJIdea2022.2\consoles\db\853a6dfa-4222-41ec-89dc-9f6aa19cd817" />
+      <recent name="D:\workspace\dragon_storehouse\python_project" />
+      <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\gmall" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\dragon_storehouse\python_project" />
+      <recent name="D:\workspace\dragon_storehouse\docs\imgs" />
+      <recent name="D:\workspace\dragon_storehouse\Offline-pyspark" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.qwen_demo">
+    <configuration name="a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/a.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ads_coupon_stats" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads/ads_coupon_stats.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="hive_to_mysql" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/scripts/hive_to_mysql.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mysql_to_hive" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/scripts/mysql_to_hive.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="qwen_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/qwen" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/qwen/qwen_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.qwen_demo" />
+        <item itemvalue="Python.hive_to_mysql" />
+        <item itemvalue="Python.ads_coupon_stats" />
+        <item itemvalue="Python.a" />
+        <item itemvalue="Python.mysql_to_hive" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="" />
+      <created>1752738492885</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752738492885</updated>
+      <workItem from="1752738496058" duration="382000" />
+      <workItem from="1752738897933" duration="485000" />
+      <workItem from="1752739403653" duration="3941000" />
+      <workItem from="1752743369203" duration="1123000" />
+      <workItem from="1752746352256" duration="1116000" />
+      <workItem from="1752748624668" duration="2957000" />
+      <workItem from="1752753370018" duration="182000" />
+      <workItem from="1752756687250" duration="1719000" />
+      <workItem from="1752759525165" duration="2995000" />
+      <workItem from="1752762561666" duration="992000" />
+      <workItem from="1752763717599" duration="737000" />
+      <workItem from="1752800514131" duration="1546000" />
+      <workItem from="1752802239764" duration="5034000" />
+      <workItem from="1752807372291" duration="1293000" />
+      <workItem from="1752809539236" duration="1489000" />
+      <workItem from="1752824963653" duration="12686000" />
+      <workItem from="1752840966509" duration="407000" />
+      <workItem from="1752841387515" duration="335000" />
+      <workItem from="1752841803438" duration="2899000" />
+      <workItem from="1752844976756" duration="457000" />
+      <workItem from="1752845944473" duration="577000" />
+      <workItem from="1752846993929" duration="429000" />
+    </task>
+    <task id="LOCAL-00001" summary="add python">
+      <created>1752740355346</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752740355346</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add python">
+      <created>1752761630401</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752761630401</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add python">
+      <created>1752762650271</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752762650271</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add python">
+      <created>1752838938877</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752838938877</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add python">
+      <created>1752846258383</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752846258383</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="a" />
+    <MESSAGE value="add python" />
+    <option name="LAST_COMMIT_MESSAGE" value="add python" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dragon_storehouse$ads_coupon_stats.coverage" NAME="ads_coupon_stats 覆盖结果" MODIFIED="1752829300141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$hive_to_mysql.coverage" NAME="hive_to_mysql 覆盖结果" MODIFIED="1752838786141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/scripts" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive.coverage" NAME="mysql_to_hive 覆盖结果" MODIFIED="1752802963614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/scripts" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$.coverage" NAME="电商 覆盖结果" MODIFIED="1752739719542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Offline-pyspark" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$a.coverage" NAME="a 覆盖结果" MODIFIED="1752808752274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$ods_to_ads.coverage" NAME="ods_to_ads 覆盖结果" MODIFIED="1752739982545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Offline-pyspark/gmall" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$dim_activity_full.coverage" NAME="dim_activity_full 覆盖结果" MODIFIED="1752744112511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Offline-pyspark/gmall/dim" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$qwen_demo.coverage" NAME="qwen_demo 覆盖结果" MODIFIED="1752844097036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/qwen" />
+  </component>
+</project>
