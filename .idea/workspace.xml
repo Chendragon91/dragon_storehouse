@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/qwen/a.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,8 @@
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
       &quot;hive&quot;,
-      &quot;postgresql&quot;
+      &quot;postgresql&quot;,
+      &quot;mysql&quot;
     ]
   }
 }</component>
@@ -256,6 +256,8 @@
       <workItem from="1752889638856" duration="186000" />
       <workItem from="1752890203497" duration="245000" />
       <workItem from="1752890937326" duration="1576000" />
+      <workItem from="1753108688580" duration="689000" />
+      <workItem from="1753153447965" duration="2978000" />
     </task>
     <task id="LOCAL-00001" summary="add python">
       <created>1752740355346</created>
@@ -327,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752847964369</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="a">
+      <created>1753108769154</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1753108769154</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
