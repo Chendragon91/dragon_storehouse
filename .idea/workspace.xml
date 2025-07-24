@@ -4,53 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="a">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/TCL_20250724.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/imgs/123.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink_realtime/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flink_realtime/src/main/java/SQLServer_CDC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/CommonTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/domain/HBaseInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/domain/HBaseTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/domain/HdfsInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/Base58.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/CommonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/ConfigUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/CustomStringSerializationSchema.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/DateTimeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/DingTalkUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/EnvironmentSettingUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/FlinkEnvUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/HashModUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/HbaseUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/HdfsUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/JdbcUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/KafkaUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/PushMessageUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/RedisClusterUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/RedisLuaUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/StringsUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/WaterMarkUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/resources/common-config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/resources/filter/common-config.properties.dev" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/resources/filter/common-config.properties.prod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/resources/filter/common-config.properties.stage" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stream-common/src/test/java/StrTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/TCL_20250717.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TCL_20250717.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/imgs/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/imgs/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/imgs/img_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/imgs/img_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="sqlserver_cdc">
+      <change beforePath="$PROJECT_DIR$/docs/TCL_20250724.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TCL_20250724.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +266,7 @@
       <workItem from="1753281409452" duration="85000" />
       <workItem from="1753281688244" duration="149000" />
       <workItem from="1753282611049" duration="2000" />
-      <workItem from="1753318811431" duration="26418000" />
+      <workItem from="1753318811431" duration="26790000" />
     </task>
     <task id="LOCAL-00001" summary="add python">
       <created>1752740355346</created>
@@ -411,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753280859427</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="sqlserver_cdc">
+      <created>1753366448242</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1753366448243</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +406,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add python" />
     <MESSAGE value="a" />
-    <option name="LAST_COMMIT_MESSAGE" value="a" />
+    <MESSAGE value="sqlserver_cdc" />
+    <option name="LAST_COMMIT_MESSAGE" value="sqlserver_cdc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
