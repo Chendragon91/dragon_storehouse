@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="doris-cdh03">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.41">
+    <root id="1">
+      <DefaultCasing>exact</DefaultCasing>
+      <DefaultEngine>olap</DefaultEngine>
+      <DefaultTmpEngine>olap</DefaultTmpEngine>
+      <Grants>|root||admin||ALTER|G
+|root||root||ALTER|G
+|root||admin||CREATE|G
+|root||root||CREATE|G
+|root||admin||DROP|G
+|root||root||DROP|G
+|root||admin||INSERT|G
+|root||root||INSERT|G
+|root||admin||SELECT|G
+|root||root||SELECT|G
+|root||admin||SHOW VIEW|G
+|root||root||SHOW VIEW|G
+|root||admin||grant option|G
+|root||root||grant option|G
+mysql|schema||admin||SELECT|G
+mysql|schema||root||SELECT|G</Grants>
+      <ServerVersion>5.7.99</ServerVersion>
+    </root>
+    <collation id="2" parent="1" name="utf8mb4_0900_bin">
+      <Charset>utf8mb4</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <schema id="3" parent="1" name="__internal_schema">
+      <Current>1</Current>
+      <CollationName>utf8mb4_0900_bin</CollationName>
+    </schema>
+    <schema id="4" parent="1" name="a">
+      <CollationName>utf8mb4_0900_bin</CollationName>
+    </schema>
+    <schema id="5" parent="1" name="information_schema">
+      <CollationName>utf8mb4_0900_bin</CollationName>
+    </schema>
+    <schema id="6" parent="1" name="mysql">
+      <CollationName>utf8mb4_0900_bin</CollationName>
+    </schema>
+    <user id="7" parent="1" name="admin">
+      <MaxUserConnections>100</MaxUserConnections>
+    </user>
+    <user id="8" parent="1" name="root">
+      <MaxUserConnections>100</MaxUserConnections>
+    </user>
+  </database-model>
+</dataSource>
