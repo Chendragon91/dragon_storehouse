@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/dragon_storehouse.iml" filepath="$PROJECT_DIR$/.idea/dragon_storehouse.iml" />
       <module fileurl="file://$PROJECT_DIR$/python_project/python_project.iml" filepath="$PROJECT_DIR$/python_project/python_project.iml" />
     </modules>
   </component>

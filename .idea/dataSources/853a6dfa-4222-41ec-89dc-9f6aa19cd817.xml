@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="@cdh01">
+<dataSource name="hive-cdh01">
   <database-model serializer="dbm" dbms="HIVE" family-id="HIVE" format-version="4.41">
     <root id="1">
       <ServerVersion>3.1.3</ServerVersion>

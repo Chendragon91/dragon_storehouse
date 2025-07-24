@@ -5,13 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="a">
-      <change afterPath="$PROJECT_DIR$/docs/TCL_20250723.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/reptile/crawl4ai简单爬取.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/reptile/crawl4ai验证安装.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/reptile/douban_movies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/reptile/豆瓣电影top250.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/TCL_20250724.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/imgs/123.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink_realtime/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flink_realtime/src/main/java/SQLServer_CDC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/CommonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/domain/HBaseInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/domain/HBaseTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/domain/HdfsInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/Base58.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/CommonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/ConfigUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/CustomStringSerializationSchema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/DateTimeUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/DingTalkUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/EnvironmentSettingUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/FlinkEnvUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/HashModUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/HbaseUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/HdfsUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/JdbcUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/KafkaUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/PushMessageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/RedisClusterUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/RedisLuaUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/StringsUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/java/com/stream/common/utils/WaterMarkUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/resources/common-config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/resources/filter/common-config.properties.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/resources/filter/common-config.properties.prod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/resources/filter/common-config.properties.stage" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-common/src/test/java/StrTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TCL_20250717.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TCL_20250717.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/imgs/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/imgs/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/imgs/img_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/imgs/img_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +64,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,6 +86,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -63,9 +106,10 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/workspace/dragon_storehouse/docs/imgs",
+    "last_opened_file_path": "D:/workspace/dragon_storehouse/flink_realtime1/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,6 +124,7 @@
     "DatabaseDriversLRU": [
       "hive",
       "postgresql",
+      "sqlserver",
       "mysql"
     ]
   }
@@ -95,19 +140,36 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\dragon_storehouse\flink_realtime1\src\main\resources" />
+      <recent name="D:\workspace\dragon_storehouse" />
       <recent name="D:\workspace\dragon_storehouse\docs\imgs" />
       <recent name="D:\workspace\dragon_storehouse\docs" />
       <recent name="C:\Users\24927\AppData\Roaming\JetBrains\IntelliJIdea2022.2\consoles\db\853a6dfa-4222-41ec-89dc-9f6aa19cd817" />
-      <recent name="D:\workspace\dragon_storehouse\python_project" />
-      <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\gmall" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\workspace\dragon_storehouse\docs\imgs" />
       <recent name="D:\workspace\dragon_storehouse\python_project" />
       <recent name="D:\workspace\dragon_storehouse\Offline-pyspark" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.豆瓣电影top250">
+  <component name="RunManager" selected="应用程序.SQLServer_CDC (1)">
+    <configuration name="SQLServer_CDC (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SQLServer_CDC" />
+      <module name="flink_realtime" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SQLServer_CDC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SQLServer_CDC" />
+      <module name="dragon_storehouse" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ads_new_order_user_stats" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,28 +236,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="qwen_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/qwen" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/qwen/qwen_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="豆瓣电影top250" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.SQLServer_CDC (1)" />
+        <item itemvalue="应用程序.SQLServer_CDC" />
         <item itemvalue="Python.豆瓣电影top250" />
-        <item itemvalue="Python.crawl4ai简单爬取" />
         <item itemvalue="Python.crawl4ai验证安装" />
         <item itemvalue="Python.ads_new_order_user_stats" />
-        <item itemvalue="Python.qwen_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +307,11 @@
       <workItem from="1753153447965" duration="2978000" />
       <workItem from="1753194995773" duration="350000" />
       <workItem from="1753195363793" duration="31000" />
-      <workItem from="1753258407491" duration="7857000" />
+      <workItem from="1753258407491" duration="8267000" />
+      <workItem from="1753281409452" duration="85000" />
+      <workItem from="1753281688244" duration="149000" />
+      <workItem from="1753282611049" duration="2000" />
+      <workItem from="1753318811431" duration="26418000" />
     </task>
     <task id="LOCAL-00001" summary="add python">
       <created>1752740355346</created>
@@ -360,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753195173384</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="a">
+      <created>1753280859427</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1753280859427</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
