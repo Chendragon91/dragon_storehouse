@@ -31,19 +31,19 @@ mysql|schema||root||SELECT|G</Grants>
       <Current>1</Current>
       <CollationName>utf8mb4_0900_bin</CollationName>
     </schema>
-    <schema id="4" parent="1" name="a">
+    <schema id="4" parent="1" name="information_schema">
       <CollationName>utf8mb4_0900_bin</CollationName>
     </schema>
-    <schema id="5" parent="1" name="information_schema">
+    <schema id="5" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_bin</CollationName>
     </schema>
-    <schema id="6" parent="1" name="mysql">
+    <schema id="6" parent="1" name="a">
       <CollationName>utf8mb4_0900_bin</CollationName>
     </schema>
-    <user id="7" parent="1" name="admin">
+    <user id="7" parent="1" name="root">
       <MaxUserConnections>100</MaxUserConnections>
     </user>
-    <user id="8" parent="1" name="root">
+    <user id="8" parent="1" name="admin">
       <MaxUserConnections>100</MaxUserConnections>
     </user>
   </database-model>

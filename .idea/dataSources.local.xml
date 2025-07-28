@@ -15,6 +15,7 @@
             <name qname="tms_dwd" />
             <name qname="tms_dws" />
             <name qname="tms_ads" />
+            <name qname="default" />
           </node>
         </introspection-scope>
       </schema-mapping>
