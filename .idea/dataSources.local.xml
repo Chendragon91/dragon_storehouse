@@ -16,6 +16,7 @@
             <name qname="tms_dws" />
             <name qname="tms_ads" />
             <name qname="default" />
+            <name qname="08_ods" />
           </node>
         </introspection-scope>
       </schema-mapping>

@@ -4,7 +4,6 @@ from pyspark.sql import DataFrame
 
 
 def get_spark_session():
-    """初始化SparkSession，使用tms数据库"""
     spark = SparkSession.builder \
         .appName("TMSCityStatsETL") \
         .config("hive.metastore.uris", "thrift://cdh01:9083") \
@@ -18,14 +17,11 @@ def get_spark_session():
 
 
 def write_to_ads_city_stats(df: DataFrame):
-    """写入目标表ads_city_stats，增加类型校验和错误处理"""
     try:
-        # 1. 校验目标表结构
         target_table = "tms_ads.ads_city_stats"
         spark = get_spark_session()
         target_df = spark.table(target_table)
 
-        # 2. 按目标表列顺序和类型调整DataFrame
         df = df.select([col(c).cast(target_df.schema[c].dataType) for c in target_df.columns])
 
         df.write \
@@ -38,15 +34,13 @@ def write_to_ads_city_stats(df: DataFrame):
         print(f"[ERROR] 写入失败：{str(e)}")
         print("[ERROR] 待写入数据样例：")
         df.show(5)
-        raise e  # 抛出异常，终止作业
+        raise e
 
 
 def execute_city_stats_etl(target_date: str):
     spark = get_spark_session()
     print(f"[INFO] 开始执行城市统计ETL，目标日期：{target_date}")
 
-    # 1. 处理1天数据（1d表）
-    # 1.1 订单数据
     city_order_1d = spark.table("tms_dws.dws_trade_org_cargo_type_order_1d") \
         .filter(col("dt") == target_date) \
         .groupBy("city_id", "city_name") \
@@ -57,8 +51,6 @@ def execute_city_stats_etl(target_date: str):
         .withColumn("dt", lit(target_date)) \
         .withColumn("recent_days", lit(1))
 
-    # 1.2 运输完成数据
-    # 先处理组织层级和区域关联
     trans_origin = spark.table("tms_dws.dws_trans_org_truck_model_type_trans_finish_1d") \
         .filter(col("dt") == target_date) \
         .select("org_id", "trans_finish_count", "trans_finish_distance", "trans_finish_dur_sec")
@@ -75,7 +67,6 @@ def execute_city_stats_etl(target_date: str):
         .filter(col("dt") == target_date) \
         .select("id", "name")
 
-    # 关联获取城市信息
     trans_with_city = trans_origin \
         .join(organ, trans_origin.org_id == organ.id, "left") \
         .join(city_for_level1, organ.region_id == city_for_level1.id, "left") \
@@ -91,7 +82,6 @@ def execute_city_stats_etl(target_date: str):
         city_for_level2["name"].alias("city_level2_name")
     )
 
-    # 根据组织级别选择城市
     trans_1d = trans_with_city \
         .withColumn("city_id",
                     when(col("org_level") == 1, col("city_level1_id"))
@@ -111,7 +101,6 @@ def execute_city_stats_etl(target_date: str):
         .withColumn("dt", lit(target_date)) \
         .withColumn("recent_days", lit(1))
 
-    # 1.3 1d部分关联
     part1d = city_order_1d \
         .join(trans_1d, on=["dt", "recent_days", "city_id", "city_name"], how="full_outer") \
         .select(
@@ -128,8 +117,6 @@ def execute_city_stats_etl(target_date: str):
         col("avg_trans_finish_dur_sec")
     )
 
-    # 2. 处理多天数据（nd表）
-    # 2.1 订单数据
     city_order_nd = spark.table("tms_dws.dws_trade_org_cargo_type_order_nd") \
         .filter(col("dt") == target_date) \
         .groupBy("recent_days", "city_id", "city_name") \
@@ -139,7 +126,6 @@ def execute_city_stats_etl(target_date: str):
     ) \
         .withColumn("dt", lit(target_date))
 
-    # 2.2 运输完成数据
     city_trans_nd = spark.table("tms_dws.dws_trans_shift_trans_finish_nd") \
         .filter(col("dt") == target_date) \
         .groupBy("recent_days", "city_id", "city_name") \
@@ -152,7 +138,6 @@ def execute_city_stats_etl(target_date: str):
     ) \
         .withColumn("dt", lit(target_date))
 
-    # 2.3 nd部分关联
     partnd = city_order_nd \
         .join(city_trans_nd, on=["dt", "recent_days", "city_id", "city_name"], how="full_outer") \
         .select(
@@ -169,10 +154,8 @@ def execute_city_stats_etl(target_date: str):
         col("avg_trans_finish_dur_sec")
     )
 
-    # 3. 合并当前日期的新数据（不包含历史数据，避免重复写入）
     final_df = part1d.unionByName(partnd)
 
-    # 4. 按目标表列顺序整理
     target_columns = [
         "dt", "recent_days", "city_id", "city_name",
         "order_count", "order_amount",
@@ -181,11 +164,10 @@ def execute_city_stats_etl(target_date: str):
     ]
     final_df = final_df.select(target_columns)
 
-    # 5. 写入目标表
     write_to_ads_city_stats(final_df)
     print(f"[INFO] ETL执行完成，目标日期：{target_date}")
 
 
 if __name__ == "__main__":
-    target_date = '20250713'  # 可通过调度工具动态传入（如Airflow/Oozie）
+    target_date = '20250713'
     execute_city_stats_etl(target_date)
