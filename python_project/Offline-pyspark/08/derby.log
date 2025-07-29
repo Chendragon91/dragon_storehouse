@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Jul 29 22:35:57 CST 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0198-569c-8e49-0000278696c0 
+on database directory D:\workspace\dragon_storehouse\python_project\Offline-pyspark\08\metastore_db with class loader sun.misc.Launcher$AppClassLoader@182decdb 
+Loaded from file:/F:/Auser/anaconda/envs/python_project/Lib/site-packages/pyspark/jars/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_301-b09
+user.dir=D:\workspace\dragon_storehouse\python_project\Offline-pyspark\08
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

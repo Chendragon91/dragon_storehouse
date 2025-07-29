@@ -44,7 +44,22 @@ def create_base_tables():
             StructField("end_date", StringType()),
             StructField("is_current", BooleanType())
         ]),
-        # 其他DIM表结构类似...
+        "dim_product": StructType([
+            StructField("product_id", StringType()),
+            StructField("product_name", StringType()),
+            StructField("shop_id", StringType()),
+            StructField("category_id", StringType()),
+            StructField("category_name", StringType()),
+            StructField("price", DecimalType(10, 2)),
+            StructField("status", IntegerType()),
+            StructField("is_pre_sale", BooleanType()),
+            StructField("is_billion_subsidy", BooleanType()),
+            StructField("create_time", TimestampType()),
+            StructField("update_time", TimestampType()),
+            StructField("start_date", StringType()),
+            StructField("end_date", StringType()),
+            StructField("is_current", BooleanType())
+        ])
     }
     for name, schema in dim_tables.items():
         if not spark.catalog.tableExists(name):
@@ -93,10 +108,8 @@ def generate_mock_data(bizdate, record_count=1000000):
         current_timestamp().alias("create_time"),
         when(rand() > 0.4, 1).otherwise(when(rand() > 0.5, 0).otherwise(2)).alias("status"),
         when(rand() > 0.4, expr("concat('order', cast(rand()*900000+100000 as int))")).otherwise(None).alias("order_id"),
-        when(rand() > 0.7,
-             array_sample(array(lit("价格敏感客户"), lit("老客户维护"), lit("新客转化"), lit("投诉补偿")),
-                          None).alias("remark")
-             )
+        when(rand() > 0.7, array(lit("价格敏感客户"), lit("老客户维护"), lit("新客转化"), lit("投诉补偿"))).otherwise(None).alias("remark")
+    )
 
     # 写入ODS层（使用分区写入优化）
     shops.withColumn("dt", lit(bizdate)) \
@@ -166,7 +179,7 @@ def process_dwd_layer(bizdate):
         r.record_id, r.activity_id, 
         p.product_id, p.product_name, p.price as original_price,
         r.discount_amount, 
-        (p.price - r.discount_amount) as final_price,
+        (COALESCE(p.price, 0) - COALESCE(r.discount_amount, 0)) as final_price,
         r.buyer_id, r.cs_id, 
         r.create_time, r.expire_time,
         CASE 
@@ -246,6 +259,8 @@ def main():
     except Exception as e:
         print(f"Pipeline failed: {str(e)}")
         raise
+    finally:
+        spark.stop()
 
 if __name__ == "__main__":
     main()
