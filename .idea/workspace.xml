@@ -5,178 +5,187 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="add">
-      <change afterPath="$PROJECT_DIR$/docs/TCL_20250729.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/derby.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/db.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/log/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/log/log.ctrl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/log/log1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/log/logmirror.ctrl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c10.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c101.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c111.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c121.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c130.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c141.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c150.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c161.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c171.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c180.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c191.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1a1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1b1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1c0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1d1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1e0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1f1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c20.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c200.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c211.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c221.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c230.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c241.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c251.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c260.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c271.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c281.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c290.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2a1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2b1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2c1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2d0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2e1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2f0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c300.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c31.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c311.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c321.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c331.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c340.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c351.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c361.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c371.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c380.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c391.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3a1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3b1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3c0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3d1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3e1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3f1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c400.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c41.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c411.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c421.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c430.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c441.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c451.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c461.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c470.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c481.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c490.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4a1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4b0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4c1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4d1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4e1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4f0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c501.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c51.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c510.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c521.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c530.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c541.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c550.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c561.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c570.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c581.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c590.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5a1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5b0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5c1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5d0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5e1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5f0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c60.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c601.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c610.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c621.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c630.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c641.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c650.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c661.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c670.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c681.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c690.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6a1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6b0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6c1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6d0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6e1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6f0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c701.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c71.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c711.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c721.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c731.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c741.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c751.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c761.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c771.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c781.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c791.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7a1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7b1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7c1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7d1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7e1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7f1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c801.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c81.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c811.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c821.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c831.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c840.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c851.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c860.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c871.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c880.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c891.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8a0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8b1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8c1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8d1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8e1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8f1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c90.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c901.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c911.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c920.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c931.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c941.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c951.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c961.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c971.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c980.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c991.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9a0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9b1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9c0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9d1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9e1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9f0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/ca01.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/ca1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/ca11.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/cb1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/cc0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/cd1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/ce1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/cf0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/service.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/gmall_simulator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_project/scripts/gmall_08_hive_ddl.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_project/scripts/mysql_to_hive1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_project/scripts/mysql_to_hive2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/252ae64f-648d-46db-9341-6c26f2205065.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/252ae64f-648d-46db-9341-6c26f2205065.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/derby.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/gmall_cs_discount_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/gmall_cs_discount_dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/db.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/log/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/log/log.ctrl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/log/log1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/log/logmirror.ctrl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c10.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c101.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c111.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c121.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c130.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c141.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c150.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c161.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c171.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c180.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c191.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1a1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1b1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1c0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1d1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1e0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c1f1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c20.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c200.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c211.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c221.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c230.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c241.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c251.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c260.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c271.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c281.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c290.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2a1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2b1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2c1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2d0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c2f0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c300.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c31.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c311.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c321.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c331.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c340.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c351.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c361.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c371.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c380.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c391.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3a1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3b1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3c0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3d1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c3f1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c400.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c41.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c411.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c421.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c430.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c441.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c451.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c461.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c470.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c481.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c490.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4a1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4b0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4c1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4d1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c4f0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c501.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c51.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c510.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c521.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c530.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c541.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c550.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c561.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c570.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c581.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c590.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5a1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5b0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5c1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5d0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c5f0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c60.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c601.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c610.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c621.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c630.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c641.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c650.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c661.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c670.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c681.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c690.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6a1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6b0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6c1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6d0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c6f0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c701.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c71.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c711.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c721.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c731.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c741.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c751.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c761.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c771.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c781.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c791.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7a1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7b1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7c1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7d1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c7f1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c801.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c81.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c811.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c821.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c831.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c840.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c851.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c860.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c871.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c880.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c891.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8a0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8b1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8c1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8d1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c8f1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c90.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c901.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c911.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c920.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c931.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c941.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c951.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c961.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c971.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c980.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c991.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9a0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9b1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9c0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9d1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9e1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/c9f0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/ca01.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/ca1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/ca11.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/cb1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/cc0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/cd1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/ce1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/seg0/cf0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/metastore_db/service.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,13 +253,13 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/workspace/dragon_storehouse/docs&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/workspace/dragon_storehouse/python_project/Offline-pyspark/08&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.4514609&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
@@ -275,91 +284,25 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\08" />
       <recent name="D:\workspace\dragon_storehouse\docs" />
       <recent name="D:\workspace\dragon_storehouse\flink_realtime\src\main\resources" />
       <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\tms\ads" />
       <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\tms\dim" />
-      <recent name="D:\workspace\dragon_storehouse\flink_realtime1\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\dragon_storehouse\data" />
-      <recent name="D:\workspace\dragon_storehouse\docs\imgs" />
-      <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\tms" />
+      <recent name="D:\workspace\dragon_storehouse\python_project\scripts" />
+      <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\08" />
+      <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\mysql_simulator" />
       <recent name="D:\workspace\dragon_storehouse\python_project" />
-      <recent name="D:\workspace\dragon_storehouse\Offline-pyspark" />
+      <recent name="D:\workspace\dragon_storehouse\data" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.gmall_cs_discount_dashboard">
-    <configuration name="ads_org_stats" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads/ads_org_stats.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ads_trans_stats" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads/ads_trans_stats.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ads_truck_stats" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python_project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads/ads_truck_stats.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="gmall_cs_discount_dashboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.mysql_to_hive2">
+    <configuration name="gmall_simulator (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -372,7 +315,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/08/gmall_cs_discount_dashboard.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/08/gmall_simulator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -381,7 +324,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="豆瓣电影top250" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mysql_to_hive1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -389,12 +332,78 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/reptile" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/mysql_to_hive" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/reptile/豆瓣电影top250.py" />
+      <option name="SCRIPT_NAME" value="D:\workspace\dragon_storehouse\python_project\scripts\mysql_to_hive1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mysql_to_hive2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/scripts/mysql_to_hive2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mysql_to_hive_incremental_sync" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/08/mysql_to_hive_incremental_sync.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pan" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/08/pan.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -405,11 +414,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.gmall_cs_discount_dashboard" />
-        <item itemvalue="Python.豆瓣电影top250" />
-        <item itemvalue="Python.ads_truck_stats" />
-        <item itemvalue="Python.ads_org_stats" />
-        <item itemvalue="Python.ads_trans_stats" />
+        <item itemvalue="Python.mysql_to_hive2" />
+        <item itemvalue="Python.mysql_to_hive1" />
+        <item itemvalue="Python.gmall_simulator (1)" />
+        <item itemvalue="Python.mysql_to_hive_incremental_sync" />
+        <item itemvalue="Python.pan" />
       </list>
     </recent_temporary>
   </component>
@@ -464,7 +473,10 @@
       <workItem from="1753663407730" duration="1177000" />
       <workItem from="1753665417468" duration="8424000" />
       <workItem from="1753674398871" duration="19643000" />
-      <workItem from="1753747917784" duration="9467000" />
+      <workItem from="1753747917784" duration="9588000" />
+      <workItem from="1753835615134" duration="10298000" />
+      <workItem from="1753846043493" duration="23171000" />
+      <workItem from="1753884275788" duration="774000" />
     </task>
     <task id="LOCAL-00001" summary="add python">
       <created>1752740355346</created>
@@ -634,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753799474403</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add">
+      <created>1753799867375</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1753799867375</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,16 +701,18 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_new_order_user_stats.coverage" NAME="ads_new_order_user_stats 覆盖结果" MODIFIED="1752890348118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_trans_order_stats.coverage" NAME="ads_trans_order_stats 覆盖结果" MODIFIED="1753704351496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_trans_bound_finish_detail_inc.coverage" NAME="dwd_trans_bound_finish_detail_inc 覆盖结果" MODIFIED="1753674996876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$gmall_simulator__1_.coverage" NAME="gmall_simulator (1) 覆盖结果" MODIFIED="1753878794890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_trans_deliver_suc_detail_inc.coverage" NAME="dwd_trans_deliver_suc_detail_inc 覆盖结果" MODIFIED="1753689310167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
-    <SUITE FILE_PATH="coverage/dragon_storehouse$a.coverage" NAME="a 覆盖结果" MODIFIED="1753435474330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_order_stats.coverage" NAME="ads_order_stats 覆盖结果" MODIFIED="1753704081461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$a.coverage" NAME="a 覆盖结果" MODIFIED="1753847473336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ods_to_ads.coverage" NAME="ods_to_ads 覆盖结果" MODIFIED="1752739982545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Offline-pyspark/gmall" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_org_stats.coverage" NAME="ads_org_stats 覆盖结果" MODIFIED="1753705587426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_trans_trans_finish_inc.coverage" NAME="dwd_trans_trans_finish_inc 覆盖结果" MODIFIED="1753694491907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive2.coverage" NAME="mysql_to_hive2 覆盖结果" MODIFIED="1753884104809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/scripts" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_org_receive_nd.coverage" NAME="dws_trans_org_receive_nd 覆盖结果" MODIFIED="1753702968507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_express_province_stats.coverage" NAME="ads_express_province_stats 覆盖结果" MODIFIED="1753446688767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../桌面" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dim_truck_full.coverage" NAME="dim_truck_full 覆盖结果" MODIFIED="1753502307149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dim" />
-    <SUITE FILE_PATH="coverage/dragon_storehouse$gmall_cs_discount_dashboard.coverage" NAME="gmall_cs_discount_dashboard 覆盖结果" MODIFIED="1753799735998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$gmall_cs_discount_dashboard.coverage" NAME="gmall_cs_discount_dashboard 覆盖结果" MODIFIED="1753836315245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dim_organ_full.coverage" NAME="dim_organ_full 覆盖结果" MODIFIED="1753414888637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dim" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_driver_stats.coverage" NAME="ads_driver_stats 覆盖结果" MODIFIED="1753451741164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_org_sort_nd.coverage" NAME="dws_trans_org_sort_nd 覆盖结果" MODIFIED="1753703148560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
@@ -702,6 +723,7 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_express_city_stats.coverage" NAME="ads_express_city_stats 覆盖结果" MODIFIED="1753451218353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_org_sort_1d.coverage" NAME="dws_trans_org_sort_1d 覆盖结果" MODIFIED="1753703137848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_express_stats.coverage" NAME="ads_express_stats 覆盖结果" MODIFIED="1753703656553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$pan.coverage" NAME="pan 覆盖结果" MODIFIED="1753862897226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_line_stats.coverage" NAME="ads_line_stats 覆盖结果" MODIFIED="1753703794568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_trans_order_stats_td.coverage" NAME="ads_trans_order_stats_td 覆盖结果" MODIFIED="1753704506128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_dispatch_nd.coverage" NAME="dws_trans_dispatch_nd 覆盖结果" MODIFIED="1753702498855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
@@ -717,9 +739,12 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_org_receive_1d.coverage" NAME="dws_trans_org_receive_1d 覆盖结果" MODIFIED="1753702898076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_bound_outbound_inc.coverage" NAME="dwd_bound_outbound_inc 覆盖结果" MODIFIED="1753671196010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_trade_pay_suc_detail_inc.coverage" NAME="dwd_trade_pay_suc_detail_inc 覆盖结果" MODIFIED="1753688308728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive_incremental_sync.coverage" NAME="mysql_to_hive_incremental_sync 覆盖结果" MODIFIED="1753867260302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_trade_order_cancel_detail_inc.coverage" NAME="dwd_trade_order_cancel_detail_inc 覆盖结果" MODIFIED="1753674681940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$gmall_ods_simulator.coverage" NAME="gmall_ods_simulator 覆盖结果" MODIFIED="1753839627263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trade_org_cargo_type_order_1d.coverage" NAME="dws_trade_org_cargo_type_order_1d 覆盖结果" MODIFIED="1753694880628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_order_cargo_type_stats.coverage" NAME="ads_order_cargo_type_stats 覆盖结果" MODIFIED="1753703921431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive1.coverage" NAME="mysql_to_hive1 覆盖结果" MODIFIED="1753878821500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/mysql_to_hive" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$qwen_demo.coverage" NAME="qwen_demo 覆盖结果" MODIFIED="1752890297825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/qwen" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_bound_inbound_inc.coverage" NAME="dwd_bound_inbound_inc 覆盖结果" MODIFIED="1753670992592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trade_org_cargo_type_order_nd.coverage" NAME="dws_trade_org_cargo_type_order_nd 覆盖结果" MODIFIED="1753699790996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
@@ -738,6 +763,7 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_trade_order_detail_inc.coverage" NAME="dwd_trade_order_detail_inc 覆盖结果" MODIFIED="1753674062756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_org_deliver_suc_nd.coverage" NAME="dws_trans_org_deliver_suc_nd 覆盖结果" MODIFIED="1753702823334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_shift_trans_finish_nd.coverage" NAME="dws_trans_shift_trans_finish_nd 覆盖结果" MODIFIED="1753703982344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive_sync.coverage" NAME="mysql_to_hive_sync 覆盖结果" MODIFIED="1753859890351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dim_complex_full.coverage" NAME="dim_complex_full 覆盖结果" MODIFIED="1753414129403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dim" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_trans_stats.coverage" NAME="ads_trans_stats 覆盖结果" MODIFIED="1753704634012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
   </component>

@@ -8,16 +8,7 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema">
-            <name qname="gmall" />
-            <name qname="tms" />
-            <name qname="tms_dim" />
-            <name qname="tms_dwd" />
-            <name qname="tms_dws" />
-            <name qname="tms_ads" />
-            <name qname="default" />
-            <name qname="08_ods" />
-          </node>
+          <node kind="schema" qname="gmall_08" />
         </introspection-scope>
       </schema-mapping>
     </data-source>
@@ -44,7 +35,7 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="schema" qname="gmall_08" />
         </introspection-scope>
       </schema-mapping>
     </data-source>
