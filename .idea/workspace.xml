@@ -5,26 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="add">
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/ads/ads_cs_offer_activity_effect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/ads/ads_cs_offer_overview.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/ads/ads_cs_offer_send_details.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/ads/ads_cs_offer_trend_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/ads/ads_cs_service_performance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/dwd/dwd_cs_offer_activity_detail.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/dwd/dwd_cs_offer_redemption_detail.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/dwd/dwd_cs_offer_send_detail.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/dwd/dwd_cs_service_performance_daily.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/dws/dws_cs_offer_activity_stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/dws/dws_cs_offer_product_stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/dws/dws_cs_offer_time_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/dws/dws_cs_service_performance_wide.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/scripts/mysql_to_hive3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/TCL_20250731.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/gmall_cs_discount_dashboard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/08/gmall_simulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/08/gmall_simulator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scripts/mysql_to_hive2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/scripts/mysql_to_hive2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/imgs/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/imgs/img_1.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +305,7 @@
       <workItem from="1753930680739" duration="350000" />
       <workItem from="1753931046701" duration="624000" />
       <workItem from="1753931785716" duration="259000" />
-      <workItem from="1753932061670" duration="24381000" />
+      <workItem from="1753932061670" duration="25062000" />
     </task>
     <task id="LOCAL-00001" summary="add python">
       <created>1752740355346</created>
@@ -504,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1753885511244</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add">
+      <created>1753970192217</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1753970192217</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
