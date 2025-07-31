@@ -2,7 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="das://853a6dfa-4222-41ec-89dc-9f6aa19cd817/schema/gmall_08/table/ods_cs_offer_redemption_records.sql" charset="GBK" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/853a6dfa-4222-41ec-89dc-9f6aa19cd817/08.sql" charset="UTF-8" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/853a6dfa-4222-41ec-89dc-9f6aa19cd817/08_ods.sql" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink_realtime/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink_realtime/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/python_project/scripts/gmall_08_hive_ddl.sql" charset="UTF-8" />

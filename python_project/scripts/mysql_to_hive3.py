@@ -17,20 +17,13 @@ DEFAULT_MYSQL_CONFIG = {
     "port": 3306,
     "user": "root",
     "password": "root",
-    "database": MYSQL_DB  # 关联上面的MySQL库名  报的错是没连接到hive
+    "database": MYSQL_DB  # 关联上面的MySQL库名
 }
 
 DEFAULT_HIVE_CONFIG = {
     "metastore_uris": "thrift://192.168.142.128:9083",
     "hdfs_default_fs": "hdfs://192.168.142.128:8020",
     "warehouse_dir": "/user/hive/warehouse"
-}
-
-# 定义各表的创建时间字段名
-CREATE_TIME_FIELDS = {
-    "product_score_main": "create_time",
-    "product_diagnosis_compare": "create_time"
-    # 可以根据需要添加更多表的创建时间字段映射
 }
 
 
@@ -62,18 +55,6 @@ def get_mysql_tables(conn, mysql_db):
     with conn.cursor() as cursor:
         cursor.execute(f"SHOW TABLES FROM {mysql_db}")
         return [table[0] for table in cursor.fetchall()]
-
-
-def get_table_column_names(conn, mysql_db, table_name):
-    """获取MySQL表的所有列名"""
-    with conn.cursor() as cursor:
-        cursor.execute(f"""
-            SELECT COLUMN_NAME
-            FROM INFORMATION_SCHEMA.COLUMNS
-            WHERE TABLE_SCHEMA='{mysql_db}' AND TABLE_NAME='{table_name}'
-            ORDER BY ORDINAL_POSITION
-        """)
-        return [row[0] for row in cursor.fetchall()]
 
 
 # -------------------------- 建表相关函数 --------------------------
@@ -111,6 +92,25 @@ def get_table_columns(conn, mysql_db, table_name):
         return cursor.fetchall()
 
 
+# def generate_create_ddl(hive_db, table_name, columns, table_comment):
+#     """生成Hive建表DDL"""
+#     column_defs = []
+#     for col in columns:
+#         col_name, hive_type, col_comment = col
+#         escaped_comment = col_comment.replace("'", "''") if col_comment else ""
+#         comment_clause = f" COMMENT '{escaped_comment}'" if escaped_comment else ""
+#         column_defs.append(f"    `{col_name}` {hive_type}{comment_clause}")
+#     formatted_columns = ",\n".join(column_defs)
+#
+#     return f"""
+# CREATE EXTERNAL TABLE IF NOT EXISTS {hive_db}.ods_{table_name} (
+# {formatted_columns}
+# ) COMMENT '{table_comment.replace("'", "''")}'
+# PARTITIONED BY (`dt` STRING)
+# ROW FORMAT DELIMITED FIELDS TERMINATED BY '\\t'
+# LOCATION '/warehouse/{hive_db}/ods/ods_{table_name}/'
+# TBLPROPERTIES ('compression.codec'='org.apache.hadoop.io.compress.GzipCodec')
+# """
 def generate_hive_table_ddl(hive_db, table_name, columns, table_comment=""):
     """
     生成Hive外部表DDL语句，处理MySQL到Hive的类型映射
@@ -188,9 +188,6 @@ def generate_hive_table_ddl(hive_db, table_name, columns, table_comment=""):
     formatted_columns = ",\n".join(column_defs)
     escaped_table_comment = table_comment.replace("'", "''").replace("\n", " ") if table_comment else ""
 
-    # 确保HDFS路径
-    hdfs_location = f"/warehouse/{hive_db}/ods/ods_{table_name}"
-
     return f"""
 CREATE EXTERNAL TABLE IF NOT EXISTS {hive_db}.ods_{table_name} (
 {formatted_columns}
@@ -201,7 +198,7 @@ ROW FORMAT DELIMITED
   LINES TERMINATED BY '\\n'
   NULL DEFINED AS 'NULL'
 STORED AS TEXTFILE
-LOCATION '{hdfs_location}'
+LOCATION '/warehouse/{hive_db}/ods/ods_{table_name}/'
 TBLPROPERTIES (
   'compression.codec'='org.apache.hadoop.io.compress.GzipCodec',
   'skip.header.line.count'='1',
@@ -225,14 +222,13 @@ def sync_schema(mysql_db, hive_db, mysql_config, spark):
                 create_ddl = generate_hive_table_ddl(hive_db, table, columns, table_comment)
                 ddl_statements.append(create_ddl)
 
-                # 确保HDFS路径存在
                 hdfs_path = f"/warehouse/{hive_db}/ods/ods_{table}"
                 ensure_hdfs_path(spark, hdfs_path)
 
                 spark.sql(create_ddl)
-                print(f"[SUCCESS] 表 {hive_db}.ods_{table} 结构同步完成，HDFS路径: {hdfs_path}")
+                print(f"✅ 表 {hive_db}.ods_{table} 结构同步完成")
             except Exception as e:
-                print(f"[ERROR] 处理表 {table} 时出错（建表阶段）：{str(e)}")
+                print(f"❌ 处理表 {table} 时出错（建表阶段）：{str(e)}")
                 continue
 
     finally:
@@ -248,8 +244,101 @@ def sync_schema(mysql_db, hive_db, mysql_config, spark):
 
 
 # -------------------------- 数据同步相关函数 --------------------------
+# def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
+#     """同步单表数据"""
+#     try:
+#         mysql_url = f"jdbc:mysql://{mysql_config['host']}:{mysql_config['port']}/{mysql_db}?useSSL=false"
+#         jdbc_properties = {
+#             "user": mysql_config["user"],
+#             "password": mysql_config["password"],
+#             "driver": "com.mysql.jdbc.Driver",
+#             "fetchsize": "1000"
+#         }
+#
+#         dt = datetime.datetime.now().strftime("%Y%m%d")
+#         query = f"(SELECT *, '{dt}' as dt FROM {table_name}) as tmp"
+#         df = spark.read.jdbc(
+#             url=mysql_url,
+#             table=query,
+#             properties=jdbc_properties
+#         )
+#
+#         df.write.mode("overwrite") \
+#             .partitionBy("dt") \
+#             .saveAsTable(f"{hive_db}.ods_{table_name}")
+#
+#         print(f"✅ 表 {mysql_db}.{table_name} 数据同步至 {hive_db}.ods_{table_name}（dt={dt}）完成")
+#         return True
+#     except Exception as e:
+#         print(f"❌ 表 {table_name} 数据同步失败：{str(e)}")
+#         return False
+# def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
+#     """同步单表数据（含元数据更新）"""
+#     try:
+#         # 1. 配置MySQL连接
+#         mysql_url = f"jdbc:mysql://{mysql_config['host']}:{mysql_config['port']}/{mysql_db}?useSSL=false"
+#         jdbc_properties = {
+#             "user": mysql_config["user"],
+#             "password": mysql_config["password"],
+#             "driver": "com.mysql.jdbc.Driver",
+#             "fetchsize": "1000"
+#         }
+#
+#         # 2. 准备分区值
+#         dt = datetime.datetime.now().strftime("%Y%m%d")
+#         query = f"(SELECT *, '{dt}' as dt FROM {table_name}) as tmp"
+#
+#         # 3. 读取MySQL数据
+#         df = spark.read.jdbc(
+#             url=mysql_url,
+#             table=query,
+#             properties=jdbc_properties
+#         )
+#
+#         # 4. 定义HDFS存储路径
+#         hdfs_path = f"/warehouse/{hive_db}/ods/ods_{table_name}/dt={dt}"
+#
+#         # 5. 写入数据并更新元数据
+#         (df.write
+#          .mode("overwrite")
+#          .partitionBy("dt")
+#          .option("path", hdfs_path)  # 显式指定存储路径
+#          .saveAsTable(f"{hive_db}.ods_{table_name}"))
+#
+#         # 6. 强制更新元数据
+#         spark.sql(f"MSCK REPAIR TABLE {hive_db}.ods_{table_name}")
+#
+#         print(f"✅ 表 {mysql_db}.ods_{table_name} 同步完成 | 路径: ods_{hdfs_path}")
+#
+#         verify_partition(spark, hive_db, f"ods_{table_name}", dt)
+#
+#
+#     except Exception as e:
+#         print(f"❌ 同步失败: {str(e)}")
+#         return False
+#
+#
+# def verify_partition(spark, db, table, dt):
+#     """验证分区元数据和HDFS路径"""
+#     try:
+#         # 检查元数据
+#         spark.sql(f"SHOW PARTITIONS {db}.{table} PARTITION(dt='{dt}')").collect()
+#
+#         # 检查HDFS路径（需Hadoop客户端支持）
+#         hdfs_path = f"/warehouse/{db}/ods/ods_{table}/dt={dt}"
+#         hadoop = spark._jvm.org.apache.hadoop.fs.FileSystem.get(
+#             spark._jsc.hadoopConfiguration()
+#         )
+#         if not hadoop.exists(spark._jvm.org.apache.hadoop.fs.Path(hdfs_path)):
+#             raise Exception(f"HDFS路径不存在: {hdfs_path}")
+#
+#         return True
+#     except Exception as e:
+#         print(f"❌ 验证失败: {str(e)}")
+#         return False
+
 def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
-    """同步单表数据（使用创建时间作为分区）"""
+    """同步单表数据（含元数据更新）"""
     try:
         # 1. 配置MySQL连接（8.x驱动）
         mysql_url = f"jdbc:mysql://{mysql_config['host']}:{mysql_config['port']}/{mysql_db}?useSSL=false&serverTimezone=UTC"
@@ -260,66 +349,49 @@ def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
             "fetchsize": "1000"
         }
 
-        # 2. 确定创建时间字段
-        create_time_field = CREATE_TIME_FIELDS.get(table_name, "create_time")
+        # 2. 准备分区值
+        dt = datetime.datetime.now().strftime("%Y%m%d")
+        query = f"(SELECT *, '{dt}' as dt FROM {table_name}) as tmp"
 
-        # 3. 获取表的所有列名，排除dt字段（因为dt是分区字段）
-        conn = get_mysql_connection(mysql_config)
-        try:
-            column_names = get_table_column_names(conn, mysql_db, table_name)
-        finally:
-            conn.close()
-
-        # 4. 过滤掉dt字段（如果存在）
-        data_columns = [col for col in column_names if col.lower() != 'dt']
-        columns_str = ", ".join([f"`{col}`" for col in data_columns])
-
-        # 5. 构造查询语句，使用创建时间字段生成分区值
-        query = f"""(
-            SELECT {columns_str}, 
-                   DATE_FORMAT({create_time_field}, '%Y%m%d') as dt 
-            FROM {table_name}
-            WHERE {create_time_field} IS NOT NULL
-        ) as tmp"""
-
-        # 6. 读取数据
-        print(f"[INFO] 正在从MySQL读取表 {table_name} 的数据...")
+        # 3. 读取数据
         df = spark.read.jdbc(url=mysql_url, table=query, properties=jdbc_properties)
-        record_count = df.count()
-        print(f"[INFO] 从MySQL读取到 {record_count} 条记录")
 
-        # 7. 确保HDFS路径存在
-        hdfs_base_path = f"/warehouse/{hive_db}/ods/ods_{table_name}"
-        ensure_hdfs_path(spark, hdfs_base_path)
-
-        # 8. 写入Hive（使用指定路径）
-        print(f"[INFO] 正在写入数据到Hive表 {hive_db}.ods_{table_name}...")
+        # 4. 写入Hive
+        hdfs_path = f"/warehouse/{hive_db}/ods/ods_{table_name}/dt={dt}"
         (df.write
          .mode("overwrite")
          .partitionBy("dt")
-         .option("path", hdfs_base_path)  # 显式指定HDFS路径
+         .option("path", hdfs_path)
          .saveAsTable(f"{hive_db}.ods_{table_name}"))
 
-        # 9. 强制刷新表元数据
-        spark.sql(f"MSCK REPAIR TABLE {hive_db}.ods_{table_name}")
+        # 5. 验证分区
+        if not verify_partition(spark, hive_db, f"ods_{table_name}", dt):
+            raise Exception("分区验证失败")
 
-        # 10. 验证分区
-        partitions = spark.sql(f"SHOW PARTITIONS {hive_db}.ods_{table_name}").collect()
-        partition_count = len(partitions)
-        print(f"[SUCCESS] 表 {mysql_db}.{table_name} 数据同步至 {hive_db}.ods_{table_name} 完成")
-        print(f"   - 使用创建时间字段: {create_time_field}")
-        print(f"   - 总记录数: {record_count}")
-        print(f"   - 生成分区数量: {partition_count}")
-        print(f"   - HDFS路径: {hdfs_base_path}")
-        if partition_count > 0:
-            # 显示前几个分区作为示例
-            sample_partitions = [p[0] for p in partitions[:3]]
-            print(f"   - 示例分区: {', '.join(sample_partitions)}")
-
+        print(f"✅ 同步成功 | 路径: {hdfs_path}")
         return True
 
     except Exception as e:
-        print(f"[ERROR] 表 {table_name} 数据同步失败：{str(e)}")
+        print(f"❌ 同步失败: {str(e)}")
+        return False
+
+
+def verify_partition(spark, db, table, dt):
+    """修正后的分区验证逻辑"""
+    try:
+        # 检查元数据
+        spark.sql(f"SHOW PARTITIONS {db}.{table} PARTITION(dt='{dt}')").collect()
+
+        # 检查HDFS路径（修正路径拼接）
+        hdfs_path = f"/warehouse/{db}/ods/{table}/dt={dt}"
+        hadoop = spark._jvm.org.apache.hadoop.fs.FileSystem.get(
+            spark._jsc.hadoopConfiguration()
+        )
+        if not hadoop.exists(spark._jvm.org.apache.hadoop.fs.Path(hdfs_path)):
+            raise Exception(f"HDFS路径不存在: {hdfs_path}")
+        return True
+    except Exception as e:
+        print(f"❌ 验证失败: {str(e)}")
         return False
 
 
@@ -331,18 +403,11 @@ def sync_all_data(mysql_db, hive_db, mysql_config, spark):
         tables = get_mysql_tables(conn, mysql_db)
         print(f"\n===== 开始同步 {mysql_db} 到 {hive_db} 的数据，共 {len(tables)} 张表 =====")
 
-        success_count = 0
         for table in tables:
-            print(f"\n--- 处理表: {table} ---")
-            if sync_table_data(mysql_db, hive_db, table, mysql_config, spark):
-                success_count += 1
-                print(f"[SUCCESS] 表 {table} 同步完成")
-            else:
-                print(f"[ERROR] 表 {table} 同步失败")
-
-        print(f"\n数据同步完成: 成功 {success_count}/{len(tables)} 张表")
-        return success_count == len(tables)
-
+            if not sync_table_data(mysql_db, hive_db, table, mysql_config, spark):
+                print(f"❌ 数据同步中断：表 ods_{table} 同步失败")
+                return False
+        return True
     finally:
         if conn:
             conn.close()
@@ -367,7 +432,6 @@ def create_spark_session(hive_config):
         .config("spark.driver.memory", "4g") \
         .config("spark.executor.extraJavaOptions", "-XX:+UseG1GC") \
         .config("spark.sql.adaptive.enabled", "true") \
-        .config("spark.sql.hive.convertMetastoreParquet", "false") \
         .enableHiveSupport() \
         .getOrCreate()
 

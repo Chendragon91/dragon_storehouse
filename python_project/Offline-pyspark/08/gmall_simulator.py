@@ -3,6 +3,8 @@ from faker import Faker
 from datetime import datetime, timedelta
 import pymysql
 from tqdm import tqdm
+import numpy as np
+import time
 
 # 初始化Faker
 fake = Faker('zh_CN')
@@ -19,85 +21,168 @@ DB_CONFIG = {
     'charset': 'utf8mb4'
 }
 
+# 业务参数配置（10万条版本）
+CONFIG = {
+    'customer_service_num': 300,       # 300名客服
+    'activities_num': 80,              # 80个活动
+    'products_per_activity': (5, 30),  # 每个活动5-30个商品
+    'skus_per_product': (2, 8),        # 每个商品2-8个SKU
+    'offer_records_num': 100000,       # 10万条发放记录
+    'redemption_rate': 0.65,           # 65%核销率
+    'batch_size': 2000                 # 批量提交大小
+}
+
 def get_db_connection():
     return pymysql.connect(**DB_CONFIG)
 
-def generate_and_insert_customer_service(conn, num=20):
-    departments = ['客服一部', '客服二部', '客服三部', 'VIP客服部']
-    positions = ['客服专员', '客服主管', '客服经理', '高级客服']
+def batch_insert(cursor, table, columns, data):
+    """高性能批量插入"""
+    sql = f"INSERT INTO {table} ({','.join(columns)}) VALUES ({','.join(['%s']*len(columns))})"
+    cursor.executemany(sql, data)
 
+def truncate_tables(conn):
+    """清空表数据"""
+    tables = [
+        'customer_service_info',
+        'cs_special_offer_activity',
+        'cs_special_offer_products',
+        'cs_special_offer_skus',
+        'cs_offer_send_records',
+        'cs_offer_redemption_records'
+    ]
     with conn.cursor() as cursor:
-        for cs_id in tqdm(range(1, num+1), desc="生成客服信息"):
-            hire_date = fake.date_between(start_date='-5y', end_date='today')
-            cursor.execute(
-                "INSERT INTO customer_service_info VALUES (%s, %s, %s, %s, %s, %s)",
-                (cs_id, fake.name(), random.choice(departments),
-                 random.choice(positions), hire_date.strftime('%Y-%m-%d'),
-                 random.choices([0, 1], weights=[0.1, 0.9])[0])
-            )
+        for table in tables:
+            try:
+                cursor.execute(f"TRUNCATE TABLE {table}")
+            except Exception as e:
+                print(f"清空表 {table} 时出错: {e}")
     conn.commit()
 
-def generate_and_insert_activities(conn, num=15):
-    offer_types = [1, 2, 3]
+def generate_time_series_data(days_span=30):
+    """生成30天内的时间序列数据"""
+    end_date = datetime.now()
+    start_date = end_date - timedelta(days=days_span)
 
-    with conn.cursor() as cursor:
-        for activity_id in tqdm(range(1, num+1), desc="生成优惠活动"):
-            start_time = fake.date_time_between(start_date='-2m', end_date='+1m')
-            end_time = start_time + timedelta(days=random.randint(7, 30))
-            current_status = 1 if datetime.now() > start_time and datetime.now() < end_time else (
-                0 if datetime.now() < start_time else 2)
+    def random_time():
+        # 工作日(70%) vs 周末(30%)
+        if random.random() < 0.7:
+            # 工作时间段 9:00-18:00 (70%)
+            if random.random() < 0.7:
+                hour = random.randint(9, 17)
+            # 早晚高峰 8:00-9:00 和 18:00-20:00 (25%)
+            else:
+                hour = random.choice([8, 18, 19])
+        else:
+            # 周末时间段 10:00-21:00
+            hour = random.randint(10, 20)
 
-            cursor.execute(
-                """INSERT INTO cs_special_offer_activity 
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
-                (activity_id, f"{fake.word().capitalize()}专属优惠活动", random.randint(1, 3),
-                 random.choice(offer_types), start_time.strftime('%Y-%m-%d %H:%M:%S'),
-                 end_time.strftime('%Y-%m-%d %H:%M:%S'),
-                 round(random.uniform(50, 500), 2) if random.random() > 0.7 else None,
-                 current_status, random.randint(1, 10),
-                 (start_time - timedelta(days=random.randint(1, 7))).strftime('%Y-%m-%d %H:%M:%S'),
-                 fake.date_time_between(start_date=start_time, end_date=end_time).strftime('%Y-%m-%d %H:%M:%S'))
-            )
-    conn.commit()
+        random_day = random.randint(1, days_span)
+        return start_date + timedelta(
+            days=random_day,
+            hours=hour,
+            minutes=random.randint(0, 59),
+            seconds=random.randint(0, 59)
+        )
 
-def generate_and_insert_activity_products(conn, max_activity_id, num_per_activity=3):
-    with conn.cursor() as cursor:
-        product_id = 1
-        for activity_id in tqdm(range(1, max_activity_id+1), desc="生成活动商品"):
-            for _ in range(random.randint(1, num_per_activity)):
-                cursor.execute(
-                    """INSERT INTO cs_special_offer_products 
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)""",
-                    (product_id, activity_id, product_id,
-                     round(random.uniform(5, 100), 2) if random.random() > 0.3 else None,
-                     round(random.uniform(20, 200), 2) if random.random() > 0.5 else None,
-                     random.randint(1, 5) if random.random() > 0.6 else None,
-                     random.choices([0, 1], weights=[0.2, 0.8])[0],
-                     fake.date_time_between(start_date='-2m', end_date='now').strftime('%Y-%m-%d %H:%M:%S'))
-                )
-                product_id += 1
-    conn.commit()
-    return product_id - 1
+    return random_time
 
-def generate_and_insert_activity_skus(conn, max_product_id, num_per_product=2):
-    with conn.cursor() as cursor:
-        sku_id = 1
-        for product_id in tqdm(range(1, max_product_id+1), desc="生成活动SKU"):
-            for _ in range(random.randint(1, num_per_product)):
-                cursor.execute(
-                    """INSERT INTO cs_special_offer_skus 
-                    VALUES (%s, %s, %s, %s, %s, %s)""",
-                    (sku_id, product_id, sku_id,
-                     round(random.uniform(5, 100), 2) if random.random() > 0.4 else None,
-                     round(random.uniform(20, 200), 2) if random.random() > 0.6 else None,
-                     fake.date_time_between(start_date='-2m', end_date='now').strftime('%Y-%m-%d %H:%M:%S'))
-                )
-                sku_id += 1
-    conn.commit()
-    return sku_id - 1
+def generate_customer_service(num):
+    """生成客服数据"""
+    departments = ['客服一部', '客服二部', '客服三部', 'VIP客服部', '国际客服部']
+    positions = ['客服专员']*15 + ['高级客服']*3 + ['客服主管']*1 + ['客服经理']*1
 
-def generate_and_insert_offer_records(conn, max_activity_id, max_cs_id, num=200):
-    with conn.cursor() as cursor:
+    data = []
+    for cs_id in tqdm(range(1, num+1), desc="👩💼 生成客服", unit="名"):
+        hire_date = fake.date_between(start_date='-30d', end_date='today')
+        status = 0 if random.random() < 0.05 else 1
+        data.append((
+            cs_id,
+            fake.name(),
+            random.choice(departments),
+            random.choice(positions),
+            hire_date.strftime('%Y-%m-%d'),
+            status
+        ))
+    return data
+
+def generate_activities(num):
+    """生成优惠活动"""
+    offer_types = [1, 2, 3]  # 1:满减 2:折扣 3:代金券
+    activity_types = ['周年庆', '节日特惠', '会员日', '限时抢购', '新品促销']
+    time_generator = generate_time_series_data()
+
+    data = []
+    for activity_id in tqdm(range(1, num+1), desc="🎪 生成活动", unit="个"):
+        start_time = time_generator()
+        duration = min(
+            random.choices([3,7,14,21,28], weights=[0.1,0.3,0.3,0.2,0.1])[0],
+            30 - (datetime.now() - (datetime.now()-timedelta(days=30))).days
+        )
+        end_time = start_time + timedelta(days=duration)
+
+        current_status = 1 if datetime.now() > start_time and datetime.now() < end_time else (
+            0 if datetime.now() < start_time else 2)
+
+        data.append((
+            activity_id,
+            f"{random.choice(activity_types)}-{fake.color_name()}优惠",
+            random.randint(1, 3),
+            random.choice(offer_types),
+            start_time.strftime('%Y-%m-%d %H:%M:%S'),
+            end_time.strftime('%Y-%m-%d %H:%M:%S'),
+            round(random.uniform(50, 500), 2) if random.random() > 0.7 else None,
+            current_status,
+            random.randint(1, 10),
+            (start_time - timedelta(days=random.randint(1, 3))).strftime('%Y-%m-%d %H:%M:%S'),
+            fake.date_time_between(start_time, end_time).strftime('%Y-%m-%d %H:%M:%S')
+        ))
+    return data
+
+def generate_activity_products(max_activity_id):
+    """生成活动商品"""
+    data = []
+    product_id = 1
+    for activity_id in tqdm(range(1, max_activity_id+1), desc="🛍️ 生成商品", unit="个"):
+        for _ in range(random.randint(*CONFIG['products_per_activity'])):
+            data.append((
+                product_id,
+                activity_id,
+                product_id,
+                round(random.uniform(5, 100), 2) if random.random() > 0.3 else None,
+                round(random.uniform(20, 200), 2) if random.random() > 0.5 else None,
+                random.randint(1, 5) if random.random() > 0.6 else None,
+                random.choices([0, 1], weights=[0.2, 0.8])[0],
+                fake.date_time_between('-30d', 'now').strftime('%Y-%m-%d %H:%M:%S')
+            ))
+            product_id += 1
+    return data, product_id-1
+
+def generate_activity_skus(max_product_id):
+    """生成商品SKU"""
+    data = []
+    sku_id = 1
+    for product_id in tqdm(range(1, max_product_id+1), desc="📦 生成SKU", unit="个"):
+        for _ in range(random.randint(*CONFIG['skus_per_product'])):
+            data.append((
+                sku_id,
+                product_id,
+                sku_id,
+                round(random.uniform(5, 100), 2) if random.random() > 0.4 else None,
+                round(random.uniform(20, 200), 2) if random.random() > 0.6 else None,
+                fake.date_time_between('-30d', 'now').strftime('%Y-%m-%d %H:%M:%S')
+            ))
+            sku_id += 1
+    return data, sku_id-1
+
+def generate_offer_records(conn, max_activity_id, max_cs_id, num):
+    """生成优惠发放记录"""
+    time_generator = generate_time_series_data()
+    cursor = conn.cursor()
+
+    try:
+        cursor.execute("SELECT activity_id, start_time, end_time FROM cs_special_offer_activity")
+        activities = {row[0]: (row[1], row[2]) for row in cursor.fetchall()}
+
         cursor.execute("SELECT product_id, activity_id FROM cs_special_offer_products")
         products = cursor.fetchall()
 
@@ -109,7 +194,8 @@ def generate_and_insert_offer_records(conn, max_activity_id, max_cs_id, num=200)
                 sku_dict[sku[1]] = []
             sku_dict[sku[1]].append(sku[0])
 
-        for record_id in tqdm(range(1, num+1), desc="生成发送记录"):
+        data = []
+        for record_id in tqdm(range(1, num+1), desc="✉️ 发放记录", unit="条"):
             activity_id = random.randint(1, max_activity_id)
             activity_products = [p for p in products if p[1] == activity_id]
             if not activity_products:
@@ -119,89 +205,195 @@ def generate_and_insert_offer_records(conn, max_activity_id, max_cs_id, num=200)
             product_id = product[0]
             sku_id = random.choice(sku_dict.get(product_id, [None]))
 
-            # 确保有足够多的过期记录
-            if random.random() < 0.4:  # 40%的记录强制为已过期
-                send_time = fake.date_time_between(start_date='-2m', end_date='-1d')
-                expire_time = send_time + timedelta(hours=random.randint(1, 23))
-                status = 0
-            else:
-                send_time = fake.date_time_between(start_date='-1d', end_date='now')
-                expire_time = send_time + timedelta(hours=random.choice([24, 48, 72, 168]))
-                status = 1 if datetime.now() < expire_time else 0
-
-            cursor.execute(
-                """INSERT INTO cs_offer_send_records 
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
-                (record_id, activity_id, product_id, sku_id,
-                 random.randint(1000, 9999), random.randint(1, max_cs_id),
-                 round(random.uniform(5, 200), 2), random.choice([24, 48, 72, 168]),
-                 send_time.strftime('%Y-%m-%d %H:%M:%S'), expire_time.strftime('%Y-%m-%d %H:%M:%S'),
-                 status, fake.sentence() if random.random() > 0.7 else None)
+            act_start, act_end = activities[activity_id]
+            send_time = fake.date_time_between(
+                start_date=max(act_start, datetime.now()-timedelta(days=30)),
+                end_date=min(act_end, datetime.now())
             )
-    conn.commit()
-    return num
 
-def generate_and_insert_redemption_records(conn, max_record_id, redemption_rate=0.7):
-    with conn.cursor() as cursor:
-        # 调试查询1：检查状态分布
-        cursor.execute("SELECT status, COUNT(*) FROM cs_offer_send_records GROUP BY status")
-        status_dist = cursor.fetchall()
-        print(f"发送记录状态分布: {status_dist}")
+            if random.random() < 0.7:
+                expire_hours = random.choice([24, 48, 72])
+            else:
+                expire_hours = random.choice([96, 120, 144, 168])
 
-        # 调试查询2：直接查询status=0的记录
-        cursor.execute("SELECT COUNT(*) FROM cs_offer_send_records WHERE status = 0")
-        expired_count = cursor.fetchone()[0]
-        print(f"状态为0的记录总数: {expired_count}")
+            expire_time = send_time + timedelta(hours=expire_hours)
+            status = 1  # 初始状态全部设为未使用
 
-        # 关键修改：移除expire_time < NOW()条件，因为status=0已经表示过期
+            offer_amount = round(np.random.normal(50, 20), 2)
+            offer_amount = max(5, min(200, offer_amount))
+
+            data.append((
+                record_id, activity_id, product_id, sku_id,
+                random.randint(1000, 9999),
+                random.randint(1, max_cs_id),
+                offer_amount,
+                expire_hours,
+                send_time.strftime('%Y-%m-%d %H:%M:%S'),
+                expire_time.strftime('%Y-%m-%d %H:%M:%S'),
+                status,
+                fake.sentence() if random.random() > 0.9 else None
+            ))
+
+            if len(data) >= CONFIG['batch_size']:
+                batch_insert(cursor, 'cs_offer_send_records',
+                             ['record_id','activity_id','product_id','sku_id',
+                              'customer_id','cs_id','offer_amount','valid_hours',
+                              'send_time','expire_time','status','remark'], data)
+                data = []
+                conn.commit()
+
+        if data:
+            batch_insert(cursor, 'cs_offer_send_records',
+                         ['record_id','activity_id','product_id','sku_id',
+                          'customer_id','cs_id','offer_amount','valid_hours',
+                          'send_time','expire_time','status','remark'], data)
+            conn.commit()
+
+        return num
+    finally:
+        cursor.close()
+
+def generate_redemption_records(conn, max_record_id):
+    """生成核销记录（确保65%核销率）"""
+    cursor = conn.cursor()
+
+    try:
+        # 1. 计算需要核销的总数
+        total_redemptions = int(max_record_id * CONFIG['redemption_rate'])
+
+        # 2. 获取所有可核销的记录（状态为1且未过期）
         cursor.execute("""
         SELECT record_id, send_time, expire_time, offer_amount 
         FROM cs_offer_send_records 
-        WHERE status = 0
-        """)
-        expired_records = cursor.fetchall()
-        print(f"找到{len(expired_records)}条过期记录可用于核销")
+        WHERE status = 1 
+          AND expire_time > NOW()
+        ORDER BY RAND()
+        LIMIT %s
+        """, (total_redemptions,))
+        available_records = cursor.fetchall()
 
-        redemption_id = 1
-        for record in tqdm(expired_records, desc="生成核销记录"):
-            if random.random() < redemption_rate:
-                record_id, send_time, expire_time, offer_amount = record
-                redemption_time = fake.date_time_between(
-                    start_date=send_time,
-                    end_date=expire_time
-                )
+        # 3. 实际可核销数量
+        actual_redemptions = len(available_records)
+        if actual_redemptions < total_redemptions:
+            print(f"⚠️ 警告：只有{actual_redemptions}条记录可核销（需要{total_redemptions}条）")
 
-                cursor.execute(
-                    """INSERT INTO cs_offer_redemption_records 
-                    VALUES (%s, %s, %s, %s, %s, %s)""",
-                    (redemption_id, record_id, random.randint(100000, 999999),
-                     redemption_time.strftime('%Y-%m-%d %H:%M:%S'),
-                     round(float(offer_amount) * random.uniform(0.9, 1.0), 2),
-                     round(random.uniform(100, 2000), 2))
-                )
-                redemption_id += 1
-        print(f"成功生成{redemption_id-1}条核销记录")
-    conn.commit()
+        # 4. 生成核销记录
+        data = []
+        for redemption_id, record in enumerate(
+                tqdm(available_records, desc="💰 核销记录", unit="条", total=actual_redemptions),
+                start=1
+        ):
+            record_id, send_time, expire_time, offer_amount = record
+
+            redemption_time = fake.date_time_between(
+                start_date=send_time,
+                end_date=min(expire_time, datetime.now())
+            )
+
+            actual_amount = round(float(offer_amount) * random.uniform(0.9, 1.0), 2)
+            payment_amount = round(actual_amount * random.uniform(2, 10), 2)
+
+            data.append((
+                redemption_id,
+                record_id,
+                random.randint(100000, 999999),
+                redemption_time.strftime('%Y-%m-%d %H:%M:%S'),
+                actual_amount,
+                payment_amount
+            ))
+
+            if len(data) >= CONFIG['batch_size']:
+                batch_insert(cursor, 'cs_offer_redemption_records',
+                             ['redemption_id','record_id','order_id',
+                              'redemption_time','actual_offer_amount','payment_amount'], data)
+                data = []
+                conn.commit()
+
+        if data:
+            batch_insert(cursor, 'cs_offer_redemption_records',
+                         ['redemption_id','record_id','order_id',
+                          'redemption_time','actual_offer_amount','payment_amount'], data)
+            conn.commit()
+
+        # 5. 更新发放记录状态
+        if actual_redemptions > 0:
+            cursor.execute("""
+            UPDATE cs_offer_send_records 
+            SET status = 2 
+            WHERE record_id IN (
+                SELECT record_id FROM cs_offer_redemption_records
+            )
+            """)
+            conn.commit()
+
+        return actual_redemptions
+    finally:
+        cursor.close()
 
 def main():
+    print("📊 开始生成10万级测试数据...")
+    start_time = time.time()
     conn = get_db_connection()
 
     try:
-        generate_and_insert_customer_service(conn, num=20)
-        max_cs_id = 20
+        # 清空表
+        print("🧹 清空现有数据...", end=' ')
+        truncate_tables(conn)
+        print("完成")
 
-        generate_and_insert_activities(conn, num=15)
-        max_activity_id = 15
+        # 生成客服
+        cs_data = generate_customer_service(CONFIG['customer_service_num'])
+        with conn.cursor() as cursor:
+            batch_insert(cursor, 'customer_service_info',
+                         ['cs_id','cs_name','department','position','hire_date','status'], cs_data)
+        conn.commit()
+        max_cs_id = CONFIG['customer_service_num']
 
-        max_product_id = generate_and_insert_activity_products(conn, max_activity_id)
+        # 生成活动
+        activity_data = generate_activities(CONFIG['activities_num'])
+        with conn.cursor() as cursor:
+            batch_insert(cursor, 'cs_special_offer_activity',
+                         ['activity_id','activity_name','activity_level','offer_type',
+                          'start_time','end_time','max_custom_amount','status',
+                          'shop_id','create_time','update_time'], activity_data)
+        conn.commit()
+        max_activity_id = CONFIG['activities_num']
 
-        generate_and_insert_activity_skus(conn, max_product_id)
+        # 生成商品
+        product_data, max_product_id = generate_activity_products(max_activity_id)
+        with conn.cursor() as cursor:
+            batch_insert(cursor, 'cs_special_offer_products',
+                         ['id','activity_id','product_id','fixed_offer_amount',
+                          'max_offer_amount','purchase_limit','status','create_time'], product_data)
+        conn.commit()
 
-        record_count = generate_and_insert_offer_records(conn, max_activity_id, max_cs_id, num=200)
+        # 生成SKU
+        sku_data, max_sku_id = generate_activity_skus(max_product_id)
+        with conn.cursor() as cursor:
+            batch_insert(cursor, 'cs_special_offer_skus',
+                         ['id','product_id','sku_id','fixed_offer_amount',
+                          'max_offer_amount','create_time'], sku_data)
+        conn.commit()
 
-        generate_and_insert_redemption_records(conn, record_count)
+        # 生成发放记录（全部初始状态为1-未使用）
+        record_count = generate_offer_records(conn, max_activity_id, max_cs_id, CONFIG['offer_records_num'])
 
-        print("\n所有模拟数据已成功插入数据库！")
+        # 生成核销记录（确保65%核销率）
+        redemption_count = generate_redemption_records(conn, record_count)
+
+        # 打印统计
+        print("\n✅ 数据生成完成！")
+        print(f"""
+        ============ 数据统计 ============
+        👩💻 客服人员: {max_cs_id}名
+        🎡 优惠活动: {max_activity_id}个
+        🛒 活动商品: {max_product_id}个
+        📦 商品SKU: {max_sku_id}个
+        ✉️ 优惠发放: {record_count:,}条
+        💰 优惠核销: {redemption_count:,}条 (核销率: {redemption_count/record_count:.0%})
+        ⏱️ 总耗时: {time.time()-start_time:.2f}秒
+        =================================
+        """)
 
     finally:
         conn.close()
