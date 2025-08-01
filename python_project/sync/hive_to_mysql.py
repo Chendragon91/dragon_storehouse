@@ -42,12 +42,15 @@ class HiveToMySQLSync:
         return tables
 
     def get_hive_table_schema(self, table_name: str) -> Tuple[List[Tuple], str]:
-        """获取表结构和注释"""
+        """获取表结构和注释（已添加列名去重）"""
         # 获取列信息
         df = self.spark.sql(f"DESCRIBE {self.hive_db}.{table_name}")
         columns = []
+        seen_columns = set()  # 用于记录已处理的列名
+
         for row in df.collect():
-            if not row.col_name.startswith('#'):  # 跳过分区字段
+            if not row.col_name.startswith('#') and row.col_name not in seen_columns:
+                seen_columns.add(row.col_name)
                 comment = row.comment if hasattr(row, 'comment') else ''
                 columns.append((row.col_name, row.data_type.lower(), comment))
 
@@ -69,7 +72,7 @@ class HiveToMySQLSync:
             'double': 'DOUBLE',
             'float': 'FLOAT',
             'boolean': 'TINYINT(1)',
-            'timestamp': 'TIMESTAMP',  # MySQL的TIMESTAMP类型
+            'timestamp': 'TIMESTAMP',
             'date': 'DATE',
             'binary': 'BLOB'
         }
@@ -151,15 +154,6 @@ class HiveToMySQLSync:
                 continue
 
 if __name__ == "__main__":
-    # spark = SparkSession.builder \
-    #     .appName("EnhancedHiveMySQLSync") \
-    #     .config("spark.sql.warehouse.dir", "/user/hive/warehouse") \
-    #     .config("hive.metastore.uris", "thrift://cdh01:9083") \
-    #     .config("spark.hadoop.fs.defaultFS", "hdfs://cdh01:8020") \
-    #     .config("spark.sql.execution.arrow.enabled", "true") \
-    #     .config("spark.sql.parquet.writeLegacyFormat", "true") \
-    #     .enableHiveSupport() \
-    #     .getOrCreate()
     spark = SparkSession.builder \
         .appName("EnhancedHiveMySQLSync") \
         .config("spark.local.dir", "D:\linshi") \
@@ -176,9 +170,9 @@ if __name__ == "__main__":
         'port': 3306,
         'user': 'root',
         'password': 'root',
-        'database': 'tms_ads'
+        'database': 'gmall_08_ads'
     }
 
-    syncer = HiveToMySQLSync(spark, "tms_ads", config)
+    syncer = HiveToMySQLSync(spark, "gmall_08", config)
     syncer.run_sync()
     spark.stop()

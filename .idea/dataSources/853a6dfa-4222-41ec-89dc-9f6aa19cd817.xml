@@ -1299,1148 +1299,2055 @@
     <schema id="264" parent="1" name="gmall_08">
       <Location>hdfs://cdh01:8020/user/hive/warehouse/gmall_08.db</Location>
     </schema>
-    <schema id="265" parent="1" name="tms">
+    <schema id="265" parent="1" name="gmall_09">
+      <Location>hdfs://cdh01:8020/user/hive/warehouse/gmall_09.db</Location>
+    </schema>
+    <schema id="266" parent="1" name="tms">
       <Location>hdfs://cdh01:8020/user/hive/warehouse/tms.db</Location>
     </schema>
-    <schema id="266" parent="1" name="tms01">
+    <schema id="267" parent="1" name="tms01">
       <Location>hdfs://cdh01:8020/user/hive/warehouse/tms01.db</Location>
     </schema>
-    <schema id="267" parent="1" name="tms_ads">
+    <schema id="268" parent="1" name="tms_ads">
       <Location>hdfs://cdh01:8020/user/hive/warehouse/tms_ads.db</Location>
     </schema>
-    <schema id="268" parent="1" name="tms_dim">
+    <schema id="269" parent="1" name="tms_dim">
       <Location>hdfs://cdh01:8020/user/hive/warehouse/tms_dim.db</Location>
     </schema>
-    <schema id="269" parent="1" name="tms_dwd">
+    <schema id="270" parent="1" name="tms_dwd">
       <Location>hdfs://cdh01:8020/user/hive/warehouse/tms_dwd.db</Location>
     </schema>
-    <schema id="270" parent="1" name="tms_dws">
+    <schema id="271" parent="1" name="tms_dws">
       <Location>hdfs://cdh01:8020/user/hive/warehouse/tms_dws.db</Location>
     </schema>
-    <schema id="271" parent="1" name="weekexec3">
+    <schema id="272" parent="1" name="weekexec3">
       <Location>hdfs://cdh01:8020/user/hive/warehouse/weekexec3.db</Location>
     </schema>
-    <table id="272" parent="264" name="ads_cs_offer_activity_effect">
+    <table id="273" parent="264" name="ads_cs_offer_activity_effect">
       <Comment>?????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="273" parent="264" name="ads_cs_offer_overview">
+    <table id="274" parent="264" name="ads_cs_offer_overview">
       <Comment>?????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="274" parent="264" name="ads_cs_offer_send_details">
+    <table id="275" parent="264" name="ads_cs_offer_send_details">
       <Comment>?????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="275" parent="264" name="ads_cs_offer_trend_analysis">
+    <table id="276" parent="264" name="ads_cs_offer_trend_analysis">
       <Comment>?????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="276" parent="264" name="ads_cs_service_performance">
+    <table id="277" parent="264" name="ads_cs_service_performance">
       <Comment>?????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="277" parent="264" name="dwd_cs_offer_activity_detail">
+    <table id="278" parent="264" name="dwd_cs_offer_activity_detail">
       <Comment>???????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="278" parent="264" name="dwd_cs_offer_redemption_detail">
+    <table id="279" parent="264" name="dwd_cs_offer_redemption_detail">
       <Comment>???????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="279" parent="264" name="dwd_cs_offer_send_detail">
+    <table id="280" parent="264" name="dwd_cs_offer_send_detail">
       <Comment>???????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="280" parent="264" name="dwd_cs_service_performance_daily">
+    <table id="281" parent="264" name="dwd_cs_service_performance_daily">
       <Comment>????????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="281" parent="264" name="dws_cs_offer_activity_stats">
+    <table id="282" parent="264" name="dws_cs_offer_activity_stats">
       <Comment>????????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="282" parent="264" name="dws_cs_offer_product_stats">
+    <table id="283" parent="264" name="dws_cs_offer_product_stats">
       <Comment>????????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="283" parent="264" name="dws_cs_offer_time_analysis">
+    <table id="284" parent="264" name="dws_cs_offer_time_analysis">
       <Comment>????????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="284" parent="264" name="dws_cs_service_performance_wide">
+    <table id="285" parent="264" name="dws_cs_service_performance_wide">
       <Comment>??????</Comment>
       <Temporary>1</Temporary>
     </table>
-    <table id="285" parent="264" name="ods_cs_offer_redemption_records">
+    <table id="286" parent="264" name="ods_cs_offer_redemption_records">
       <Temporary>1</Temporary>
     </table>
-    <table id="286" parent="264" name="ods_cs_offer_send_records">
+    <table id="287" parent="264" name="ods_cs_offer_send_records">
       <Temporary>1</Temporary>
     </table>
-    <table id="287" parent="264" name="ods_cs_special_offer_activity">
+    <table id="288" parent="264" name="ods_cs_special_offer_activity">
       <Temporary>1</Temporary>
     </table>
-    <table id="288" parent="264" name="ods_cs_special_offer_products">
+    <table id="289" parent="264" name="ods_cs_special_offer_products">
       <Temporary>1</Temporary>
     </table>
-    <table id="289" parent="264" name="ods_cs_special_offer_skus">
+    <table id="290" parent="264" name="ods_cs_special_offer_skus">
       <Temporary>1</Temporary>
     </table>
-    <table id="290" parent="264" name="ods_customer_service_info">
+    <table id="291" parent="264" name="ods_customer_service_info">
       <Temporary>1</Temporary>
     </table>
-    <column id="291" parent="272" name="activity_id">
+    <table id="292" parent="265" name="ads_page_visit_rank">
+      <Comment>???????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="293" parent="265" name="ads_pc_entry_stats">
+      <Comment>PC??????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="294" parent="265" name="ads_realtime_path_monitor">
+      <Comment>???????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="295" parent="265" name="ads_shop_path_analysis">
+      <Comment>???????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="296" parent="265" name="ads_user_segment">
+      <Comment>???????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="297" parent="265" name="ads_wireless_entry_stats">
+      <Comment>?????????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="298" parent="265" name="dwd_page_visit_detail">
+      <Comment>????????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="299" parent="265" name="dwd_user_session">
+      <Comment>?????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="300" parent="265" name="dws_page_path_flow">
+      <Comment>???????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="301" parent="265" name="dws_page_visit_stats">
+      <Comment>???????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="302" parent="265" name="dws_traffic_entry_stats">
+      <Comment>???????</Comment>
+      <Temporary>1</Temporary>
+    </table>
+    <table id="303" parent="265" name="ods_marketing_activity">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="304" parent="265" name="ods_order_info">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="305" parent="265" name="ods_page_relationship">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="306" parent="265" name="ods_page_visit_log">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="307" parent="265" name="ods_product_info">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="308" parent="265" name="ods_shop_page_info">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="309" parent="265" name="ods_traffic_source">
+      <Temporary>1</Temporary>
+    </table>
+    <table id="310" parent="265" name="ods_user_info">
+      <Temporary>1</Temporary>
+    </table>
+    <column id="311" parent="273" name="activity_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="292" parent="272" name="activity_name">
+    <column id="312" parent="273" name="activity_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="293" parent="272" name="status">
+    <column id="313" parent="273" name="status">
       <Comment>??</Comment>
       <DataType>int|4s</DataType>
       <Position>3</Position>
     </column>
-    <column id="294" parent="272" name="start_date">
+    <column id="314" parent="273" name="start_date">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>4</Position>
     </column>
-    <column id="295" parent="272" name="end_date">
+    <column id="315" parent="273" name="end_date">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>5</Position>
     </column>
-    <column id="296" parent="272" name="send_count">
+    <column id="316" parent="273" name="send_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>6</Position>
     </column>
-    <column id="297" parent="272" name="redemption_count">
+    <column id="317" parent="273" name="redemption_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>7</Position>
     </column>
-    <column id="298" parent="272" name="redemption_rate">
+    <column id="318" parent="273" name="redemption_rate">
       <Comment>???</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>8</Position>
     </column>
-    <column id="299" parent="272" name="total_sales">
+    <column id="319" parent="273" name="total_sales">
       <Comment>????</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>9</Position>
     </column>
-    <column id="300" parent="272" name="sales_increment">
+    <column id="320" parent="273" name="sales_increment">
       <Comment>?????</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>10</Position>
     </column>
-    <column id="301" parent="272" name="avg_redemption_time">
+    <column id="321" parent="273" name="avg_redemption_time">
       <Comment>??????(??)</Comment>
       <DataType>decimal(8,2)|3s</DataType>
       <Position>11</Position>
     </column>
-    <column id="302" parent="272" name="top_product_id">
+    <column id="322" parent="273" name="top_product_id">
       <Comment>??????ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>12</Position>
     </column>
-    <column id="303" parent="272" name="top_product_name">
+    <column id="323" parent="273" name="top_product_name">
       <Comment>????????</Comment>
       <DataType>string|12s</DataType>
       <Position>13</Position>
     </column>
-    <column id="304" parent="272" name="dt">
+    <column id="324" parent="273" name="dt">
       <DataType>string|12s</DataType>
       <Position>14</Position>
     </column>
-    <column id="305" parent="273" name="stat_date">
+    <column id="325" parent="274" name="stat_date">
       <Comment>????(yyyy-MM-dd)</Comment>
       <DataType>string|12s</DataType>
       <Position>1</Position>
     </column>
-    <column id="306" parent="273" name="time_range">
+    <column id="326" parent="274" name="time_range">
       <Comment>????(1/7/30)</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="307" parent="273" name="total_send_count">
+    <column id="327" parent="274" name="total_send_count">
       <Comment>?????</Comment>
       <DataType>int|4s</DataType>
       <Position>3</Position>
     </column>
-    <column id="308" parent="273" name="total_redemption_count">
+    <column id="328" parent="274" name="total_redemption_count">
       <Comment>?????</Comment>
       <DataType>int|4s</DataType>
       <Position>4</Position>
     </column>
-    <column id="309" parent="273" name="overall_redemption_rate">
+    <column id="329" parent="274" name="overall_redemption_rate">
       <Comment>?????</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>5</Position>
     </column>
-    <column id="310" parent="273" name="total_sales">
+    <column id="330" parent="274" name="total_sales">
       <Comment>????</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>6</Position>
     </column>
-    <column id="311" parent="273" name="sales_increment_rate">
+    <column id="331" parent="274" name="sales_increment_rate">
       <Comment>?????</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>7</Position>
     </column>
-    <column id="312" parent="273" name="avg_offer_amount">
+    <column id="332" parent="274" name="avg_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>8</Position>
     </column>
-    <column id="313" parent="273" name="active_cs_count">
+    <column id="333" parent="274" name="active_cs_count">
       <Comment>?????</Comment>
       <DataType>int|4s</DataType>
       <Position>9</Position>
     </column>
-    <column id="314" parent="273" name="active_customer_count">
+    <column id="334" parent="274" name="active_customer_count">
       <Comment>?????</Comment>
       <DataType>int|4s</DataType>
       <Position>10</Position>
     </column>
-    <column id="315" parent="273" name="dt">
+    <column id="335" parent="274" name="dt">
       <DataType>string|12s</DataType>
       <Position>11</Position>
     </column>
-    <column id="316" parent="274" name="record_id">
+    <column id="336" parent="275" name="record_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="317" parent="274" name="send_time">
+    <column id="337" parent="275" name="send_time">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="318" parent="274" name="cs_name">
+    <column id="338" parent="275" name="cs_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>3</Position>
     </column>
-    <column id="319" parent="274" name="customer_id">
+    <column id="339" parent="275" name="customer_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>4</Position>
     </column>
-    <column id="320" parent="274" name="product_name">
+    <column id="340" parent="275" name="product_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>5</Position>
     </column>
-    <column id="321" parent="274" name="sku_name">
+    <column id="341" parent="275" name="sku_name">
       <Comment>SKU??</Comment>
       <DataType>string|12s</DataType>
       <Position>6</Position>
     </column>
-    <column id="322" parent="274" name="offer_amount">
+    <column id="342" parent="275" name="offer_amount">
       <Comment>????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>7</Position>
     </column>
-    <column id="323" parent="274" name="status">
+    <column id="343" parent="275" name="status">
       <Comment>??</Comment>
       <DataType>string|12s</DataType>
       <Position>8</Position>
     </column>
-    <column id="324" parent="274" name="redemption_time">
+    <column id="344" parent="275" name="redemption_time">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>9</Position>
     </column>
-    <column id="325" parent="274" name="order_amount">
+    <column id="345" parent="275" name="order_amount">
       <Comment>????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>10</Position>
     </column>
-    <column id="326" parent="274" name="activity_name">
+    <column id="346" parent="275" name="activity_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>11</Position>
     </column>
-    <column id="327" parent="274" name="expire_time">
+    <column id="347" parent="275" name="expire_time">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>12</Position>
     </column>
-    <column id="328" parent="274" name="remaining_time">
+    <column id="348" parent="275" name="remaining_time">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>13</Position>
     </column>
-    <column id="329" parent="274" name="dt">
+    <column id="349" parent="275" name="dt">
       <DataType>string|12s</DataType>
       <Position>14</Position>
     </column>
-    <column id="330" parent="275" name="time_dimension">
+    <column id="350" parent="276" name="time_dimension">
       <Comment>????(day/week/month)</Comment>
       <DataType>string|12s</DataType>
       <Position>1</Position>
     </column>
-    <column id="331" parent="275" name="time_value">
+    <column id="351" parent="276" name="time_value">
       <Comment>???</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="332" parent="275" name="send_count">
+    <column id="352" parent="276" name="send_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>3</Position>
     </column>
-    <column id="333" parent="275" name="redemption_count">
+    <column id="353" parent="276" name="redemption_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>4</Position>
     </column>
-    <column id="334" parent="275" name="redemption_rate">
+    <column id="354" parent="276" name="redemption_rate">
       <Comment>???</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>5</Position>
     </column>
-    <column id="335" parent="275" name="sales_amount">
+    <column id="355" parent="276" name="sales_amount">
       <Comment>???</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>6</Position>
     </column>
-    <column id="336" parent="275" name="avg_offer_amount">
+    <column id="356" parent="276" name="avg_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>7</Position>
     </column>
-    <column id="337" parent="275" name="peak_hour">
+    <column id="357" parent="276" name="peak_hour">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>8</Position>
     </column>
-    <column id="338" parent="275" name="dt">
+    <column id="358" parent="276" name="dt">
       <DataType>string|12s</DataType>
       <Position>9</Position>
     </column>
-    <column id="339" parent="276" name="cs_id">
+    <column id="359" parent="277" name="cs_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="340" parent="276" name="cs_name">
+    <column id="360" parent="277" name="cs_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="341" parent="276" name="dept_name">
+    <column id="361" parent="277" name="dept_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>3</Position>
     </column>
-    <column id="342" parent="276" name="stat_date">
+    <column id="362" parent="277" name="stat_date">
       <Comment>????(yyyy-MM-dd)</Comment>
       <DataType>string|12s</DataType>
       <Position>4</Position>
     </column>
-    <column id="343" parent="276" name="send_count">
+    <column id="363" parent="277" name="send_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>5</Position>
     </column>
-    <column id="344" parent="276" name="redemption_count">
+    <column id="364" parent="277" name="redemption_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>6</Position>
     </column>
-    <column id="345" parent="276" name="redemption_rate">
+    <column id="365" parent="277" name="redemption_rate">
       <Comment>???</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>7</Position>
     </column>
-    <column id="346" parent="276" name="total_sales">
+    <column id="366" parent="277" name="total_sales">
       <Comment>????</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>8</Position>
     </column>
-    <column id="347" parent="276" name="rank">
+    <column id="367" parent="277" name="rank">
       <Comment>??</Comment>
       <DataType>int|4s</DataType>
       <Position>9</Position>
     </column>
-    <column id="348" parent="276" name="rank_change">
+    <column id="368" parent="277" name="rank_change">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>10</Position>
     </column>
-    <column id="349" parent="276" name="avg_offer_amount">
+    <column id="369" parent="277" name="avg_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>11</Position>
     </column>
-    <column id="350" parent="276" name="avg_redemption_time">
+    <column id="370" parent="277" name="avg_redemption_time">
       <Comment>??????(??)</Comment>
       <DataType>decimal(8,2)|3s</DataType>
       <Position>12</Position>
     </column>
-    <column id="351" parent="276" name="dt">
+    <column id="371" parent="277" name="dt">
       <DataType>string|12s</DataType>
       <Position>13</Position>
     </column>
-    <column id="352" parent="277" name="activity_id">
+    <column id="372" parent="278" name="activity_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="353" parent="277" name="activity_name">
+    <column id="373" parent="278" name="activity_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="354" parent="277" name="activity_level">
+    <column id="374" parent="278" name="activity_level">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>3</Position>
     </column>
-    <column id="355" parent="277" name="offer_type">
+    <column id="375" parent="278" name="offer_type">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>4</Position>
     </column>
-    <column id="356" parent="277" name="start_time">
+    <column id="376" parent="278" name="start_time">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>5</Position>
     </column>
-    <column id="357" parent="277" name="end_time">
+    <column id="377" parent="278" name="end_time">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>6</Position>
     </column>
-    <column id="358" parent="277" name="max_custom_amount">
+    <column id="378" parent="278" name="max_custom_amount">
       <Comment>???????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>7</Position>
     </column>
-    <column id="359" parent="277" name="status">
+    <column id="379" parent="278" name="status">
       <Comment>??</Comment>
       <DataType>int|4s</DataType>
       <Position>8</Position>
     </column>
-    <column id="360" parent="277" name="shop_id">
+    <column id="380" parent="278" name="shop_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>9</Position>
     </column>
-    <column id="361" parent="277" name="create_time">
+    <column id="381" parent="278" name="create_time">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>10</Position>
     </column>
-    <column id="362" parent="277" name="update_time">
+    <column id="382" parent="278" name="update_time">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>11</Position>
     </column>
-    <column id="363" parent="277" name="activity_duration">
+    <column id="383" parent="278" name="activity_duration">
       <Comment>??????(??)</Comment>
       <DataType>int|4s</DataType>
       <Position>12</Position>
     </column>
-    <column id="364" parent="277" name="is_valid">
+    <column id="384" parent="278" name="is_valid">
       <Comment>??????(1:?,0:?)</Comment>
       <DataType>tinyint|-6s</DataType>
       <Position>13</Position>
     </column>
-    <column id="365" parent="277" name="is_test_data">
+    <column id="385" parent="278" name="is_test_data">
       <Comment>??????(1:?,0:?)</Comment>
       <DataType>tinyint|-6s</DataType>
       <Position>14</Position>
     </column>
-    <column id="366" parent="277" name="dt">
+    <column id="386" parent="278" name="dt">
       <DataType>string|12s</DataType>
       <Position>15</Position>
     </column>
-    <column id="367" parent="278" name="redemption_id">
+    <column id="387" parent="279" name="redemption_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="368" parent="278" name="record_id">
+    <column id="388" parent="279" name="record_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>2</Position>
     </column>
-    <column id="369" parent="278" name="order_id">
+    <column id="389" parent="279" name="order_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>3</Position>
     </column>
-    <column id="370" parent="278" name="redemption_time">
+    <column id="390" parent="279" name="redemption_time">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>4</Position>
     </column>
-    <column id="371" parent="278" name="actual_offer_amount">
+    <column id="391" parent="279" name="actual_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>5</Position>
     </column>
-    <column id="372" parent="278" name="payment_amount">
+    <column id="392" parent="279" name="payment_amount">
       <Comment>????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>6</Position>
-    </column>
-    <column id="373" parent="278" name="date_str">
-      <Comment>????(yyyy-MM-dd)</Comment>
-      <DataType>string|12s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="374" parent="278" name="redemption_date">
-      <Comment>????(yyyy-MM-dd)</Comment>
-      <DataType>string|12s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="375" parent="278" name="redemption_hour">
-      <Comment>????(HH)</Comment>
-      <DataType>string|12s</DataType>
-      <Position>9</Position>
-    </column>
-    <column id="376" parent="278" name="offer_rate">
-      <Comment>???(actual_offer_amount/payment_amount)</Comment>
-      <DataType>decimal(5,2)|3s</DataType>
-      <Position>10</Position>
-    </column>
-    <column id="377" parent="278" name="original_amount">
-      <Comment>?????(payment_amount+actual_offer_amount)</Comment>
-      <DataType>decimal(10,2)|3s</DataType>
-      <Position>11</Position>
-    </column>
-    <column id="378" parent="278" name="dt">
-      <DataType>string|12s</DataType>
-      <Position>12</Position>
-    </column>
-    <column id="379" parent="279" name="record_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint|-5s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="380" parent="279" name="activity_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint|-5s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="381" parent="279" name="product_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint|-5s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="382" parent="279" name="sku_id">
-      <Comment>SKU ID</Comment>
-      <DataType>bigint|-5s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="383" parent="279" name="customer_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint|-5s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="384" parent="279" name="cs_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint|-5s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="385" parent="279" name="offer_amount">
-      <Comment>????</Comment>
-      <DataType>decimal(10,2)|3s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="386" parent="279" name="valid_hours">
-      <Comment>?????</Comment>
-      <DataType>int|4s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="387" parent="279" name="send_time">
-      <Comment>????</Comment>
-      <DataType>string|12s</DataType>
-      <Position>9</Position>
-    </column>
-    <column id="388" parent="279" name="expire_time">
-      <Comment>????</Comment>
-      <DataType>string|12s</DataType>
-      <Position>10</Position>
-    </column>
-    <column id="389" parent="279" name="status">
-      <Comment>??</Comment>
-      <DataType>int|4s</DataType>
-      <Position>11</Position>
-    </column>
-    <column id="390" parent="279" name="remark">
-      <Comment>??</Comment>
-      <DataType>string|12s</DataType>
-      <Position>12</Position>
-    </column>
-    <column id="391" parent="279" name="activity_name">
-      <Comment>????</Comment>
-      <DataType>string|12s</DataType>
-      <Position>13</Position>
-    </column>
-    <column id="392" parent="279" name="offer_type">
-      <Comment>????</Comment>
-      <DataType>int|4s</DataType>
-      <Position>14</Position>
     </column>
     <column id="393" parent="279" name="date_str">
       <Comment>????(yyyy-MM-dd)</Comment>
       <DataType>string|12s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="394" parent="279" name="redemption_date">
+      <Comment>????(yyyy-MM-dd)</Comment>
+      <DataType>string|12s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="395" parent="279" name="redemption_hour">
+      <Comment>????(HH)</Comment>
+      <DataType>string|12s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="396" parent="279" name="offer_rate">
+      <Comment>???(actual_offer_amount/payment_amount)</Comment>
+      <DataType>decimal(5,2)|3s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="397" parent="279" name="original_amount">
+      <Comment>?????(payment_amount+actual_offer_amount)</Comment>
+      <DataType>decimal(10,2)|3s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="398" parent="279" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="399" parent="280" name="record_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="400" parent="280" name="activity_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="401" parent="280" name="product_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="402" parent="280" name="sku_id">
+      <Comment>SKU ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="403" parent="280" name="customer_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="404" parent="280" name="cs_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="405" parent="280" name="offer_amount">
+      <Comment>????</Comment>
+      <DataType>decimal(10,2)|3s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="406" parent="280" name="valid_hours">
+      <Comment>?????</Comment>
+      <DataType>int|4s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="407" parent="280" name="send_time">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="408" parent="280" name="expire_time">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="409" parent="280" name="status">
+      <Comment>??</Comment>
+      <DataType>int|4s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="410" parent="280" name="remark">
+      <Comment>??</Comment>
+      <DataType>string|12s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="411" parent="280" name="activity_name">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="412" parent="280" name="offer_type">
+      <Comment>????</Comment>
+      <DataType>int|4s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="413" parent="280" name="date_str">
+      <Comment>????(yyyy-MM-dd)</Comment>
+      <DataType>string|12s</DataType>
       <Position>15</Position>
     </column>
-    <column id="394" parent="279" name="hour_str">
+    <column id="414" parent="280" name="hour_str">
       <Comment>??(HH)</Comment>
       <DataType>string|12s</DataType>
       <Position>16</Position>
     </column>
-    <column id="395" parent="279" name="is_used">
+    <column id="415" parent="280" name="is_used">
       <Comment>?????(1:?,0:?)</Comment>
       <DataType>tinyint|-6s</DataType>
       <Position>17</Position>
     </column>
-    <column id="396" parent="279" name="is_expired">
+    <column id="416" parent="280" name="is_expired">
       <Comment>?????(1:?,0:?)</Comment>
       <DataType>tinyint|-6s</DataType>
       <Position>18</Position>
     </column>
-    <column id="397" parent="279" name="remaining_time">
+    <column id="417" parent="280" name="remaining_time">
       <Comment>??????(??)</Comment>
       <DataType>int|4s</DataType>
       <Position>19</Position>
     </column>
-    <column id="398" parent="279" name="dt">
+    <column id="418" parent="280" name="dt">
       <DataType>string|12s</DataType>
       <Position>20</Position>
     </column>
-    <column id="399" parent="280" name="cs_id">
+    <column id="419" parent="281" name="cs_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="400" parent="280" name="stat_date">
+    <column id="420" parent="281" name="stat_date">
       <Comment>????(yyyy-MM-dd)</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="401" parent="280" name="send_count">
+    <column id="421" parent="281" name="send_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>3</Position>
     </column>
-    <column id="402" parent="280" name="redemption_count">
+    <column id="422" parent="281" name="redemption_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>4</Position>
     </column>
-    <column id="403" parent="280" name="total_offer_amount">
+    <column id="423" parent="281" name="total_offer_amount">
       <Comment>?????</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>5</Position>
     </column>
-    <column id="404" parent="280" name="total_sales">
+    <column id="424" parent="281" name="total_sales">
       <Comment>????</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>6</Position>
     </column>
-    <column id="405" parent="280" name="avg_offer_amount">
+    <column id="425" parent="281" name="avg_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>7</Position>
     </column>
-    <column id="406" parent="280" name="avg_order_amount">
+    <column id="426" parent="281" name="avg_order_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>8</Position>
     </column>
-    <column id="407" parent="280" name="redemption_rate">
+    <column id="427" parent="281" name="redemption_rate">
       <Comment>???</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>9</Position>
     </column>
-    <column id="408" parent="280" name="dt">
+    <column id="428" parent="281" name="dt">
       <DataType>string|12s</DataType>
       <Position>10</Position>
     </column>
-    <column id="409" parent="281" name="activity_id">
+    <column id="429" parent="282" name="activity_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="410" parent="281" name="activity_name">
+    <column id="430" parent="282" name="activity_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="411" parent="281" name="start_date">
+    <column id="431" parent="282" name="start_date">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>3</Position>
     </column>
-    <column id="412" parent="281" name="end_date">
+    <column id="432" parent="282" name="end_date">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>4</Position>
     </column>
-    <column id="413" parent="281" name="status">
+    <column id="433" parent="282" name="status">
       <Comment>??</Comment>
       <DataType>int|4s</DataType>
       <Position>5</Position>
     </column>
-    <column id="414" parent="281" name="total_send_count">
+    <column id="434" parent="282" name="total_send_count">
       <Comment>?????</Comment>
       <DataType>int|4s</DataType>
       <Position>6</Position>
     </column>
-    <column id="415" parent="281" name="total_redemption_count">
+    <column id="435" parent="282" name="total_redemption_count">
       <Comment>?????</Comment>
       <DataType>int|4s</DataType>
       <Position>7</Position>
     </column>
-    <column id="416" parent="281" name="redemption_rate">
+    <column id="436" parent="282" name="redemption_rate">
       <Comment>???</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>8</Position>
     </column>
-    <column id="417" parent="281" name="total_sales">
+    <column id="437" parent="282" name="total_sales">
       <Comment>????</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>9</Position>
     </column>
-    <column id="418" parent="281" name="avg_offer_amount">
+    <column id="438" parent="282" name="avg_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>10</Position>
     </column>
-    <column id="419" parent="281" name="max_offer_amount">
+    <column id="439" parent="282" name="max_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>11</Position>
     </column>
-    <column id="420" parent="281" name="min_offer_amount">
+    <column id="440" parent="282" name="min_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>12</Position>
     </column>
-    <column id="421" parent="281" name="total_customers">
+    <column id="441" parent="282" name="total_customers">
       <Comment>?????</Comment>
       <DataType>int|4s</DataType>
       <Position>13</Position>
     </column>
-    <column id="422" parent="281" name="avg_redemption_time">
+    <column id="442" parent="282" name="avg_redemption_time">
       <Comment>??????(??)</Comment>
       <DataType>decimal(8,2)|3s</DataType>
       <Position>14</Position>
     </column>
-    <column id="423" parent="281" name="dt">
+    <column id="443" parent="282" name="dt">
       <DataType>string|12s</DataType>
       <Position>15</Position>
     </column>
-    <column id="424" parent="282" name="product_id">
+    <column id="444" parent="283" name="product_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="425" parent="282" name="product_name">
+    <column id="445" parent="283" name="product_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="426" parent="282" name="stat_date">
+    <column id="446" parent="283" name="stat_date">
       <Comment>????(yyyy-MM-dd)</Comment>
       <DataType>string|12s</DataType>
       <Position>3</Position>
     </column>
-    <column id="427" parent="282" name="send_count">
+    <column id="447" parent="283" name="send_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>4</Position>
     </column>
-    <column id="428" parent="282" name="redemption_count">
+    <column id="448" parent="283" name="redemption_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>5</Position>
     </column>
-    <column id="429" parent="282" name="redemption_rate">
+    <column id="449" parent="283" name="redemption_rate">
       <Comment>???</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>6</Position>
     </column>
-    <column id="430" parent="282" name="total_sales">
+    <column id="450" parent="283" name="total_sales">
       <Comment>????</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>7</Position>
     </column>
-    <column id="431" parent="282" name="avg_offer_rate">
+    <column id="451" parent="283" name="avg_offer_rate">
       <Comment>?????</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>8</Position>
     </column>
-    <column id="432" parent="282" name="max_offer_amount">
+    <column id="452" parent="283" name="max_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>9</Position>
     </column>
-    <column id="433" parent="282" name="min_offer_amount">
+    <column id="453" parent="283" name="min_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>10</Position>
     </column>
-    <column id="434" parent="282" name="avg_redemption_time">
+    <column id="454" parent="283" name="avg_redemption_time">
       <Comment>??????(??)</Comment>
       <DataType>decimal(8,2)|3s</DataType>
       <Position>11</Position>
     </column>
-    <column id="435" parent="282" name="dt">
+    <column id="455" parent="283" name="dt">
       <DataType>string|12s</DataType>
       <Position>12</Position>
     </column>
-    <column id="436" parent="283" name="time_type">
+    <column id="456" parent="284" name="time_type">
       <Comment>????(day/week/month)</Comment>
       <DataType>string|12s</DataType>
       <Position>1</Position>
     </column>
-    <column id="437" parent="283" name="time_value">
+    <column id="457" parent="284" name="time_value">
       <Comment>???</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="438" parent="283" name="send_count">
+    <column id="458" parent="284" name="send_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>3</Position>
     </column>
-    <column id="439" parent="283" name="redemption_count">
+    <column id="459" parent="284" name="redemption_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>4</Position>
     </column>
-    <column id="440" parent="283" name="redemption_rate">
+    <column id="460" parent="284" name="redemption_rate">
       <Comment>???</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>5</Position>
     </column>
-    <column id="441" parent="283" name="avg_process_time">
+    <column id="461" parent="284" name="avg_process_time">
       <Comment>??????</Comment>
       <DataType>decimal(8,2)|3s</DataType>
       <Position>6</Position>
     </column>
-    <column id="442" parent="283" name="avg_offer_amount">
+    <column id="462" parent="284" name="avg_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>7</Position>
     </column>
-    <column id="443" parent="283" name="peak_hour">
+    <column id="463" parent="284" name="peak_hour">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>8</Position>
     </column>
-    <column id="444" parent="283" name="total_sales">
+    <column id="464" parent="284" name="total_sales">
       <Comment>????</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>9</Position>
     </column>
-    <column id="445" parent="283" name="dt">
+    <column id="465" parent="284" name="dt">
       <DataType>string|12s</DataType>
       <Position>10</Position>
     </column>
-    <column id="446" parent="284" name="cs_id">
+    <column id="466" parent="285" name="cs_id">
       <Comment>??ID</Comment>
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="447" parent="284" name="cs_name">
+    <column id="467" parent="285" name="cs_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="448" parent="284" name="dept_name">
+    <column id="468" parent="285" name="dept_name">
       <Comment>????</Comment>
       <DataType>string|12s</DataType>
       <Position>3</Position>
     </column>
-    <column id="449" parent="284" name="stat_date">
+    <column id="469" parent="285" name="stat_date">
       <Comment>????(yyyy-MM-dd)</Comment>
       <DataType>string|12s</DataType>
       <Position>4</Position>
     </column>
-    <column id="450" parent="284" name="stat_week">
+    <column id="470" parent="285" name="stat_week">
       <Comment>???(yyyy-ww)</Comment>
       <DataType>string|12s</DataType>
       <Position>5</Position>
     </column>
-    <column id="451" parent="284" name="stat_month">
+    <column id="471" parent="285" name="stat_month">
       <Comment>???(yyyy-MM)</Comment>
       <DataType>string|12s</DataType>
       <Position>6</Position>
     </column>
-    <column id="452" parent="284" name="send_count">
+    <column id="472" parent="285" name="send_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>7</Position>
     </column>
-    <column id="453" parent="284" name="redemption_count">
+    <column id="473" parent="285" name="redemption_count">
       <Comment>????</Comment>
       <DataType>int|4s</DataType>
       <Position>8</Position>
     </column>
-    <column id="454" parent="284" name="redemption_rate">
+    <column id="474" parent="285" name="redemption_rate">
       <Comment>???</Comment>
       <DataType>decimal(5,2)|3s</DataType>
       <Position>9</Position>
     </column>
-    <column id="455" parent="284" name="total_sales">
+    <column id="475" parent="285" name="total_sales">
       <Comment>????</Comment>
       <DataType>decimal(12,2)|3s</DataType>
       <Position>10</Position>
     </column>
-    <column id="456" parent="284" name="rank_in_dept">
+    <column id="476" parent="285" name="rank_in_dept">
       <Comment>?????</Comment>
       <DataType>int|4s</DataType>
       <Position>11</Position>
     </column>
-    <column id="457" parent="284" name="avg_offer_amount">
+    <column id="477" parent="285" name="avg_offer_amount">
       <Comment>??????</Comment>
       <DataType>decimal(10,2)|3s</DataType>
       <Position>12</Position>
     </column>
-    <column id="458" parent="284" name="avg_redemption_time">
+    <column id="478" parent="285" name="avg_redemption_time">
       <Comment>??????(??)</Comment>
       <DataType>decimal(8,2)|3s</DataType>
       <Position>13</Position>
     </column>
-    <column id="459" parent="284" name="dt">
+    <column id="479" parent="285" name="dt">
       <DataType>string|12s</DataType>
       <Position>14</Position>
     </column>
-    <column id="460" parent="285" name="redemption_id">
+    <column id="480" parent="286" name="redemption_id">
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="461" parent="285" name="record_id">
+    <column id="481" parent="286" name="record_id">
       <DataType>bigint|-5s</DataType>
       <Position>2</Position>
     </column>
-    <column id="462" parent="285" name="order_id">
+    <column id="482" parent="286" name="order_id">
       <DataType>bigint|-5s</DataType>
       <Position>3</Position>
     </column>
-    <column id="463" parent="285" name="redemption_time">
+    <column id="483" parent="286" name="redemption_time">
       <DataType>timestamp|93s</DataType>
       <Position>4</Position>
     </column>
-    <column id="464" parent="285" name="actual_offer_amount">
+    <column id="484" parent="286" name="actual_offer_amount">
       <DataType>decimal(10,2)|3s</DataType>
       <Position>5</Position>
     </column>
-    <column id="465" parent="285" name="payment_amount">
+    <column id="485" parent="286" name="payment_amount">
       <DataType>decimal(10,2)|3s</DataType>
       <Position>6</Position>
     </column>
-    <column id="466" parent="285" name="dt">
+    <column id="486" parent="286" name="dt">
       <DataType>string|12s</DataType>
       <Position>7</Position>
     </column>
-    <column id="467" parent="286" name="record_id">
+    <column id="487" parent="287" name="record_id">
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="468" parent="286" name="activity_id">
+    <column id="488" parent="287" name="activity_id">
       <DataType>bigint|-5s</DataType>
       <Position>2</Position>
     </column>
-    <column id="469" parent="286" name="product_id">
+    <column id="489" parent="287" name="product_id">
       <DataType>bigint|-5s</DataType>
       <Position>3</Position>
     </column>
-    <column id="470" parent="286" name="sku_id">
+    <column id="490" parent="287" name="sku_id">
       <DataType>bigint|-5s</DataType>
       <Position>4</Position>
     </column>
-    <column id="471" parent="286" name="customer_id">
+    <column id="491" parent="287" name="customer_id">
       <DataType>bigint|-5s</DataType>
       <Position>5</Position>
     </column>
-    <column id="472" parent="286" name="cs_id">
+    <column id="492" parent="287" name="cs_id">
       <DataType>bigint|-5s</DataType>
       <Position>6</Position>
     </column>
-    <column id="473" parent="286" name="offer_amount">
+    <column id="493" parent="287" name="offer_amount">
       <DataType>decimal(10,2)|3s</DataType>
       <Position>7</Position>
     </column>
-    <column id="474" parent="286" name="valid_hours">
+    <column id="494" parent="287" name="valid_hours">
       <DataType>int|4s</DataType>
       <Position>8</Position>
     </column>
-    <column id="475" parent="286" name="send_time">
+    <column id="495" parent="287" name="send_time">
       <DataType>timestamp|93s</DataType>
       <Position>9</Position>
     </column>
-    <column id="476" parent="286" name="expire_time">
+    <column id="496" parent="287" name="expire_time">
       <DataType>timestamp|93s</DataType>
       <Position>10</Position>
     </column>
-    <column id="477" parent="286" name="status">
+    <column id="497" parent="287" name="status">
       <DataType>int|4s</DataType>
       <Position>11</Position>
     </column>
-    <column id="478" parent="286" name="remark">
+    <column id="498" parent="287" name="remark">
       <DataType>string|12s</DataType>
       <Position>12</Position>
     </column>
-    <column id="479" parent="286" name="dt">
+    <column id="499" parent="287" name="dt">
       <DataType>string|12s</DataType>
       <Position>13</Position>
     </column>
-    <column id="480" parent="287" name="activity_id">
+    <column id="500" parent="288" name="activity_id">
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="481" parent="287" name="activity_name">
+    <column id="501" parent="288" name="activity_name">
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="482" parent="287" name="activity_level">
+    <column id="502" parent="288" name="activity_level">
       <DataType>int|4s</DataType>
       <Position>3</Position>
     </column>
-    <column id="483" parent="287" name="offer_type">
+    <column id="503" parent="288" name="offer_type">
       <DataType>int|4s</DataType>
       <Position>4</Position>
     </column>
-    <column id="484" parent="287" name="start_time">
+    <column id="504" parent="288" name="start_time">
       <DataType>timestamp|93s</DataType>
       <Position>5</Position>
     </column>
-    <column id="485" parent="287" name="end_time">
+    <column id="505" parent="288" name="end_time">
       <DataType>timestamp|93s</DataType>
       <Position>6</Position>
     </column>
-    <column id="486" parent="287" name="max_custom_amount">
+    <column id="506" parent="288" name="max_custom_amount">
       <DataType>decimal(10,2)|3s</DataType>
       <Position>7</Position>
     </column>
-    <column id="487" parent="287" name="status">
+    <column id="507" parent="288" name="status">
       <DataType>int|4s</DataType>
       <Position>8</Position>
     </column>
-    <column id="488" parent="287" name="shop_id">
+    <column id="508" parent="288" name="shop_id">
       <DataType>bigint|-5s</DataType>
       <Position>9</Position>
     </column>
-    <column id="489" parent="287" name="create_time">
+    <column id="509" parent="288" name="create_time">
       <DataType>timestamp|93s</DataType>
       <Position>10</Position>
     </column>
-    <column id="490" parent="287" name="update_time">
+    <column id="510" parent="288" name="update_time">
       <DataType>timestamp|93s</DataType>
       <Position>11</Position>
     </column>
-    <column id="491" parent="287" name="dt">
+    <column id="511" parent="288" name="dt">
       <DataType>string|12s</DataType>
       <Position>12</Position>
     </column>
-    <column id="492" parent="288" name="id">
+    <column id="512" parent="289" name="id">
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="493" parent="288" name="activity_id">
+    <column id="513" parent="289" name="activity_id">
       <DataType>bigint|-5s</DataType>
       <Position>2</Position>
     </column>
-    <column id="494" parent="288" name="product_id">
+    <column id="514" parent="289" name="product_id">
       <DataType>bigint|-5s</DataType>
       <Position>3</Position>
     </column>
-    <column id="495" parent="288" name="fixed_offer_amount">
+    <column id="515" parent="289" name="fixed_offer_amount">
       <DataType>decimal(10,2)|3s</DataType>
       <Position>4</Position>
     </column>
-    <column id="496" parent="288" name="max_offer_amount">
+    <column id="516" parent="289" name="max_offer_amount">
       <DataType>decimal(10,2)|3s</DataType>
       <Position>5</Position>
     </column>
-    <column id="497" parent="288" name="purchase_limit">
+    <column id="517" parent="289" name="purchase_limit">
       <DataType>int|4s</DataType>
       <Position>6</Position>
     </column>
-    <column id="498" parent="288" name="status">
+    <column id="518" parent="289" name="status">
       <DataType>int|4s</DataType>
       <Position>7</Position>
     </column>
-    <column id="499" parent="288" name="create_time">
+    <column id="519" parent="289" name="create_time">
       <DataType>timestamp|93s</DataType>
       <Position>8</Position>
     </column>
-    <column id="500" parent="288" name="dt">
+    <column id="520" parent="289" name="dt">
       <DataType>string|12s</DataType>
       <Position>9</Position>
     </column>
-    <column id="501" parent="289" name="id">
+    <column id="521" parent="290" name="id">
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="502" parent="289" name="product_id">
+    <column id="522" parent="290" name="product_id">
       <DataType>bigint|-5s</DataType>
       <Position>2</Position>
     </column>
-    <column id="503" parent="289" name="sku_id">
+    <column id="523" parent="290" name="sku_id">
       <DataType>bigint|-5s</DataType>
       <Position>3</Position>
     </column>
-    <column id="504" parent="289" name="fixed_offer_amount">
+    <column id="524" parent="290" name="fixed_offer_amount">
       <DataType>decimal(10,2)|3s</DataType>
       <Position>4</Position>
     </column>
-    <column id="505" parent="289" name="max_offer_amount">
+    <column id="525" parent="290" name="max_offer_amount">
       <DataType>decimal(10,2)|3s</DataType>
       <Position>5</Position>
     </column>
-    <column id="506" parent="289" name="create_time">
+    <column id="526" parent="290" name="create_time">
       <DataType>timestamp|93s</DataType>
       <Position>6</Position>
     </column>
-    <column id="507" parent="289" name="dt">
+    <column id="527" parent="290" name="dt">
       <DataType>string|12s</DataType>
       <Position>7</Position>
     </column>
-    <column id="508" parent="290" name="cs_id">
+    <column id="528" parent="291" name="cs_id">
       <DataType>bigint|-5s</DataType>
       <Position>1</Position>
     </column>
-    <column id="509" parent="290" name="cs_name">
+    <column id="529" parent="291" name="cs_name">
       <DataType>string|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="510" parent="290" name="department">
+    <column id="530" parent="291" name="department">
       <DataType>string|12s</DataType>
       <Position>3</Position>
     </column>
-    <column id="511" parent="290" name="position">
+    <column id="531" parent="291" name="position">
       <DataType>string|12s</DataType>
       <Position>4</Position>
     </column>
-    <column id="512" parent="290" name="hire_date">
+    <column id="532" parent="291" name="hire_date">
       <DataType>date|91s</DataType>
       <Position>5</Position>
     </column>
-    <column id="513" parent="290" name="status">
+    <column id="533" parent="291" name="status">
       <DataType>int|4s</DataType>
       <Position>6</Position>
     </column>
-    <column id="514" parent="290" name="dt">
+    <column id="534" parent="291" name="dt">
       <DataType>string|12s</DataType>
       <Position>7</Position>
+    </column>
+    <column id="535" parent="292" name="stat_date">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="536" parent="292" name="time_period">
+      <Comment>????(day/7d/30d/month)</Comment>
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="537" parent="292" name="page_type">
+      <Comment>????(shop/product/other)</Comment>
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="538" parent="292" name="page_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="539" parent="292" name="page_name">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="540" parent="292" name="visitor_count">
+      <Comment>???</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="541" parent="292" name="visit_count">
+      <Comment>????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="542" parent="292" name="avg_stay_duration">
+      <Comment>??????</Comment>
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="543" parent="292" name="rank">
+      <Comment>??</Comment>
+      <DataType>int|4s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="544" parent="292" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="545" parent="293" name="stat_date">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="546" parent="293" name="source_page_id">
+      <Comment>????ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="547" parent="293" name="source_page_name">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="548" parent="293" name="visitor_count">
+      <Comment>???</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="549" parent="293" name="visitor_ratio">
+      <Comment>????</Comment>
+      <DataType>decimal(18,4)|3s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="550" parent="293" name="rank">
+      <Comment>??</Comment>
+      <DataType>int|4s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="551" parent="293" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="552" parent="294" name="time_window">
+      <Comment>????(5min/30min/1h)</Comment>
+      <DataType>string|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="553" parent="294" name="current_page">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="554" parent="294" name="page_type">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="555" parent="294" name="active_users">
+      <Comment>?????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="556" parent="294" name="avg_stay_duration">
+      <Comment>??????(?)</Comment>
+      <DataType>int|4s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="557" parent="294" name="next_page_dist">
+      <Comment>?????(JSON??)</Comment>
+      <DataType>string|12s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="558" parent="294" name="update_time">
+      <Comment>????</Comment>
+      <DataType>timestamp|93s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="559" parent="294" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="560" parent="295" name="stat_date">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="561" parent="295" name="time_period">
+      <Comment>????(day/7d/30d/month)</Comment>
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="562" parent="295" name="path_type">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="563" parent="295" name="from_page_id">
+      <Comment>????ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="564" parent="295" name="from_page_name">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="565" parent="295" name="to_page_id">
+      <Comment>????ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="566" parent="295" name="to_page_name">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="567" parent="295" name="flow_count">
+      <Comment>????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="568" parent="295" name="visitor_count">
+      <Comment>?????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="569" parent="295" name="conversion_rate">
+      <Comment>???</Comment>
+      <DataType>decimal(18,4)|3s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="570" parent="295" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="571" parent="296" name="segment_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="572" parent="296" name="segment_name">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="573" parent="296" name="user_count">
+      <Comment>???</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="574" parent="296" name="avg_path_length">
+      <Comment>??????</Comment>
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="575" parent="296" name="conversion_rate">
+      <Comment>???</Comment>
+      <DataType>decimal(18,4)|3s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="576" parent="296" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="577" parent="297" name="stat_date">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="578" parent="297" name="time_period">
+      <Comment>????(day/7d/30d/month)</Comment>
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="579" parent="297" name="entry_page_id">
+      <Comment>????ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="580" parent="297" name="entry_page_name">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="581" parent="297" name="visitor_count">
+      <Comment>???</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="582" parent="297" name="new_visitor_count">
+      <Comment>????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="583" parent="297" name="order_buyer_count">
+      <Comment>?????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="584" parent="297" name="order_conversion_rate">
+      <Comment>?????</Comment>
+      <DataType>decimal(18,4)|3s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="585" parent="297" name="avg_stay_duration">
+      <Comment>??????</Comment>
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="586" parent="297" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="587" parent="298" name="log_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="588" parent="298" name="user_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="589" parent="298" name="session_id">
+      <Comment>??ID</Comment>
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="590" parent="298" name="page_url">
+      <Comment>??URL</Comment>
+      <DataType>string|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="591" parent="298" name="page_type">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="592" parent="298" name="page_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="593" parent="298" name="page_name">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="594" parent="298" name="referer_url">
+      <Comment>????URL</Comment>
+      <DataType>string|12s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="595" parent="298" name="referer_page_id">
+      <Comment>????ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="596" parent="298" name="referer_page_name">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="597" parent="298" name="visit_time">
+      <Comment>????</Comment>
+      <DataType>timestamp|93s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="598" parent="298" name="stay_duration">
+      <Comment>????</Comment>
+      <DataType>int|4s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="599" parent="298" name="device_type">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="600" parent="298" name="is_new_visitor">
+      <Comment>?????</Comment>
+      <DataType>tinyint|-6s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="601" parent="298" name="user_info">
+      <DataType>struct&lt;user_name:string,gender:string,age:int,vip_level:int&gt;|2002s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="602" parent="298" name="product_info">
+      <DataType>struct&lt;product_id:bigint,product_name:string,category_name:string,brand_name:string&gt;|2002s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="603" parent="298" name="traffic_source">
+      <DataType>struct&lt;source_type:string,source_name:string,campaign_name:string&gt;|2002s</DataType>
+      <Position>17</Position>
+    </column>
+    <column id="604" parent="298" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>18</Position>
+    </column>
+    <column id="605" parent="299" name="session_id">
+      <Comment>??ID</Comment>
+      <DataType>string|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="606" parent="299" name="user_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="607" parent="299" name="start_time">
+      <Comment>??????</Comment>
+      <DataType>timestamp|93s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="608" parent="299" name="end_time">
+      <Comment>??????</Comment>
+      <DataType>timestamp|93s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="609" parent="299" name="entry_page">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="610" parent="299" name="exit_page">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="611" parent="299" name="page_count">
+      <Comment>?????</Comment>
+      <DataType>int|4s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="612" parent="299" name="session_duration">
+      <Comment>????(?)</Comment>
+      <DataType>int|4s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="613" parent="299" name="device_type">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="614" parent="299" name="is_order">
+      <Comment>????</Comment>
+      <DataType>tinyint|-6s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="615" parent="299" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="616" parent="300" name="from_page_id">
+      <Comment>????ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="617" parent="300" name="from_page_name">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="618" parent="300" name="from_page_type">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="619" parent="300" name="to_page_id">
+      <Comment>????ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="620" parent="300" name="to_page_name">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="621" parent="300" name="to_page_type">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="622" parent="300" name="flow_count">
+      <Comment>????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="623" parent="300" name="visitor_count">
+      <Comment>?????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="624" parent="300" name="avg_stay_duration">
+      <Comment>??????</Comment>
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="625" parent="300" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="626" parent="301" name="page_id">
+      <Comment>??ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="627" parent="301" name="page_name">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="628" parent="301" name="page_type">
+      <Comment>????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="629" parent="301" name="visit_count">
+      <Comment>????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="630" parent="301" name="visitor_count">
+      <Comment>???</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="631" parent="301" name="avg_stay_duration">
+      <Comment>??????</Comment>
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="632" parent="301" name="bounce_count">
+      <Comment>????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="633" parent="301" name="exit_count">
+      <Comment>????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="634" parent="301" name="order_count">
+      <Comment>???</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="635" parent="301" name="order_amount">
+      <Comment>????</Comment>
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="636" parent="301" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="637" parent="302" name="entry_page_id">
+      <Comment>????ID</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="638" parent="302" name="entry_page_name">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="639" parent="302" name="entry_page_type">
+      <Comment>??????</Comment>
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="640" parent="302" name="visitor_count">
+      <Comment>???</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="641" parent="302" name="new_visitor_count">
+      <Comment>????</Comment>
+      <DataType>bigint|-5s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="642" parent="302" name="avg_session_duration">
+      <Comment>??????</Comment>
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="643" parent="302" name="order_conversion_rate">
+      <Comment>?????</Comment>
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="644" parent="302" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="645" parent="303" name="activity_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="646" parent="303" name="activity_name">
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="647" parent="303" name="start_time">
+      <DataType>timestamp|93s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="648" parent="303" name="end_time">
+      <DataType>timestamp|93s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="649" parent="303" name="activity_type">
+      <DataType>string|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="650" parent="303" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="651" parent="304" name="order_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="652" parent="304" name="user_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="653" parent="304" name="product_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="654" parent="304" name="order_amount">
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="655" parent="304" name="payment_amount">
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="656" parent="304" name="order_time">
+      <DataType>timestamp|93s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="657" parent="304" name="payment_time">
+      <DataType>timestamp|93s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="658" parent="304" name="order_status">
+      <DataType>int|4s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="659" parent="304" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="660" parent="305" name="from_page_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="661" parent="305" name="to_page_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="662" parent="305" name="relation_type">
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="663" parent="305" name="create_time">
+      <DataType>timestamp|93s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="664" parent="305" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="665" parent="306" name="log_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="666" parent="306" name="user_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="667" parent="306" name="session_id">
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="668" parent="306" name="page_url">
+      <DataType>string|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="669" parent="306" name="page_type">
+      <DataType>string|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="670" parent="306" name="page_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="671" parent="306" name="referer_url">
+      <DataType>string|12s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="672" parent="306" name="referer_page_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="673" parent="306" name="visit_time">
+      <DataType>timestamp|93s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="674" parent="306" name="stay_duration">
+      <DataType>int|4s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="675" parent="306" name="device_type">
+      <DataType>string|12s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="676" parent="306" name="os_type">
+      <DataType>string|12s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="677" parent="306" name="browser_type">
+      <DataType>string|12s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="678" parent="306" name="ip_address">
+      <DataType>string|12s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="679" parent="306" name="province">
+      <DataType>string|12s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="680" parent="306" name="city">
+      <DataType>string|12s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="681" parent="306" name="is_new_visitor">
+      <DataType>int|4s</DataType>
+      <Position>17</Position>
+    </column>
+    <column id="682" parent="306" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>18</Position>
+    </column>
+    <column id="683" parent="307" name="product_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="684" parent="307" name="product_name">
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="685" parent="307" name="category_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="686" parent="307" name="category_name">
+      <DataType>string|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="687" parent="307" name="brand_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="688" parent="307" name="brand_name">
+      <DataType>string|12s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="689" parent="307" name="price">
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="690" parent="307" name="cost_price">
+      <DataType>decimal(18,2)|3s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="691" parent="307" name="status">
+      <DataType>int|4s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="692" parent="307" name="create_time">
+      <DataType>timestamp|93s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="693" parent="307" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="694" parent="308" name="page_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="695" parent="308" name="page_name">
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="696" parent="308" name="page_url">
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="697" parent="308" name="page_type">
+      <DataType>string|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="698" parent="308" name="page_level">
+      <DataType>int|4s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="699" parent="308" name="parent_page_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="700" parent="308" name="is_active">
+      <DataType>int|4s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="701" parent="308" name="create_time">
+      <DataType>timestamp|93s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="702" parent="308" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="703" parent="309" name="source_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="704" parent="309" name="source_type">
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="705" parent="309" name="source_name">
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="706" parent="309" name="source_url">
+      <DataType>string|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="707" parent="309" name="campaign_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="708" parent="309" name="campaign_name">
+      <DataType>string|12s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="709" parent="309" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="710" parent="310" name="user_id">
+      <DataType>bigint|-5s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="711" parent="310" name="user_name">
+      <DataType>string|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="712" parent="310" name="gender">
+      <DataType>string|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="713" parent="310" name="age">
+      <DataType>int|4s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="714" parent="310" name="register_time">
+      <DataType>timestamp|93s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="715" parent="310" name="vip_level">
+      <DataType>int|4s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="716" parent="310" name="province">
+      <DataType>string|12s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="717" parent="310" name="city">
+      <DataType>string|12s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="718" parent="310" name="phone_prefix">
+      <DataType>string|12s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="719" parent="310" name="dt">
+      <DataType>string|12s</DataType>
+      <Position>10</Position>
     </column>
   </database-model>
 </dataSource>
