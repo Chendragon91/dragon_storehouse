@@ -1,7 +1,6 @@
 from pyspark.sql import SparkSession
 
 def get_spark_session():
-    """创建并返回启用Hive支持的SparkSession"""
     spark = SparkSession.builder \
         .appName("HiveETL") \
         .config("hive.metastore.uris", "thrift://cdh01:9083") \
@@ -22,7 +21,6 @@ def execute_hive_insert(partition_date: str, tableName):
 
     print(f"[INFO] 开始执行SQL插入，分区日期：{partition_date}")
 
-    # 直接使用SQL执行插入操作
     insert_sql = f"""
     INSERT OVERWRITE TABLE gmall_08.{tableName} PARTITION(dt='{partition_date}')
     SELECT
@@ -82,9 +80,7 @@ if __name__ == "__main__":
     table_name = 'dws_cs_service_performance_wide'
     target_date = '20250731'
 
-    # 添加错误处理和重试机制
     try:
         execute_hive_insert(target_date, table_name)
     except Exception as e:
         print(f"[ERROR] 执行失败: {str(e)}")
-        # 这里可以添加重试逻辑或通知机制

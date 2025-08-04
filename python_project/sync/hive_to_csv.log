@@ -1,0 +1,62 @@
+2025-08-02 10:09:19,023 - INFO - 发现 19 张待导出表
+2025-08-02 10:09:19,957 - ERROR - 导出表 ads_page_visit_rank 失败: Pathname /D:/linshi/ads_page_visit_rank.csv from hdfs://cdh01:8020/D:/linshi/ads_page_visit_rank.csv is not a valid DFS filename.
+2025-08-02 10:09:19,960 - ERROR - 表 ads_page_visit_rank 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ads_page_visit_rank.csv from hdfs://cdh01:8020/D:/linshi/ads_page_visit_rank.csv is not a valid DFS filename.
+2025-08-02 10:09:20,111 - ERROR - 导出表 ads_pc_entry_stats 失败: Pathname /D:/linshi/ads_pc_entry_stats.csv from hdfs://cdh01:8020/D:/linshi/ads_pc_entry_stats.csv is not a valid DFS filename.
+2025-08-02 10:09:20,115 - ERROR - 表 ads_pc_entry_stats 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ads_pc_entry_stats.csv from hdfs://cdh01:8020/D:/linshi/ads_pc_entry_stats.csv is not a valid DFS filename.
+2025-08-02 10:09:20,275 - ERROR - 导出表 ads_realtime_path_monitor 失败: Pathname /D:/linshi/ads_realtime_path_monitor.csv from hdfs://cdh01:8020/D:/linshi/ads_realtime_path_monitor.csv is not a valid DFS filename.
+2025-08-02 10:09:20,277 - ERROR - 表 ads_realtime_path_monitor 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ads_realtime_path_monitor.csv from hdfs://cdh01:8020/D:/linshi/ads_realtime_path_monitor.csv is not a valid DFS filename.
+2025-08-02 10:09:20,436 - ERROR - 导出表 ads_shop_path_analysis 失败: Pathname /D:/linshi/ads_shop_path_analysis.csv from hdfs://cdh01:8020/D:/linshi/ads_shop_path_analysis.csv is not a valid DFS filename.
+2025-08-02 10:09:20,440 - ERROR - 表 ads_shop_path_analysis 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ads_shop_path_analysis.csv from hdfs://cdh01:8020/D:/linshi/ads_shop_path_analysis.csv is not a valid DFS filename.
+2025-08-02 10:09:20,602 - ERROR - 导出表 ads_user_segment 失败: Pathname /D:/linshi/ads_user_segment.csv from hdfs://cdh01:8020/D:/linshi/ads_user_segment.csv is not a valid DFS filename.
+2025-08-02 10:09:20,604 - ERROR - 表 ads_user_segment 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ads_user_segment.csv from hdfs://cdh01:8020/D:/linshi/ads_user_segment.csv is not a valid DFS filename.
+2025-08-02 10:09:20,739 - ERROR - 导出表 ads_wireless_entry_stats 失败: Pathname /D:/linshi/ads_wireless_entry_stats.csv from hdfs://cdh01:8020/D:/linshi/ads_wireless_entry_stats.csv is not a valid DFS filename.
+2025-08-02 10:09:20,741 - ERROR - 表 ads_wireless_entry_stats 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ads_wireless_entry_stats.csv from hdfs://cdh01:8020/D:/linshi/ads_wireless_entry_stats.csv is not a valid DFS filename.
+2025-08-02 10:09:20,954 - ERROR - 导出表 dwd_page_visit_detail 失败: Pathname /D:/linshi/dwd_page_visit_detail.csv from hdfs://cdh01:8020/D:/linshi/dwd_page_visit_detail.csv is not a valid DFS filename.
+2025-08-02 10:09:20,956 - ERROR - 表 dwd_page_visit_detail 导出失败，跳过继续处理其他表: Pathname /D:/linshi/dwd_page_visit_detail.csv from hdfs://cdh01:8020/D:/linshi/dwd_page_visit_detail.csv is not a valid DFS filename.
+2025-08-02 10:09:21,108 - ERROR - 导出表 dwd_user_session 失败: Pathname /D:/linshi/dwd_user_session.csv from hdfs://cdh01:8020/D:/linshi/dwd_user_session.csv is not a valid DFS filename.
+2025-08-02 10:09:21,110 - ERROR - 表 dwd_user_session 导出失败，跳过继续处理其他表: Pathname /D:/linshi/dwd_user_session.csv from hdfs://cdh01:8020/D:/linshi/dwd_user_session.csv is not a valid DFS filename.
+2025-08-02 10:09:21,253 - ERROR - 导出表 dws_page_path_flow 失败: Pathname /D:/linshi/dws_page_path_flow.csv from hdfs://cdh01:8020/D:/linshi/dws_page_path_flow.csv is not a valid DFS filename.
+2025-08-02 10:09:21,255 - ERROR - 表 dws_page_path_flow 导出失败，跳过继续处理其他表: Pathname /D:/linshi/dws_page_path_flow.csv from hdfs://cdh01:8020/D:/linshi/dws_page_path_flow.csv is not a valid DFS filename.
+2025-08-02 10:09:21,409 - ERROR - 导出表 dws_page_visit_stats 失败: Pathname /D:/linshi/dws_page_visit_stats.csv from hdfs://cdh01:8020/D:/linshi/dws_page_visit_stats.csv is not a valid DFS filename.
+2025-08-02 10:09:21,411 - ERROR - 表 dws_page_visit_stats 导出失败，跳过继续处理其他表: Pathname /D:/linshi/dws_page_visit_stats.csv from hdfs://cdh01:8020/D:/linshi/dws_page_visit_stats.csv is not a valid DFS filename.
+2025-08-02 10:09:21,559 - ERROR - 导出表 dws_traffic_entry_stats 失败: Pathname /D:/linshi/dws_traffic_entry_stats.csv from hdfs://cdh01:8020/D:/linshi/dws_traffic_entry_stats.csv is not a valid DFS filename.
+2025-08-02 10:09:21,561 - ERROR - 表 dws_traffic_entry_stats 导出失败，跳过继续处理其他表: Pathname /D:/linshi/dws_traffic_entry_stats.csv from hdfs://cdh01:8020/D:/linshi/dws_traffic_entry_stats.csv is not a valid DFS filename.
+2025-08-02 10:09:21,730 - ERROR - 导出表 ods_marketing_activity 失败: Pathname /D:/linshi/ods_marketing_activity.csv from hdfs://cdh01:8020/D:/linshi/ods_marketing_activity.csv is not a valid DFS filename.
+2025-08-02 10:09:21,733 - ERROR - 表 ods_marketing_activity 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ods_marketing_activity.csv from hdfs://cdh01:8020/D:/linshi/ods_marketing_activity.csv is not a valid DFS filename.
+2025-08-02 10:09:21,869 - ERROR - 导出表 ods_order_info 失败: Pathname /D:/linshi/ods_order_info.csv from hdfs://cdh01:8020/D:/linshi/ods_order_info.csv is not a valid DFS filename.
+2025-08-02 10:09:21,872 - ERROR - 表 ods_order_info 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ods_order_info.csv from hdfs://cdh01:8020/D:/linshi/ods_order_info.csv is not a valid DFS filename.
+2025-08-02 10:09:22,015 - ERROR - 导出表 ods_page_relationship 失败: Pathname /D:/linshi/ods_page_relationship.csv from hdfs://cdh01:8020/D:/linshi/ods_page_relationship.csv is not a valid DFS filename.
+2025-08-02 10:09:22,018 - ERROR - 表 ods_page_relationship 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ods_page_relationship.csv from hdfs://cdh01:8020/D:/linshi/ods_page_relationship.csv is not a valid DFS filename.
+2025-08-02 10:09:22,167 - ERROR - 导出表 ods_page_visit_log 失败: Pathname /D:/linshi/ods_page_visit_log.csv from hdfs://cdh01:8020/D:/linshi/ods_page_visit_log.csv is not a valid DFS filename.
+2025-08-02 10:09:22,169 - ERROR - 表 ods_page_visit_log 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ods_page_visit_log.csv from hdfs://cdh01:8020/D:/linshi/ods_page_visit_log.csv is not a valid DFS filename.
+2025-08-02 10:09:22,301 - ERROR - 导出表 ods_product_info 失败: Pathname /D:/linshi/ods_product_info.csv from hdfs://cdh01:8020/D:/linshi/ods_product_info.csv is not a valid DFS filename.
+2025-08-02 10:09:22,303 - ERROR - 表 ods_product_info 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ods_product_info.csv from hdfs://cdh01:8020/D:/linshi/ods_product_info.csv is not a valid DFS filename.
+2025-08-02 10:09:22,449 - ERROR - 导出表 ods_shop_page_info 失败: Pathname /D:/linshi/ods_shop_page_info.csv from hdfs://cdh01:8020/D:/linshi/ods_shop_page_info.csv is not a valid DFS filename.
+2025-08-02 10:09:22,453 - ERROR - 表 ods_shop_page_info 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ods_shop_page_info.csv from hdfs://cdh01:8020/D:/linshi/ods_shop_page_info.csv is not a valid DFS filename.
+2025-08-02 10:09:22,581 - ERROR - 导出表 ods_traffic_source 失败: Pathname /D:/linshi/ods_traffic_source.csv from hdfs://cdh01:8020/D:/linshi/ods_traffic_source.csv is not a valid DFS filename.
+2025-08-02 10:09:22,584 - ERROR - 表 ods_traffic_source 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ods_traffic_source.csv from hdfs://cdh01:8020/D:/linshi/ods_traffic_source.csv is not a valid DFS filename.
+2025-08-02 10:09:22,735 - ERROR - 导出表 ods_user_info 失败: Pathname /D:/linshi/ods_user_info.csv from hdfs://cdh01:8020/D:/linshi/ods_user_info.csv is not a valid DFS filename.
+2025-08-02 10:09:22,738 - ERROR - 表 ods_user_info 导出失败，跳过继续处理其他表: Pathname /D:/linshi/ods_user_info.csv from hdfs://cdh01:8020/D:/linshi/ods_user_info.csv is not a valid DFS filename.
+2025-08-02 10:09:23,024 - INFO - 导出任务结束
+2025-08-02 10:34:00,332 - INFO - 发现 19 张待导出表
+2025-08-02 10:34:03,734 - INFO - 表 ads_page_visit_rank 导出成功，保存路径: D:/linshi\ads_page_visit_rank
+2025-08-02 10:34:04,401 - INFO - 表 ads_pc_entry_stats 导出成功，保存路径: D:/linshi\ads_pc_entry_stats
+2025-08-02 10:34:04,787 - INFO - 表 ads_realtime_path_monitor 导出成功，保存路径: D:/linshi\ads_realtime_path_monitor
+2025-08-02 10:34:05,333 - INFO - 表 ads_shop_path_analysis 导出成功，保存路径: D:/linshi\ads_shop_path_analysis
+2025-08-02 10:34:05,586 - INFO - 表 ads_user_segment 导出成功，保存路径: D:/linshi\ads_user_segment
+2025-08-02 10:34:05,942 - INFO - 表 ads_wireless_entry_stats 导出成功，保存路径: D:/linshi\ads_wireless_entry_stats
+2025-08-02 10:34:06,180 - ERROR - 导出表 dwd_page_visit_detail 失败: CSV data source does not support struct<user_name:string,gender:string,age:int,vip_level:int> data type.
+2025-08-02 10:34:06,182 - ERROR - 表 dwd_page_visit_detail 导出失败，跳过继续处理其他表: CSV data source does not support struct<user_name:string,gender:string,age:int,vip_level:int> data type.
+2025-08-02 10:34:08,138 - INFO - 表 dwd_user_session 导出成功，保存路径: D:/linshi\dwd_user_session
+2025-08-02 10:34:08,593 - INFO - 表 dws_page_path_flow 导出成功，保存路径: D:/linshi\dws_page_path_flow
+2025-08-02 10:34:08,893 - INFO - 表 dws_page_visit_stats 导出成功，保存路径: D:/linshi\dws_page_visit_stats
+2025-08-02 10:34:09,176 - INFO - 表 dws_traffic_entry_stats 导出成功，保存路径: D:/linshi\dws_traffic_entry_stats
+2025-08-02 10:34:09,985 - INFO - 表 ods_marketing_activity 导出成功，保存路径: D:/linshi\ods_marketing_activity
+2025-08-02 10:34:10,250 - INFO - 表 ods_order_info 导出成功，保存路径: D:/linshi\ods_order_info
+2025-08-02 10:34:10,497 - INFO - 表 ods_page_relationship 导出成功，保存路径: D:/linshi\ods_page_relationship
+2025-08-02 10:34:15,218 - INFO - 表 ods_page_visit_log 导出成功，保存路径: D:/linshi\ods_page_visit_log
+2025-08-02 10:34:15,483 - INFO - 表 ods_product_info 导出成功，保存路径: D:/linshi\ods_product_info
+2025-08-02 10:34:15,720 - INFO - 表 ods_shop_page_info 导出成功，保存路径: D:/linshi\ods_shop_page_info
+2025-08-02 10:34:15,955 - INFO - 表 ods_traffic_source 导出成功，保存路径: D:/linshi\ods_traffic_source
+2025-08-02 10:34:16,261 - INFO - 表 ods_user_info 导出成功，保存路径: D:/linshi\ods_user_info
+2025-08-02 10:34:16,789 - INFO - 导出任务结束

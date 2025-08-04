@@ -1,0 +1,1713 @@
+2025-08-02 09:55:45,685 - INFO - 发现 19 张待同步表
+2025-08-02 09:55:46,020 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 09:55:48,932 - INFO - 表 ads_page_visit_rank 数据同步完成，记录数: 1101
+2025-08-02 09:55:49,113 - INFO - 表 ads_pc_entry_stats 结构同步成功
+2025-08-02 09:58:12,818 - INFO - 表 ads_pc_entry_stats 数据同步完成，记录数: 239695
+2025-08-02 09:58:13,025 - INFO - 表 ads_realtime_path_monitor 结构同步成功
+2025-08-02 09:58:13,363 - ERROR - 同步表 ads_realtime_path_monitor 数据失败: (1406, "Data too long for column 'next_page_dist' at row 1")
+2025-08-02 09:58:13,363 - ERROR - 表 ads_realtime_path_monitor 同步失败，跳过继续处理其他表
+2025-08-02 09:58:13,520 - INFO - 表 ads_shop_path_analysis 结构同步成功
+2025-08-02 09:58:19,832 - INFO - 表 ads_shop_path_analysis 数据同步完成，记录数: 9267
+2025-08-02 09:58:19,985 - INFO - 表 ads_user_segment 结构同步成功
+2025-08-02 09:58:20,213 - INFO - 表 ads_user_segment 数据同步完成，记录数: 2
+2025-08-02 09:58:20,386 - INFO - 表 ads_wireless_entry_stats 结构同步成功
+2025-08-02 09:58:21,313 - INFO - 表 ads_wireless_entry_stats 数据同步完成，记录数: 1100
+2025-08-02 09:58:21,569 - INFO - 表 dwd_page_visit_detail 结构同步成功
+2025-08-02 09:58:27,963 - ERROR - 同步表 dwd_page_visit_detail 数据失败: An error occurred while calling o102.collectToPython.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 6.0 failed 1 times, most recent failure: Lost task 0.0 in stage 6.0 (TID 11) (Long executor driver): java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:3236)
+	at java.io.ByteArrayOutputStream.grow(ByteArrayOutputStream.java:118)
+	at java.io.ByteArrayOutputStream.ensureCapacity(ByteArrayOutputStream.java:93)
+	at java.io.ByteArrayOutputStream.write(ByteArrayOutputStream.java:153)
+	at org.apache.spark.util.ByteBufferOutputStream.write(ByteBufferOutputStream.scala:41)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1853)
+	at java.io.ObjectOutputStream.write(ObjectOutputStream.java:709)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:233)
+	at org.apache.spark.scheduler.DirectTaskResult.$anonfun$writeExternal$1(TaskResult.scala:53)
+	at org.apache.spark.scheduler.DirectTaskResult$$Lambda$2328/1975222061.apply$mcV$sp(Unknown Source)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.tryOrIOException(Utils.scala:1405)
+	at org.apache.spark.scheduler.DirectTaskResult.writeExternal(TaskResult.scala:51)
+	at java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1459)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1430)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:44)
+	at org.apache.spark.serializer.JavaSerializerInstance.serialize(JavaSerializer.scala:101)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:606)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2258)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2207)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2206)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2206)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1079)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2445)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2387)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2376)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:390)
+	at org.apache.spark.sql.Dataset.$anonfun$collectToPython$1(Dataset.scala:3519)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3687)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3685)
+	at org.apache.spark.sql.Dataset.collectToPython(Dataset.scala:3516)
+	at sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:3236)
+	at java.io.ByteArrayOutputStream.grow(ByteArrayOutputStream.java:118)
+	at java.io.ByteArrayOutputStream.ensureCapacity(ByteArrayOutputStream.java:93)
+	at java.io.ByteArrayOutputStream.write(ByteArrayOutputStream.java:153)
+	at org.apache.spark.util.ByteBufferOutputStream.write(ByteBufferOutputStream.scala:41)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1853)
+	at java.io.ObjectOutputStream.write(ObjectOutputStream.java:709)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:233)
+	at org.apache.spark.scheduler.DirectTaskResult.$anonfun$writeExternal$1(TaskResult.scala:53)
+	at org.apache.spark.scheduler.DirectTaskResult$$Lambda$2328/1975222061.apply$mcV$sp(Unknown Source)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.tryOrIOException(Utils.scala:1405)
+	at org.apache.spark.scheduler.DirectTaskResult.writeExternal(TaskResult.scala:51)
+	at java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1459)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1430)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:44)
+	at org.apache.spark.serializer.JavaSerializerInstance.serialize(JavaSerializer.scala:101)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:606)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+
+2025-08-02 09:58:27,964 - ERROR - 表 dwd_page_visit_detail 同步失败，跳过继续处理其他表
+2025-08-02 09:58:28,189 - ERROR - 同步表 dwd_user_session 结构失败: (1067, "Invalid default value for 'end_time'")
+2025-08-02 09:58:28,189 - ERROR - 表 dwd_user_session 同步失败，跳过继续处理其他表
+2025-08-02 09:58:28,716 - INFO - Error while receiving.
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1205, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "F:\Auser\anaconda\envs\python_rely\lib\socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-08-02 09:58:28,763 - ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1205, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "F:\Auser\anaconda\envs\python_rely\lib\socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1216, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while receiving
+2025-08-02 09:58:28,764 - ERROR - 表 dws_page_path_flow 同步失败，跳过继续处理其他表
+2025-08-02 09:58:30,808 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:30,808 - ERROR - 表 dws_page_visit_stats 同步失败，跳过继续处理其他表
+2025-08-02 09:58:32,852 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:32,853 - ERROR - 表 dws_traffic_entry_stats 同步失败，跳过继续处理其他表
+2025-08-02 09:58:34,898 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:34,898 - ERROR - 表 ods_marketing_activity 同步失败，跳过继续处理其他表
+2025-08-02 09:58:36,935 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:36,936 - ERROR - 表 ods_order_info 同步失败，跳过继续处理其他表
+2025-08-02 09:58:38,968 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:38,969 - ERROR - 表 ods_page_relationship 同步失败，跳过继续处理其他表
+2025-08-02 09:58:41,010 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:41,011 - ERROR - 表 ods_page_visit_log 同步失败，跳过继续处理其他表
+2025-08-02 09:58:43,048 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:43,049 - ERROR - 表 ods_product_info 同步失败，跳过继续处理其他表
+2025-08-02 09:58:45,086 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:45,087 - ERROR - 表 ods_shop_page_info 同步失败，跳过继续处理其他表
+2025-08-02 09:58:47,125 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:47,127 - ERROR - 表 ods_traffic_source 同步失败，跳过继续处理其他表
+2025-08-02 09:58:49,167 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:49,168 - ERROR - 表 ods_user_info 同步失败，跳过继续处理其他表
+2025-08-02 09:58:51,204 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:53,726 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:55,780 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:57,817 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:58:59,857 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:59:01,897 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:59:03,935 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:59:05,970 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:59:08,008 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:59:10,045 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:59:12,085 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:59:14,121 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 09:59:16,163 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:52587)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:07:01,868 - INFO - 发现 19 张待同步表
+2025-08-02 10:07:01,868 - INFO - 开始同步表 ads_page_visit_rank (尝试 1/3)
+2025-08-02 10:07:02,175 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 10:07:03,469 - ERROR - 同步表 ads_page_visit_rank 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:07:03,470 - ERROR - 表 ads_page_visit_rank 同步失败 (尝试 1/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:07:13,482 - INFO - 开始同步表 ads_page_visit_rank (尝试 2/3)
+2025-08-02 10:07:13,673 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 10:07:13,814 - ERROR - 同步表 ads_page_visit_rank 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:07:13,814 - ERROR - 表 ads_page_visit_rank 同步失败 (尝试 2/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:07:33,825 - INFO - 开始同步表 ads_page_visit_rank (尝试 3/3)
+2025-08-02 10:07:34,029 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 10:07:34,218 - ERROR - 同步表 ads_page_visit_rank 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:07:34,218 - ERROR - 表 ads_page_visit_rank 同步失败 (尝试 3/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:07:34,218 - ERROR - 表 ads_page_visit_rank 同步失败，跳过继续处理其他表
+2025-08-02 10:07:34,218 - INFO - 开始同步表 ads_pc_entry_stats (尝试 1/3)
+2025-08-02 10:07:34,452 - INFO - 表 ads_pc_entry_stats 结构同步成功
+2025-08-02 10:07:34,629 - ERROR - 同步表 ads_pc_entry_stats 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:07:34,629 - ERROR - 表 ads_pc_entry_stats 同步失败 (尝试 1/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:07:44,631 - INFO - 开始同步表 ads_pc_entry_stats (尝试 2/3)
+2025-08-02 10:07:44,858 - INFO - 表 ads_pc_entry_stats 结构同步成功
+2025-08-02 10:07:45,077 - ERROR - 同步表 ads_pc_entry_stats 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:07:45,077 - ERROR - 表 ads_pc_entry_stats 同步失败 (尝试 2/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:05,085 - INFO - 开始同步表 ads_pc_entry_stats (尝试 3/3)
+2025-08-02 10:08:05,246 - INFO - 表 ads_pc_entry_stats 结构同步成功
+2025-08-02 10:08:05,371 - ERROR - 同步表 ads_pc_entry_stats 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:05,371 - ERROR - 表 ads_pc_entry_stats 同步失败 (尝试 3/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:05,371 - ERROR - 表 ads_pc_entry_stats 同步失败，跳过继续处理其他表
+2025-08-02 10:08:05,371 - INFO - 开始同步表 ads_realtime_path_monitor (尝试 1/3)
+2025-08-02 10:08:05,569 - INFO - 表 ads_realtime_path_monitor 结构同步成功
+2025-08-02 10:08:05,767 - ERROR - 同步表 ads_realtime_path_monitor 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:05,767 - ERROR - 表 ads_realtime_path_monitor 同步失败 (尝试 1/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:15,772 - INFO - 开始同步表 ads_realtime_path_monitor (尝试 2/3)
+2025-08-02 10:08:15,942 - INFO - 表 ads_realtime_path_monitor 结构同步成功
+2025-08-02 10:08:16,100 - ERROR - 同步表 ads_realtime_path_monitor 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:16,101 - ERROR - 表 ads_realtime_path_monitor 同步失败 (尝试 2/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:36,105 - INFO - 开始同步表 ads_realtime_path_monitor (尝试 3/3)
+2025-08-02 10:08:36,268 - INFO - 表 ads_realtime_path_monitor 结构同步成功
+2025-08-02 10:08:36,438 - ERROR - 同步表 ads_realtime_path_monitor 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:36,438 - ERROR - 表 ads_realtime_path_monitor 同步失败 (尝试 3/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:36,438 - ERROR - 表 ads_realtime_path_monitor 同步失败，跳过继续处理其他表
+2025-08-02 10:08:36,438 - INFO - 开始同步表 ads_shop_path_analysis (尝试 1/3)
+2025-08-02 10:08:36,609 - INFO - 表 ads_shop_path_analysis 结构同步成功
+2025-08-02 10:08:36,795 - ERROR - 同步表 ads_shop_path_analysis 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:36,795 - ERROR - 表 ads_shop_path_analysis 同步失败 (尝试 1/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:46,807 - INFO - 开始同步表 ads_shop_path_analysis (尝试 2/3)
+2025-08-02 10:08:46,955 - INFO - 表 ads_shop_path_analysis 结构同步成功
+2025-08-02 10:08:47,082 - ERROR - 同步表 ads_shop_path_analysis 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:47,082 - ERROR - 表 ads_shop_path_analysis 同步失败 (尝试 2/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:08:52,040 - INFO - 同步任务结束
+2025-08-02 10:35:31,015 - INFO - 发现 19 张待同步表
+2025-08-02 10:35:31,016 - INFO - 开始同步表 ads_page_visit_rank (尝试 1/3)
+2025-08-02 10:35:31,327 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 10:35:32,587 - ERROR - 同步表 ads_page_visit_rank 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:35:32,587 - ERROR - 表 ads_page_visit_rank 同步失败 (尝试 1/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:35:42,590 - INFO - 开始同步表 ads_page_visit_rank (尝试 2/3)
+2025-08-02 10:35:42,781 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 10:35:42,916 - ERROR - 同步表 ads_page_visit_rank 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:35:42,916 - ERROR - 表 ads_page_visit_rank 同步失败 (尝试 2/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:02,929 - INFO - 开始同步表 ads_page_visit_rank (尝试 3/3)
+2025-08-02 10:36:03,104 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 10:36:03,239 - ERROR - 同步表 ads_page_visit_rank 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:03,241 - ERROR - 表 ads_page_visit_rank 同步失败 (尝试 3/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:03,241 - ERROR - 表 ads_page_visit_rank 同步失败，跳过继续处理其他表
+2025-08-02 10:36:03,241 - INFO - 开始同步表 ads_pc_entry_stats (尝试 1/3)
+2025-08-02 10:36:03,396 - INFO - 表 ads_pc_entry_stats 结构同步成功
+2025-08-02 10:36:03,570 - ERROR - 同步表 ads_pc_entry_stats 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:03,570 - ERROR - 表 ads_pc_entry_stats 同步失败 (尝试 1/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:13,582 - INFO - 开始同步表 ads_pc_entry_stats (尝试 2/3)
+2025-08-02 10:36:13,731 - INFO - 表 ads_pc_entry_stats 结构同步成功
+2025-08-02 10:36:13,864 - ERROR - 同步表 ads_pc_entry_stats 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:13,864 - ERROR - 表 ads_pc_entry_stats 同步失败 (尝试 2/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:33,866 - INFO - 开始同步表 ads_pc_entry_stats (尝试 3/3)
+2025-08-02 10:36:33,999 - INFO - 表 ads_pc_entry_stats 结构同步成功
+2025-08-02 10:36:34,116 - ERROR - 同步表 ads_pc_entry_stats 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:34,116 - ERROR - 表 ads_pc_entry_stats 同步失败 (尝试 3/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:34,116 - ERROR - 表 ads_pc_entry_stats 同步失败，跳过继续处理其他表
+2025-08-02 10:36:34,116 - INFO - 开始同步表 ads_realtime_path_monitor (尝试 1/3)
+2025-08-02 10:36:34,320 - INFO - 表 ads_realtime_path_monitor 结构同步成功
+2025-08-02 10:36:34,511 - ERROR - 同步表 ads_realtime_path_monitor 数据失败: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:34,511 - ERROR - 表 ads_realtime_path_monitor 同步失败 (尝试 1/3): Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+2025-08-02 10:36:39,059 - INFO - Error while receiving.
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\serializers.py", line 437, in dumps
+    return cloudpickle.dumps(obj, pickle_protocol)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\cloudpickle\cloudpickle_fast.py", line 72, in dumps
+    cp.dump(obj)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\cloudpickle\cloudpickle_fast.py", line 540, in dump
+    return Pickler.dump(self, obj)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\context.py", line 353, in __getnewargs__
+    raise Exception(
+Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\workspace\dragon_storehouse\python_project\sync\a.py", line 191, in run_sync
+    self.sync_table_data(table)
+  File "D:\workspace\dragon_storehouse\python_project\sync\a.py", line 172, in sync_table_data
+    df.foreachPartition(process_partition)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\sql\dataframe.py", line 777, in foreachPartition
+    self.rdd.foreachPartition(f)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 937, in foreachPartition
+    self.mapPartitions(func).count()  # Force evaluation
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 1235, in count
+    return self.mapPartitions(lambda i: [sum(1 for _ in i)]).sum()
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 1224, in sum
+    return self.mapPartitions(lambda x: [sum(x)]).fold(0, operator.add)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 1078, in fold
+    vals = self.mapPartitions(func).collect()
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 949, in collect
+    sock_info = self.ctx._jvm.PythonRDD.collectAndServe(self._jrdd.rdd())
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 2949, in _jrdd
+    wrapped_func = _wrap_function(self.ctx, self.func, self._prev_jrdd_deserializer,
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 2828, in _wrap_function
+    pickled_command, broadcast_vars, env, includes = _prepare_for_python_RDD(sc, command)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 2814, in _prepare_for_python_RDD
+    pickled_command = ser.dumps(command)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\serializers.py", line 447, in dumps
+    raise pickle.PicklingError(msg)
+_pickle.PicklingError: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\workspace\dragon_storehouse\python_project\sync\a.py", line 226, in <module>
+    syncer.run_sync()
+  File "D:\workspace\dragon_storehouse\python_project\sync\a.py", line 200, in run_sync
+    time.sleep(10 * retry_count)  # 指数退避
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\context.py", line 285, in signal_handler
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1205, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "F:\Auser\anaconda\envs\python_rely\lib\socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-08-02 10:36:39,066 - ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\serializers.py", line 437, in dumps
+    return cloudpickle.dumps(obj, pickle_protocol)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\cloudpickle\cloudpickle_fast.py", line 72, in dumps
+    cp.dump(obj)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\cloudpickle\cloudpickle_fast.py", line 540, in dump
+    return Pickler.dump(self, obj)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\context.py", line 353, in __getnewargs__
+    raise Exception(
+Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\workspace\dragon_storehouse\python_project\sync\a.py", line 191, in run_sync
+    self.sync_table_data(table)
+  File "D:\workspace\dragon_storehouse\python_project\sync\a.py", line 172, in sync_table_data
+    df.foreachPartition(process_partition)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\sql\dataframe.py", line 777, in foreachPartition
+    self.rdd.foreachPartition(f)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 937, in foreachPartition
+    self.mapPartitions(func).count()  # Force evaluation
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 1235, in count
+    return self.mapPartitions(lambda i: [sum(1 for _ in i)]).sum()
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 1224, in sum
+    return self.mapPartitions(lambda x: [sum(x)]).fold(0, operator.add)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 1078, in fold
+    vals = self.mapPartitions(func).collect()
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 949, in collect
+    sock_info = self.ctx._jvm.PythonRDD.collectAndServe(self._jrdd.rdd())
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 2949, in _jrdd
+    wrapped_func = _wrap_function(self.ctx, self.func, self._prev_jrdd_deserializer,
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 2828, in _wrap_function
+    pickled_command, broadcast_vars, env, includes = _prepare_for_python_RDD(sc, command)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\rdd.py", line 2814, in _prepare_for_python_RDD
+    pickled_command = ser.dumps(command)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\serializers.py", line 447, in dumps
+    raise pickle.PicklingError(msg)
+_pickle.PicklingError: Could not serialize object: Exception: It appears that you are attempting to reference SparkContext from a broadcast variable, action, or transformation. SparkContext can only be used on the driver, not in code that it run on workers. For more information, see SPARK-5063.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\workspace\dragon_storehouse\python_project\sync\a.py", line 226, in <module>
+    syncer.run_sync()
+  File "D:\workspace\dragon_storehouse\python_project\sync\a.py", line 200, in run_sync
+    time.sleep(10 * retry_count)  # 指数退避
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\pyspark\context.py", line 285, in signal_handler
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1205, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "F:\Auser\anaconda\envs\python_rely\lib\socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1216, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while receiving
+2025-08-02 10:36:39,072 - INFO - 同步任务结束
+2025-08-02 10:36:41,144 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:55757)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:36:43,181 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:55757)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:38:07,567 - INFO - 发现 19 张待同步表
+2025-08-02 10:38:07,568 - INFO - 开始同步表 ads_page_visit_rank (尝试 1/3)
+2025-08-02 10:38:07,868 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 10:38:09,580 - ERROR - 同步表 ads_page_visit_rank 数据失败: An error occurred while calling z:org.apache.spark.api.python.PythonRDD.collectAndServe.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 0.0 failed 1 times, most recent failure: Lost task 0.0 in stage 0.0 (TID 0) (Long executor driver): java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2258)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2207)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2206)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2206)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1079)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2445)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2387)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2376)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:180)
+	at org.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+2025-08-02 10:38:09,582 - ERROR - 表 ads_page_visit_rank 同步失败 (尝试 1/3): An error occurred while calling z:org.apache.spark.api.python.PythonRDD.collectAndServe.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 0.0 failed 1 times, most recent failure: Lost task 0.0 in stage 0.0 (TID 0) (Long executor driver): java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2258)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2207)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2206)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2206)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1079)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2445)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2387)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2376)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:180)
+	at org.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+2025-08-02 10:38:19,584 - INFO - 开始同步表 ads_page_visit_rank (尝试 2/3)
+2025-08-02 10:38:19,738 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 10:38:19,952 - ERROR - 同步表 ads_page_visit_rank 数据失败: An error occurred while calling z:org.apache.spark.api.python.PythonRDD.collectAndServe.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (Long executor driver): java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2258)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2207)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2206)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2206)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1079)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2445)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2387)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2376)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:180)
+	at org.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+2025-08-02 10:38:19,953 - ERROR - 表 ads_page_visit_rank 同步失败 (尝试 2/3): An error occurred while calling z:org.apache.spark.api.python.PythonRDD.collectAndServe.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (Long executor driver): java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2258)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2207)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2206)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2206)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1079)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2445)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2387)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2376)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:180)
+	at org.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+2025-08-02 10:39:37,149 - INFO - 发现 19 张待同步表
+2025-08-02 10:39:37,149 - INFO - 开始同步表 ads_page_visit_rank (尝试 1/3)
+2025-08-02 10:39:37,571 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 10:39:39,727 - ERROR - 同步表 ads_page_visit_rank 数据失败: An error occurred while calling z:org.apache.spark.api.python.PythonRDD.collectAndServe.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 0.0 failed 1 times, most recent failure: Lost task 0.0 in stage 0.0 (TID 0) (Long executor driver): java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2258)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2207)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2206)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2206)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1079)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2445)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2387)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2376)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:180)
+	at org.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+2025-08-02 10:39:39,732 - ERROR - 表 ads_page_visit_rank 同步失败 (尝试 1/3): An error occurred while calling z:org.apache.spark.api.python.PythonRDD.collectAndServe.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 0.0 failed 1 times, most recent failure: Lost task 0.0 in stage 0.0 (TID 0) (Long executor driver): java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2258)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2207)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2206)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2206)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1079)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2445)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2387)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2376)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:180)
+	at org.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Cannot run program "python3": CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at org.apache.spark.api.python.PythonWorkerFactory.createSimpleWorker(PythonWorkerFactory.scala:165)
+	at org.apache.spark.api.python.PythonWorkerFactory.create(PythonWorkerFactory.scala:107)
+	at org.apache.spark.SparkEnv.createPythonWorker(SparkEnv.scala:119)
+	at org.apache.spark.api.python.BasePythonRunner.compute(PythonRunner.scala:145)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:65)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:373)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:337)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+Caused by: java.io.IOException: CreateProcess error=3, 系统找不到指定的路径。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:453)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:140)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 15 more
+
+2025-08-02 10:42:53,284 - INFO - 发现 19 张待同步表
+2025-08-02 10:42:53,592 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 10:42:56,672 - INFO - 表 ads_page_visit_rank 数据同步完成，记录数: 1101
+2025-08-02 10:42:56,855 - INFO - 表 ads_pc_entry_stats 结构同步成功
+2025-08-02 10:45:40,179 - INFO - 表 ads_pc_entry_stats 数据同步完成，记录数: 239695
+2025-08-02 10:45:40,381 - INFO - 表 ads_realtime_path_monitor 结构同步成功
+2025-08-02 10:45:40,828 - ERROR - 同步表 ads_realtime_path_monitor 数据失败: (1406, "Data too long for column 'next_page_dist' at row 1")
+2025-08-02 10:45:40,828 - ERROR - 表 ads_realtime_path_monitor 同步失败，跳过继续处理其他表
+2025-08-02 10:45:40,989 - INFO - 表 ads_shop_path_analysis 结构同步成功
+2025-08-02 10:45:47,382 - INFO - 表 ads_shop_path_analysis 数据同步完成，记录数: 9267
+2025-08-02 10:45:47,546 - INFO - 表 ads_user_segment 结构同步成功
+2025-08-02 10:45:47,767 - INFO - 表 ads_user_segment 数据同步完成，记录数: 2
+2025-08-02 10:45:47,982 - INFO - 表 ads_wireless_entry_stats 结构同步成功
+2025-08-02 10:45:49,103 - INFO - 表 ads_wireless_entry_stats 数据同步完成，记录数: 1100
+2025-08-02 10:45:49,340 - INFO - 表 dwd_page_visit_detail 结构同步成功
+2025-08-02 10:45:55,419 - ERROR - 同步表 dwd_page_visit_detail 数据失败: An error occurred while calling o102.collectToPython.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 6.0 failed 1 times, most recent failure: Lost task 0.0 in stage 6.0 (TID 11) (Long executor driver): java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:3236)
+	at java.io.ByteArrayOutputStream.grow(ByteArrayOutputStream.java:118)
+	at java.io.ByteArrayOutputStream.ensureCapacity(ByteArrayOutputStream.java:93)
+	at java.io.ByteArrayOutputStream.write(ByteArrayOutputStream.java:153)
+	at org.apache.spark.util.ByteBufferOutputStream.write(ByteBufferOutputStream.scala:41)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1853)
+	at java.io.ObjectOutputStream.write(ObjectOutputStream.java:709)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:233)
+	at org.apache.spark.scheduler.DirectTaskResult.$anonfun$writeExternal$1(TaskResult.scala:53)
+	at org.apache.spark.scheduler.DirectTaskResult$$Lambda$2327/76110493.apply$mcV$sp(Unknown Source)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.tryOrIOException(Utils.scala:1405)
+	at org.apache.spark.scheduler.DirectTaskResult.writeExternal(TaskResult.scala:51)
+	at java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1459)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1430)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:44)
+	at org.apache.spark.serializer.JavaSerializerInstance.serialize(JavaSerializer.scala:101)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:606)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2258)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2207)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2206)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2206)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1079)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1079)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2445)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2387)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2376)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:390)
+	at org.apache.spark.sql.Dataset.$anonfun$collectToPython$1(Dataset.scala:3519)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3687)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3685)
+	at org.apache.spark.sql.Dataset.collectToPython(Dataset.scala:3516)
+	at sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:3236)
+	at java.io.ByteArrayOutputStream.grow(ByteArrayOutputStream.java:118)
+	at java.io.ByteArrayOutputStream.ensureCapacity(ByteArrayOutputStream.java:93)
+	at java.io.ByteArrayOutputStream.write(ByteArrayOutputStream.java:153)
+	at org.apache.spark.util.ByteBufferOutputStream.write(ByteBufferOutputStream.scala:41)
+	at java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1853)
+	at java.io.ObjectOutputStream.write(ObjectOutputStream.java:709)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:233)
+	at org.apache.spark.scheduler.DirectTaskResult.$anonfun$writeExternal$1(TaskResult.scala:53)
+	at org.apache.spark.scheduler.DirectTaskResult$$Lambda$2327/76110493.apply$mcV$sp(Unknown Source)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.tryOrIOException(Utils.scala:1405)
+	at org.apache.spark.scheduler.DirectTaskResult.writeExternal(TaskResult.scala:51)
+	at java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1459)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1430)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:44)
+	at org.apache.spark.serializer.JavaSerializerInstance.serialize(JavaSerializer.scala:101)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:606)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+
+2025-08-02 10:45:55,424 - ERROR - 表 dwd_page_visit_detail 同步失败，跳过继续处理其他表
+2025-08-02 10:45:55,595 - ERROR - 同步表 dwd_user_session 结构失败: (1067, "Invalid default value for 'end_time'")
+2025-08-02 10:45:55,596 - ERROR - 表 dwd_user_session 同步失败，跳过继续处理其他表
+2025-08-02 10:45:56,141 - INFO - Error while receiving.
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1205, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "F:\Auser\anaconda\envs\python_rely\lib\socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-08-02 10:45:56,144 - ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1205, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "F:\Auser\anaconda\envs\python_rely\lib\socket.py", line 717, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1216, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while receiving
+2025-08-02 10:45:56,145 - ERROR - 表 dws_page_path_flow 同步失败，跳过继续处理其他表
+2025-08-02 10:45:58,179 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:45:58,180 - ERROR - 表 dws_page_visit_stats 同步失败，跳过继续处理其他表
+2025-08-02 10:46:00,219 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:00,220 - ERROR - 表 dws_traffic_entry_stats 同步失败，跳过继续处理其他表
+2025-08-02 10:46:02,259 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:02,260 - ERROR - 表 ods_marketing_activity 同步失败，跳过继续处理其他表
+2025-08-02 10:46:04,293 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:04,294 - ERROR - 表 ods_order_info 同步失败，跳过继续处理其他表
+2025-08-02 10:46:06,330 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:06,330 - ERROR - 表 ods_page_relationship 同步失败，跳过继续处理其他表
+2025-08-02 10:46:08,371 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:08,372 - ERROR - 表 ods_page_visit_log 同步失败，跳过继续处理其他表
+2025-08-02 10:46:10,413 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:10,414 - ERROR - 表 ods_product_info 同步失败，跳过继续处理其他表
+2025-08-02 10:46:12,451 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:12,452 - ERROR - 表 ods_shop_page_info 同步失败，跳过继续处理其他表
+2025-08-02 10:46:14,493 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:14,495 - ERROR - 表 ods_traffic_source 同步失败，跳过继续处理其他表
+2025-08-02 10:46:16,529 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:16,530 - ERROR - 表 ods_user_info 同步失败，跳过继续处理其他表
+2025-08-02 10:46:18,569 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:21,009 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:23,065 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:25,102 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:27,143 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:29,183 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:31,222 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:33,263 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:35,302 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:37,343 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:39,383 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:41,422 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 10:46:43,459 - ERROR - An error occurred while trying to connect to the Java server (127.0.0.1:57140)
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 982, in _get_connection
+    connection = self.deque.pop()
+IndexError: pop from an empty deque
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Auser\anaconda\envs\python_rely\lib\site-packages\py4j\java_gateway.py", line 1120, in start
+    self.socket.connect((self.address, self.port))
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-08-02 11:03:30,542 - INFO - 发现 19 张待同步表
+2025-08-02 11:03:30,543 - INFO - 开始同步表 ads_page_visit_rank
+2025-08-02 11:03:30,869 - INFO - 表 ads_page_visit_rank 结构同步成功
+2025-08-02 11:03:33,369 - INFO - 表 ads_page_visit_rank 数据同步完成，记录数: 1101
+2025-08-02 11:03:33,370 - INFO - 表 ads_page_visit_rank 同步成功
+2025-08-02 11:03:33,370 - INFO - 开始同步表 ads_pc_entry_stats
+2025-08-02 11:03:33,601 - INFO - 表 ads_pc_entry_stats 结构同步成功
+2025-08-02 11:03:39,424 - INFO - 表 ads_pc_entry_stats 数据同步完成，记录数: 239695
+2025-08-02 11:03:39,453 - INFO - 表 ads_pc_entry_stats 同步成功
+2025-08-02 11:03:39,453 - INFO - 开始同步表 ads_realtime_path_monitor
+2025-08-02 11:03:39,619 - INFO - 表 ads_realtime_path_monitor 结构同步成功
+2025-08-02 11:03:40,307 - INFO - 表 ads_realtime_path_monitor 数据同步完成，记录数: 1101
+2025-08-02 11:03:40,307 - INFO - 表 ads_realtime_path_monitor 同步成功
+2025-08-02 11:03:40,307 - INFO - 开始同步表 ads_shop_path_analysis
+2025-08-02 11:03:40,467 - INFO - 表 ads_shop_path_analysis 结构同步成功
+2025-08-02 11:03:41,074 - INFO - 表 ads_shop_path_analysis 数据同步完成，记录数: 9267
+2025-08-02 11:03:41,076 - INFO - 表 ads_shop_path_analysis 同步成功
+2025-08-02 11:03:41,076 - INFO - 开始同步表 ads_user_segment
+2025-08-02 11:03:41,240 - INFO - 表 ads_user_segment 结构同步成功
+2025-08-02 11:03:41,410 - INFO - 表 ads_user_segment 数据同步完成，记录数: 2
+2025-08-02 11:03:41,410 - INFO - 表 ads_user_segment 同步成功
+2025-08-02 11:03:41,410 - INFO - 开始同步表 ads_wireless_entry_stats
+2025-08-02 11:03:41,584 - INFO - 表 ads_wireless_entry_stats 结构同步成功
+2025-08-02 11:03:41,884 - INFO - 表 ads_wireless_entry_stats 数据同步完成，记录数: 1100
+2025-08-02 11:03:41,884 - INFO - 表 ads_wireless_entry_stats 同步成功
+2025-08-02 11:03:41,884 - INFO - 开始同步表 dwd_page_visit_detail
+2025-08-02 11:03:42,086 - INFO - 表 dwd_page_visit_detail 结构同步成功
+2025-08-02 11:03:42,622 - ERROR - 同步大表 dwd_page_visit_detail 数据失败: 
+mismatched input 'OFFSET' expecting {<EOF>, ';'}(line 3, pos 32)
+
+== SQL ==
+
+                    SELECT * FROM gmall_09.dwd_page_visit_detail 
+                    LIMIT 50000 OFFSET 0
+--------------------------------^^^
+                
+
+2025-08-02 11:03:42,626 - ERROR - 同步表 dwd_page_visit_detail 数据失败: 
+mismatched input 'OFFSET' expecting {<EOF>, ';'}(line 3, pos 32)
+
+== SQL ==
+
+                    SELECT * FROM gmall_09.dwd_page_visit_detail 
+                    LIMIT 50000 OFFSET 0
+--------------------------------^^^
+                
+
+2025-08-02 11:03:42,626 - ERROR - 表 dwd_page_visit_detail 同步失败，跳过继续处理其他表
+2025-08-02 11:03:42,626 - INFO - 开始同步表 dwd_user_session
+2025-08-02 11:03:42,765 - ERROR - 同步表 dwd_user_session 结构失败: (1067, "Invalid default value for 'end_time'")
+2025-08-02 11:03:42,766 - ERROR - 表 dwd_user_session 同步失败，跳过继续处理其他表
+2025-08-02 11:03:42,766 - INFO - 开始同步表 dws_page_path_flow
+2025-08-02 11:03:42,932 - INFO - 表 dws_page_path_flow 结构同步成功
+2025-08-02 11:03:45,915 - INFO - 表 dws_page_path_flow 数据同步完成，记录数: 83828
+2025-08-02 11:03:45,934 - INFO - 表 dws_page_path_flow 同步成功
+2025-08-02 11:03:45,934 - INFO - 开始同步表 dws_page_visit_stats
+2025-08-02 11:03:46,107 - INFO - 表 dws_page_visit_stats 结构同步成功
+2025-08-02 11:03:46,373 - INFO - 表 dws_page_visit_stats 数据同步完成，记录数: 1101
+2025-08-02 11:03:46,374 - INFO - 表 dws_page_visit_stats 同步成功
+2025-08-02 11:03:46,374 - INFO - 开始同步表 dws_traffic_entry_stats
+2025-08-02 11:03:46,538 - INFO - 表 dws_traffic_entry_stats 结构同步成功
+2025-08-02 11:03:46,762 - INFO - 表 dws_traffic_entry_stats 数据同步完成，记录数: 1102
+2025-08-02 11:03:46,762 - INFO - 表 dws_traffic_entry_stats 同步成功
+2025-08-02 11:03:46,762 - INFO - 开始同步表 ods_marketing_activity
+2025-08-02 11:03:46,916 - ERROR - 同步表 ods_marketing_activity 结构失败: (1067, "Invalid default value for 'end_time'")
+2025-08-02 11:03:46,916 - ERROR - 表 ods_marketing_activity 同步失败，跳过继续处理其他表
+2025-08-02 11:03:46,916 - INFO - 开始同步表 ods_order_info
+2025-08-02 11:03:47,090 - ERROR - 同步表 ods_order_info 结构失败: (1067, "Invalid default value for 'payment_time'")
+2025-08-02 11:03:47,090 - ERROR - 表 ods_order_info 同步失败，跳过继续处理其他表
+2025-08-02 11:03:47,090 - INFO - 开始同步表 ods_page_relationship
+2025-08-02 11:03:47,248 - INFO - 表 ods_page_relationship 结构同步成功
+2025-08-02 11:03:47,966 - INFO - 表 ods_page_relationship 数据同步完成，记录数: 200
+2025-08-02 11:03:47,966 - INFO - 表 ods_page_relationship 同步成功
+2025-08-02 11:03:47,966 - INFO - 开始同步表 ods_page_visit_log
+2025-08-02 11:03:48,129 - INFO - 表 ods_page_visit_log 结构同步成功
+2025-08-02 11:04:45,304 - INFO - 表 ods_page_visit_log 数据同步完成，记录数: 1000000
+2025-08-02 11:04:45,658 - INFO - 表 ods_page_visit_log 同步成功
+2025-08-02 11:04:45,658 - INFO - 开始同步表 ods_product_info
+2025-08-02 11:04:45,950 - INFO - 表 ods_product_info 结构同步成功
+2025-08-02 11:04:46,229 - INFO - 表 ods_product_info 数据同步完成，记录数: 1000
+2025-08-02 11:04:46,229 - INFO - 表 ods_product_info 同步成功
+2025-08-02 11:04:46,229 - INFO - 开始同步表 ods_shop_page_info
+2025-08-02 11:04:46,378 - INFO - 表 ods_shop_page_info 结构同步成功
+2025-08-02 11:04:46,556 - INFO - 表 ods_shop_page_info 数据同步完成，记录数: 100
+2025-08-02 11:04:46,557 - INFO - 表 ods_shop_page_info 同步成功
+2025-08-02 11:04:46,557 - INFO - 开始同步表 ods_traffic_source
+2025-08-02 11:04:46,719 - INFO - 表 ods_traffic_source 结构同步成功
+2025-08-02 11:04:46,888 - INFO - 表 ods_traffic_source 数据同步完成，记录数: 20
+2025-08-02 11:04:46,888 - INFO - 表 ods_traffic_source 同步成功
+2025-08-02 11:04:46,888 - INFO - 开始同步表 ods_user_info
+2025-08-02 11:04:47,045 - INFO - 表 ods_user_info 结构同步成功
+2025-08-02 11:04:47,585 - INFO - 表 ods_user_info 数据同步完成，记录数: 10000
+2025-08-02 11:04:47,587 - INFO - 表 ods_user_info 同步成功

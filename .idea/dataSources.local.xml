@@ -10,7 +10,6 @@
         <introspection-scope>
           <node kind="schema">
             <name qname="gmall_08" />
-            <name qname="default" />
             <name qname="gmall_09" />
           </node>
         </introspection-scope>
@@ -39,7 +38,7 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="gmall_09" />
+          <node kind="schema" qname="gmall_09_ads" />
         </introspection-scope>
       </schema-mapping>
     </data-source>

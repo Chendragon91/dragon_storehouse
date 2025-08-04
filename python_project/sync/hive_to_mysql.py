@@ -61,7 +61,7 @@ class HiveToMySQLSync:
 
         return columns, table_comment
 
-    def convert_data_type(self, hive_type: str) -> str:
+    def convert_data_type(self, hive_type: str, column_name: str = None) -> str:
         """增强版类型映射，处理Hive与MySQL之间的类型不兼容问题"""
         type_map = {
             'string': 'VARCHAR(512)',
@@ -76,6 +76,11 @@ class HiveToMySQLSync:
             'date': 'DATE',
             'binary': 'BLOB'
         }
+
+        # 特殊处理 next_page_dist 列
+        if column_name == 'next_page_dist':
+            return 'LONGTEXT'
+
         if hive_type.startswith('decimal'):
             return hive_type.upper().replace('decimal', 'DECIMAL')
         return type_map.get(hive_type, 'TEXT')
@@ -87,7 +92,7 @@ class HiveToMySQLSync:
 
         for col in columns:
             name, col_type, col_comment = col
-            mysql_type = self.convert_data_type(col_type)
+            mysql_type = self.convert_data_type(col_type, name)  # 传递列名以进行特殊处理
             comment_clause = f" COMMENT '{col_comment}'" if col_comment else ''
 
             # 假设名为id的字段是主键
@@ -125,30 +130,113 @@ class HiveToMySQLSync:
     def sync_table_data(self, table_name: str):
         """批量同步数据到MySQL"""
         try:
+            # 对于大表使用分批处理
+            if table_name in ["dwd_page_visit_detail"]:
+                self._sync_large_table_data(table_name)
+            else:
+                self._sync_normal_table_data(table_name)
+        except Exception as e:
+            logging.error(f"同步表 {table_name} 数据失败: {str(e)}")
+            raise
+
+    def _sync_normal_table_data(self, table_name: str):
+        """同步普通大小的表数据"""
+        try:
             df = self.spark.sql(f"SELECT * FROM {self.hive_db}.{table_name}")
             columns = df.schema.names
             rows = df.collect()
 
-            with self.get_mysql_connection() as conn:
-                with conn.cursor() as cursor:
-                    placeholders = ', '.join(['%s'] * len(columns))
-                    insert_sql = f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES ({placeholders})"
-
-                    for row in rows:
-                        cursor.execute(insert_sql, tuple(row))
-
+            self._batch_insert_to_mysql(table_name, columns, rows)
             logging.info(f"表 {table_name} 数据同步完成，记录数: {len(rows)}")
         except Exception as e:
             logging.error(f"同步表 {table_name} 数据失败: {str(e)}")
             raise
+
+    def _sync_large_table_data(self, table_name: str):
+        """同步大表数据，使用分批处理避免内存溢出"""
+        try:
+            # 先获取总记录数
+            count_df = self.spark.sql(f"SELECT COUNT(*) as cnt FROM {self.hive_db}.{table_name}")
+            total_count = count_df.collect()[0]['cnt']
+
+            batch_size = 50000  # 每批处理5万条记录
+            offset = 0
+            total_processed = 0
+
+            while offset < total_count:
+                # 分批读取数据
+                df = self.spark.sql(f"""
+                    SELECT * FROM {self.hive_db}.{table_name} 
+                    LIMIT {batch_size} OFFSET {offset}
+                """)
+
+                # 获取列名
+                columns = df.schema.names
+
+                # 收集当前批次数据
+                rows = df.collect()
+
+                # 批量插入到MySQL
+                self._batch_insert_to_mysql(table_name, columns, rows)
+
+                processed = len(rows)
+                total_processed += processed
+                offset += batch_size
+
+                logging.info(f"表 {table_name} 已处理 {total_processed}/{total_count} 条记录")
+
+                # 如果当前批次少于batch_size，说明已经处理完所有数据
+                if processed < batch_size:
+                    break
+
+            logging.info(f"表 {table_name} 数据同步完成，记录数: {total_processed}")
+        except Exception as e:
+            logging.error(f"同步大表 {table_name} 数据失败: {str(e)}")
+            raise
+
+    def _batch_insert_to_mysql(self, table_name: str, columns: List[str], rows: List):
+        """批量插入数据到MySQL"""
+        if not rows:
+            return
+
+        conn = pymysql.connect(
+            host=self.mysql_config['host'],
+            port=self.mysql_config['port'],
+            user=self.mysql_config['user'],
+            password=self.mysql_config['password'],
+            database=self.mysql_config['database'],
+            charset='utf8mb4'
+        )
+        cursor = conn.cursor()
+
+        try:
+            placeholders = ', '.join(['%s'] * len(columns))
+            insert_sql = f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES ({placeholders})"
+
+            batch = []
+            for row in rows:
+                batch.append(tuple(row))
+                if len(batch) >= self.batch_size:
+                    cursor.executemany(insert_sql, batch)
+                    conn.commit()
+                    batch = []
+
+            if batch:  # 插入剩余记录
+                cursor.executemany(insert_sql, batch)
+                conn.commit()
+        finally:
+            cursor.close()
+            conn.close()
 
     def run_sync(self):
         """执行完整同步流程"""
         tables = self.get_hive_tables()
         for table in tables:
             try:
+                logging.info(f"开始同步表 {table}")
                 self.sync_table_structure(table)
                 self.sync_table_data(table)
+                logging.info(f"表 {table} 同步成功")
             except Exception:
                 logging.error(f"表 {table} 同步失败，跳过继续处理其他表")
                 continue
@@ -156,11 +244,14 @@ class HiveToMySQLSync:
 if __name__ == "__main__":
     spark = SparkSession.builder \
         .appName("EnhancedHiveMySQLSync") \
+        .config("spark.driver.memory", "8g") \
+        .config("spark.driver.maxResultSize", "4g") \
+        .config("spark.executor.memory", "8g") \
         .config("spark.local.dir", "D:\linshi") \
         .config("spark.sql.warehouse.dir", "/user/hive/warehouse") \
         .config("hive.metastore.uris", "thrift://cdh01:9083") \
         .config("spark.hadoop.fs.defaultFS", "hdfs://cdh01:8020") \
-        .config("spark.sql.execution.arrow.enabled", "true") \
+        .config("spark.sql.execution.arrow.pyspark.enabled", "true") \
         .config("spark.sql.parquet.writeLegacyFormat", "true") \
         .enableHiveSupport() \
         .getOrCreate()
@@ -170,9 +261,9 @@ if __name__ == "__main__":
         'port': 3306,
         'user': 'root',
         'password': 'root',
-        'database': 'gmall_08_ads'
+        'database': 'gmall_09_ads'
     }
 
-    syncer = HiveToMySQLSync(spark, "gmall_08", config)
+    syncer = HiveToMySQLSync(spark, "gmall_09", config)
     syncer.run_sync()
     spark.stop()
