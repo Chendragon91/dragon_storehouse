@@ -826,881 +826,770 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="226" parent="1" name="gmall">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="227" parent="1" name="gmall_08">
+    <schema id="227" parent="1" name="gmall_01">
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </schema>
+    <schema id="228" parent="1" name="gmall_08">
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
-    <schema id="228" parent="1" name="gmall_08_ads">
+    <schema id="229" parent="1" name="gmall_08_ads">
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
-    <schema id="229" parent="1" name="gmall_09">
+    <schema id="230" parent="1" name="gmall_09">
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
-    <schema id="230" parent="1" name="gmall_09_ads">
+    <schema id="231" parent="1" name="gmall_09_ads">
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
-    <schema id="231" parent="1" name="hive">
+    <schema id="232" parent="1" name="hive">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="232" parent="1" name="hue">
+    <schema id="233" parent="1" name="hue">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="233" parent="1" name="information_schema">
+    <schema id="234" parent="1" name="information_schema">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="234" parent="1" name="mysql">
+    <schema id="235" parent="1" name="mysql">
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
-    <schema id="235" parent="1" name="oozie">
+    <schema id="236" parent="1" name="oozie">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="236" parent="1" name="performance_schema">
+    <schema id="237" parent="1" name="performance_schema">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="237" parent="1" name="scm">
+    <schema id="238" parent="1" name="scm">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="238" parent="1" name="sys">
+    <schema id="239" parent="1" name="sys">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="239" parent="1" name="tms">
+    <schema id="240" parent="1" name="tms">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="240" parent="1" name="tms_ads">
+    <schema id="241" parent="1" name="tms_ads">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <user id="241" parent="1" name="dolphinscheduler">
+    <user id="242" parent="1" name="dolphinscheduler">
       <Host>cdh03</Host>
     </user>
-    <user id="242" parent="1" name="mysql.sys">
+    <user id="243" parent="1" name="mysql.sys">
       <Host>localhost</Host>
     </user>
-    <user id="243" parent="1" name="root"/>
-    <user id="244" parent="1" name="{admin}"/>
-    <user id="245" parent="1" name="{admin}">
+    <user id="244" parent="1" name="root"/>
+    <user id="245" parent="1" name="{admin}"/>
+    <user id="246" parent="1" name="{admin}">
       <Host>cdh03</Host>
     </user>
-    <table id="246" parent="230" name="ads_page_visit_rank">
-      <Comment>gmall_09</Comment>
+    <table id="247" parent="227" name="marketing_activity">
+      <Comment>营销活动表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="247" parent="230" name="ads_pc_entry_stats">
-      <Comment>gmall_09</Comment>
+    <table id="248" parent="227" name="micro_detail_visit">
+      <Comment>商品微详情访问表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="248" parent="230" name="ads_realtime_path_monitor">
-      <Comment>gmall_09</Comment>
+    <table id="249" parent="227" name="order_detail">
+      <Comment>订单明细表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="249" parent="230" name="ads_shop_path_analysis">
-      <Comment>gmall_09</Comment>
+    <table id="250" parent="227" name="order_info">
+      <Comment>订单主表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="250" parent="230" name="ads_user_segment">
-      <Comment>gmall_09</Comment>
+    <table id="251" parent="227" name="order_refund">
+      <Comment>订单退款表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="251" parent="230" name="ads_wireless_entry_stats">
-      <Comment>gmall_09</Comment>
+    <table id="252" parent="227" name="product_category">
+      <Comment>商品类目表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="252" parent="230" name="dwd_page_visit_detail">
-      <Comment>gmall_09</Comment>
+    <table id="253" parent="227" name="product_competitiveness">
+      <Comment>商品竞争力评分表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="253" parent="230" name="dws_page_path_flow">
-      <Comment>gmall_09</Comment>
+    <table id="254" parent="227" name="product_favorite">
+      <Comment>商品收藏表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="254" parent="230" name="dws_page_visit_stats">
-      <Comment>gmall_09</Comment>
+    <table id="255" parent="227" name="product_info">
+      <Comment>商品信息表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="255" parent="230" name="dws_traffic_entry_stats">
-      <Comment>gmall_09</Comment>
+    <table id="256" parent="227" name="shopping_cart">
+      <Comment>购物车表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="256" parent="230" name="ods_page_relationship">
-      <Comment>gmall_09</Comment>
+    <table id="257" parent="227" name="user_behavior">
+      <Comment>用户行为原始表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="257" parent="230" name="ods_page_visit_log">
-      <Comment>gmall_09</Comment>
+    <table id="258" parent="227" name="yearly_payment_snapshot">
+      <Comment>商品年累计支付金额快照表</Comment>
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="258" parent="230" name="ods_product_info">
-      <Comment>gmall_09</Comment>
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="259" parent="230" name="ods_shop_page_info">
-      <Comment>gmall_09</Comment>
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="260" parent="230" name="ods_traffic_source">
-      <Comment>gmall_09</Comment>
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="261" parent="230" name="ods_user_info">
-      <Comment>gmall_09</Comment>
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <column id="262" parent="246" name="stat_date">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
+    <column id="259" parent="247" name="activity_id">
+      <Comment>活动ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="263" parent="246" name="time_period">
-      <Comment>????(day/7d/30d/month)</Comment>
-      <DataType>varchar(512)|0s</DataType>
+    <column id="260" parent="247" name="order_id">
+      <Comment>订单ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="264" parent="246" name="page_type">
-      <Comment>????(shop/product/other)</Comment>
-      <DataType>varchar(512)|0s</DataType>
+    <column id="261" parent="247" name="activity_type">
+      <Comment>活动类型(juhuasuan/...)</Comment>
+      <DataType>varchar(50)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="265" parent="246" name="page_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
+    <column id="262" parent="247" name="discount_amount">
+      <Comment>优惠金额</Comment>
+      <DataType>decimal(16,2 digit)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="266" parent="246" name="page_name">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
+    <column id="263" parent="247" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="267" parent="246" name="visitor_count">
-      <Comment>???</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="268" parent="246" name="visit_count">
-      <Comment>????</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="269" parent="246" name="avg_stay_duration">
-      <Comment>??????</Comment>
-      <DataType>decimal(18,2 digit)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="270" parent="246" name="rank">
-      <Comment>??</Comment>
-      <DataType>int(11)|0s</DataType>
-      <Position>9</Position>
-    </column>
-    <column id="271" parent="246" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>10</Position>
-    </column>
-    <column id="272" parent="247" name="stat_date">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
+    <index id="264" parent="247" name="PRIMARY">
+      <ColNames>activity_id
+order_id
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="265" parent="247" name="idx_order_id">
+      <ColNames>order_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="266" parent="247" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="267" parent="248" name="visit_id">
+      <Comment>访问ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="273" parent="247" name="source_page_id">
-      <Comment>????ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
+    <column id="268" parent="248" name="visitor_id">
+      <Comment>访客ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="274" parent="247" name="source_page_name">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
+    <column id="269" parent="248" name="product_id">
+      <Comment>商品ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="275" parent="247" name="visitor_count">
-      <Comment>???</Comment>
-      <DataType>bigint(20)|0s</DataType>
+    <column id="270" parent="248" name="stay_duration">
+      <Comment>停留时长(秒)</Comment>
+      <DataType>int(11)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="276" parent="247" name="visitor_ratio">
-      <Comment>????</Comment>
-      <DataType>decimal(18,4 digit)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="277" parent="247" name="rank">
-      <Comment>??</Comment>
-      <DataType>int(11)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="278" parent="247" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="279" parent="248" name="time_window">
-      <Comment>????(5min/30min/1h)</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="280" parent="248" name="current_page">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="281" parent="248" name="page_type">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="282" parent="248" name="active_users">
-      <Comment>?????</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="283" parent="248" name="avg_stay_duration">
-      <Comment>??????(?)</Comment>
-      <DataType>int(11)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="284" parent="248" name="next_page_dist">
-      <Comment>?????(JSON??)</Comment>
-      <DataType>longtext|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="285" parent="248" name="update_time">
-      <Comment>????</Comment>
+    <column id="271" parent="248" name="visit_time">
+      <Comment>访问时间</Comment>
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
-      <Position>7</Position>
-    </column>
-    <column id="286" parent="248" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="287" parent="249" name="stat_date">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="288" parent="249" name="time_period">
-      <Comment>????(day/7d/30d/month)</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="289" parent="249" name="path_type">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="290" parent="249" name="from_page_id">
-      <Comment>????ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="291" parent="249" name="from_page_name">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="292" parent="249" name="to_page_id">
-      <Comment>????ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
+    <column id="272" parent="248" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="293" parent="249" name="to_page_name">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
+    <index id="273" parent="248" name="PRIMARY">
+      <ColNames>visit_id
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="274" parent="248" name="idx_visitor_id">
+      <ColNames>visitor_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="275" parent="248" name="idx_product_id">
+      <ColNames>product_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="276" parent="248" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="277" parent="249" name="order_id">
+      <Comment>订单ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="278" parent="249" name="product_id">
+      <Comment>商品ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="279" parent="249" name="product_name">
+      <Comment>商品名称</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="280" parent="249" name="category_id">
+      <Comment>类目ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="281" parent="249" name="price">
+      <Comment>商品单价</Comment>
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="282" parent="249" name="quantity">
+      <Comment>购买数量</Comment>
+      <DataType>int(11)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="283" parent="249" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="294" parent="249" name="flow_count">
-      <Comment>????</Comment>
-      <DataType>bigint(20)|0s</DataType>
+    <index id="284" parent="249" name="PRIMARY">
+      <ColNames>order_id
+product_id
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="285" parent="249" name="idx_product_id">
+      <ColNames>product_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="286" parent="249" name="idx_category_id">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="287" parent="249" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="288" parent="250" name="order_id">
+      <Comment>订单ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="289" parent="250" name="user_id">
+      <Comment>用户ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="290" parent="250" name="payment_amount">
+      <Comment>实际支付金额</Comment>
+      <DataType>decimal(16,2 digit)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="291" parent="250" name="payment_time">
+      <Comment>支付时间</Comment>
+      <DataType>timestamp|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>4</Position>
+    </column>
+    <column id="292" parent="250" name="order_status">
+      <Comment>订单状态</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="293" parent="250" name="terminal_type">
+      <Comment>终端类型(pc/wireless)</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="294" parent="250" name="is_new_buyer">
+      <Comment>是否新买家(1是0否)</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="295" parent="250" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="295" parent="249" name="visitor_count">
-      <Comment>?????</Comment>
-      <DataType>bigint(20)|0s</DataType>
+    <index id="296" parent="250" name="PRIMARY">
+      <ColNames>order_id
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="297" parent="250" name="idx_user_id">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="298" parent="250" name="idx_payment_time">
+      <ColNames>payment_time</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="299" parent="250" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="300" parent="251" name="refund_id">
+      <Comment>退款ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="301" parent="251" name="order_id">
+      <Comment>订单ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="302" parent="251" name="product_id">
+      <Comment>商品ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="303" parent="251" name="refund_amount">
+      <Comment>退款金额</Comment>
+      <DataType>decimal(16,2 digit)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="304" parent="251" name="refund_type">
+      <Comment>退款类型(only_refund/refund_return)</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="305" parent="251" name="refund_time">
+      <Comment>退款时间</Comment>
+      <DataType>timestamp|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>6</Position>
+    </column>
+    <column id="306" parent="251" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <index id="307" parent="251" name="PRIMARY">
+      <ColNames>refund_id
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="308" parent="251" name="idx_order_id">
+      <ColNames>order_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="309" parent="251" name="idx_product_id">
+      <ColNames>product_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="310" parent="251" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="311" parent="252" name="category_id">
+      <Comment>类目ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="312" parent="252" name="category_name">
+      <Comment>类目名称</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="313" parent="252" name="parent_id">
+      <Comment>父类目ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="314" parent="252" name="is_leaf">
+      <Comment>是否叶子类目(1是0否)</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="315" parent="252" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="316" parent="252" name="PRIMARY">
+      <ColNames>category_id
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="317" parent="252" name="idx_parent_id">
+      <ColNames>parent_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="318" parent="252" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="319" parent="253" name="product_id">
+      <Comment>商品ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="320" parent="253" name="score">
+      <Comment>竞争力评分</Comment>
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="321" parent="253" name="score_time">
+      <Comment>评分时间</Comment>
+      <DataType>timestamp|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>3</Position>
+    </column>
+    <column id="322" parent="253" name="score_dimensions">
+      <Comment>评分维度(流量获取/转化/内容营销等)</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="323" parent="253" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="324" parent="253" name="PRIMARY">
+      <ColNames>product_id
+score_time
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="325" parent="253" name="idx_score_time">
+      <ColNames>score_time</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="326" parent="253" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="327" parent="254" name="fav_id">
+      <Comment>收藏ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="328" parent="254" name="user_id">
+      <Comment>用户ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="329" parent="254" name="product_id">
+      <Comment>商品ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="330" parent="254" name="fav_time">
+      <Comment>收藏时间</Comment>
+      <DataType>timestamp|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>4</Position>
+    </column>
+    <column id="331" parent="254" name="is_cancel">
+      <Comment>是否取消(1是0否)</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="332" parent="254" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="333" parent="254" name="PRIMARY">
+      <ColNames>fav_id
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="334" parent="254" name="idx_user_id">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="335" parent="254" name="idx_product_id">
+      <ColNames>product_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="336" parent="254" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="337" parent="255" name="product_id">
+      <Comment>商品ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="338" parent="255" name="product_name">
+      <Comment>商品名称</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="339" parent="255" name="category_id">
+      <Comment>叶子类目ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="340" parent="255" name="price">
+      <Comment>商品价格</Comment>
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="341" parent="255" name="status">
+      <Comment>商品状态(1上架0下架)</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="342" parent="255" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="343" parent="255" name="PRIMARY">
+      <ColNames>product_id
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="344" parent="255" name="idx_category_id">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="345" parent="255" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="346" parent="256" name="cart_id">
+      <Comment>购物车ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="347" parent="256" name="user_id">
+      <Comment>用户ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="348" parent="256" name="product_id">
+      <Comment>商品ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="349" parent="256" name="quantity">
+      <Comment>加购数量</Comment>
+      <DataType>int(11)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="350" parent="256" name="cart_time">
+      <Comment>加购时间</Comment>
+      <DataType>timestamp|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>5</Position>
+    </column>
+    <column id="351" parent="256" name="is_delete">
+      <Comment>是否删除(1是0否)</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="352" parent="256" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <index id="353" parent="256" name="PRIMARY">
+      <ColNames>cart_id
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="354" parent="256" name="idx_user_id">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="355" parent="256" name="idx_product_id">
+      <ColNames>product_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="356" parent="256" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="357" parent="257" name="log_id">
+      <Comment>日志ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="358" parent="257" name="user_id">
+      <Comment>用户ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="359" parent="257" name="visitor_id">
+      <Comment>访客ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="360" parent="257" name="product_id">
+      <Comment>商品ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="361" parent="257" name="behavior_type">
+      <Comment>行为类型(view/cart/fav/buy)</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="362" parent="257" name="behavior_time">
+      <Comment>行为时间</Comment>
+      <DataType>timestamp|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>6</Position>
+    </column>
+    <column id="363" parent="257" name="stay_duration">
+      <Comment>停留时长(秒)</Comment>
+      <DataType>int(11)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="364" parent="257" name="terminal_type">
+      <Comment>终端类型(pc/wireless)</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="365" parent="257" name="page_type">
+      <Comment>页面类型(detail/shop/micro_detail)</Comment>
+      <DataType>varchar(50)|0s</DataType>
       <Position>9</Position>
     </column>
-    <column id="296" parent="249" name="conversion_rate">
-      <Comment>???</Comment>
-      <DataType>decimal(18,4 digit)|0s</DataType>
+    <column id="366" parent="257" name="click_behavior">
+      <Comment>点击行为明细</Comment>
+      <DataType>varchar(255)|0s</DataType>
       <Position>10</Position>
     </column>
-    <column id="297" parent="249" name="dt">
-      <DataType>varchar(512)|0s</DataType>
+    <column id="367" parent="257" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <column id="298" parent="250" name="segment_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="299" parent="250" name="segment_name">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="300" parent="250" name="user_count">
-      <Comment>???</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="301" parent="250" name="avg_path_length">
-      <Comment>??????</Comment>
-      <DataType>decimal(18,2 digit)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="302" parent="250" name="conversion_rate">
-      <Comment>???</Comment>
-      <DataType>decimal(18,4 digit)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="303" parent="250" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="304" parent="251" name="stat_date">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="305" parent="251" name="time_period">
-      <Comment>????(day/7d/30d/month)</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="306" parent="251" name="entry_page_id">
-      <Comment>????ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="307" parent="251" name="entry_page_name">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="308" parent="251" name="visitor_count">
-      <Comment>???</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="309" parent="251" name="new_visitor_count">
-      <Comment>????</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="310" parent="251" name="order_buyer_count">
-      <Comment>?????</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="311" parent="251" name="order_conversion_rate">
-      <Comment>?????</Comment>
-      <DataType>decimal(18,4 digit)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="312" parent="251" name="avg_stay_duration">
-      <Comment>??????</Comment>
-      <DataType>decimal(18,2 digit)|0s</DataType>
-      <Position>9</Position>
-    </column>
-    <column id="313" parent="251" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>10</Position>
-    </column>
-    <column id="314" parent="252" name="log_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="315" parent="252" name="user_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="316" parent="252" name="session_id">
-      <Comment>??ID</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="317" parent="252" name="page_url">
-      <Comment>??URL</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="318" parent="252" name="page_type">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="319" parent="252" name="page_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="320" parent="252" name="page_name">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="321" parent="252" name="referer_url">
-      <Comment>????URL</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="322" parent="252" name="referer_page_id">
-      <Comment>????ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>9</Position>
-    </column>
-    <column id="323" parent="252" name="referer_page_name">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>10</Position>
-    </column>
-    <column id="324" parent="252" name="visit_time">
-      <Comment>????</Comment>
-      <DataType>timestamp|0s</DataType>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    <index id="368" parent="257" name="PRIMARY">
+      <ColNames>log_id
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="369" parent="257" name="idx_user_id">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="370" parent="257" name="idx_product_id">
+      <ColNames>product_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="371" parent="257" name="idx_behavior_time">
+      <ColNames>behavior_time</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="372" parent="257" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="373" parent="258" name="product_id">
+      <Comment>商品ID</Comment>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
-      <Position>11</Position>
-    </column>
-    <column id="325" parent="252" name="stay_duration">
-      <Comment>????</Comment>
-      <DataType>int(11)|0s</DataType>
-      <Position>12</Position>
-    </column>
-    <column id="326" parent="252" name="device_type">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>13</Position>
-    </column>
-    <column id="327" parent="252" name="is_new_visitor">
-      <Comment>?????</Comment>
-      <DataType>text|0s</DataType>
-      <Position>14</Position>
-    </column>
-    <column id="328" parent="252" name="user_info">
-      <DataType>text|0s</DataType>
-      <Position>15</Position>
-    </column>
-    <column id="329" parent="252" name="product_info">
-      <DataType>text|0s</DataType>
-      <Position>16</Position>
-    </column>
-    <column id="330" parent="252" name="traffic_source">
-      <DataType>text|0s</DataType>
-      <Position>17</Position>
-    </column>
-    <column id="331" parent="252" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>18</Position>
-    </column>
-    <column id="332" parent="253" name="from_page_id">
-      <Comment>????ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="333" parent="253" name="from_page_name">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
+    <column id="374" parent="258" name="year_payment_amount">
+      <Comment>年累计支付金额</Comment>
+      <DataType>decimal(16,2 digit)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="334" parent="253" name="from_page_type">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="335" parent="253" name="to_page_id">
-      <Comment>????ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="336" parent="253" name="to_page_name">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="337" parent="253" name="to_page_type">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="338" parent="253" name="flow_count">
-      <Comment>????</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="339" parent="253" name="visitor_count">
-      <Comment>?????</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="340" parent="253" name="avg_stay_duration">
-      <Comment>??????</Comment>
-      <DataType>decimal(18,2 digit)|0s</DataType>
-      <Position>9</Position>
-    </column>
-    <column id="341" parent="253" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>10</Position>
-    </column>
-    <column id="342" parent="254" name="page_id">
-      <Comment>??ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="343" parent="254" name="page_name">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="344" parent="254" name="page_type">
-      <Comment>????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="345" parent="254" name="visit_count">
-      <Comment>????</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="346" parent="254" name="visitor_count">
-      <Comment>???</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="347" parent="254" name="avg_stay_duration">
-      <Comment>??????</Comment>
-      <DataType>decimal(18,2 digit)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="348" parent="254" name="bounce_count">
-      <Comment>????</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="349" parent="254" name="exit_count">
-      <Comment>????</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="350" parent="254" name="order_count">
-      <Comment>???</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>9</Position>
-    </column>
-    <column id="351" parent="254" name="order_amount">
-      <Comment>????</Comment>
-      <DataType>decimal(18,2 digit)|0s</DataType>
-      <Position>10</Position>
-    </column>
-    <column id="352" parent="254" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>11</Position>
-    </column>
-    <column id="353" parent="255" name="entry_page_id">
-      <Comment>????ID</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="354" parent="255" name="entry_page_name">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="355" parent="255" name="entry_page_type">
-      <Comment>??????</Comment>
-      <DataType>varchar(512)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="356" parent="255" name="visitor_count">
-      <Comment>???</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="357" parent="255" name="new_visitor_count">
-      <Comment>????</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="358" parent="255" name="avg_session_duration">
-      <Comment>??????</Comment>
-      <DataType>decimal(18,2 digit)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="359" parent="255" name="order_conversion_rate">
-      <Comment>?????</Comment>
-      <DataType>decimal(18,2 digit)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="360" parent="255" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="361" parent="256" name="from_page_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="362" parent="256" name="to_page_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="363" parent="256" name="relation_type">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="364" parent="256" name="create_time">
-      <DataType>timestamp|0s</DataType>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    <column id="375" parent="258" name="snapshot_date">
+      <Comment>快照日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
-      <Position>4</Position>
-    </column>
-    <column id="365" parent="256" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="366" parent="257" name="log_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="367" parent="257" name="user_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="368" parent="257" name="session_id">
-      <DataType>varchar(512)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="369" parent="257" name="page_url">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="370" parent="257" name="page_type">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="371" parent="257" name="page_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="372" parent="257" name="referer_url">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="373" parent="257" name="referer_page_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="374" parent="257" name="visit_time">
-      <DataType>timestamp|0s</DataType>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    <column id="376" parent="258" name="dt">
+      <Comment>分区日期(yyyy-MM-dd)</Comment>
+      <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
-      <Position>9</Position>
-    </column>
-    <column id="375" parent="257" name="stay_duration">
-      <DataType>int(11)|0s</DataType>
-      <Position>10</Position>
-    </column>
-    <column id="376" parent="257" name="device_type">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>11</Position>
-    </column>
-    <column id="377" parent="257" name="os_type">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>12</Position>
-    </column>
-    <column id="378" parent="257" name="browser_type">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>13</Position>
-    </column>
-    <column id="379" parent="257" name="ip_address">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>14</Position>
-    </column>
-    <column id="380" parent="257" name="province">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>15</Position>
-    </column>
-    <column id="381" parent="257" name="city">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>16</Position>
-    </column>
-    <column id="382" parent="257" name="is_new_visitor">
-      <DataType>int(11)|0s</DataType>
-      <Position>17</Position>
-    </column>
-    <column id="383" parent="257" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>18</Position>
-    </column>
-    <column id="384" parent="258" name="product_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="385" parent="258" name="product_name">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="386" parent="258" name="category_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="387" parent="258" name="category_name">
-      <DataType>varchar(512)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="388" parent="258" name="brand_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="389" parent="258" name="brand_name">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="390" parent="258" name="price">
-      <DataType>decimal(18,2 digit)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="391" parent="258" name="cost_price">
-      <DataType>decimal(18,2 digit)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="392" parent="258" name="status">
-      <DataType>int(11)|0s</DataType>
-      <Position>9</Position>
-    </column>
-    <column id="393" parent="258" name="create_time">
-      <DataType>timestamp|0s</DataType>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <NotNull>1</NotNull>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
-      <Position>10</Position>
-    </column>
-    <column id="394" parent="258" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>11</Position>
-    </column>
-    <column id="395" parent="259" name="page_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="396" parent="259" name="page_name">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="397" parent="259" name="page_url">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="398" parent="259" name="page_type">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="399" parent="259" name="page_level">
-      <DataType>int(11)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="400" parent="259" name="parent_page_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="401" parent="259" name="is_active">
-      <DataType>int(11)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="402" parent="259" name="create_time">
-      <DataType>timestamp|0s</DataType>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <NotNull>1</NotNull>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
-      <Position>8</Position>
-    </column>
-    <column id="403" parent="259" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>9</Position>
-    </column>
-    <column id="404" parent="260" name="source_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="405" parent="260" name="source_type">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="406" parent="260" name="source_name">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="407" parent="260" name="source_url">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="408" parent="260" name="campaign_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="409" parent="260" name="campaign_name">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="410" parent="260" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="411" parent="261" name="user_id">
-      <DataType>bigint(20)|0s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="412" parent="261" name="user_name">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="413" parent="261" name="gender">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="414" parent="261" name="age">
-      <DataType>int(11)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="415" parent="261" name="register_time">
-      <DataType>timestamp|0s</DataType>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <NotNull>1</NotNull>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
-      <Position>5</Position>
-    </column>
-    <column id="416" parent="261" name="vip_level">
-      <DataType>int(11)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="417" parent="261" name="province">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="418" parent="261" name="city">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="419" parent="261" name="phone_prefix">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>9</Position>
-    </column>
-    <column id="420" parent="261" name="dt">
-      <DataType>varchar(512)|0s</DataType>
-      <Position>10</Position>
-    </column>
+    <index id="377" parent="258" name="PRIMARY">
+      <ColNames>product_id
+snapshot_date
+dt</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="378" parent="258" name="idx_snapshot_date">
+      <ColNames>snapshot_date</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="379" parent="258" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

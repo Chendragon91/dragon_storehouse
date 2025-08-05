@@ -1,0 +1,53 @@
+package com.tcl.data_encryption;
+
+
+import com.tcl.data_encryption.rpc.CryptoProto;
+import com.tcl.data_encryption.rpc.CryptoServiceGrpc;
+import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
+
+public class CryptoClient {
+    private final CryptoServiceGrpc.CryptoServiceBlockingStub blockingStub;
+    public CryptoClient(ManagedChannel channel) {
+        blockingStub = CryptoServiceGrpc.newBlockingStub(channel);
+    }
+
+    public String encrypt(String text) {
+        CryptoProto.EncryptRequest request = CryptoProto.EncryptRequest.newBuilder()
+                .setPlainText(text)
+                .build();
+
+        CryptoProto.EncryptResponse response = blockingStub.encrypt(request);
+        return DataSecureUtils.bytesToHex(response.getEncryptedData().toByteArray());
+    }
+
+    public String decrypt(byte[] encryptedData) {
+        CryptoProto.DecryptRequest request = CryptoProto.DecryptRequest.newBuilder()
+                .setEncryptedData(com.google.protobuf.ByteString.copyFrom(encryptedData))
+                .build();
+
+        CryptoProto.DecryptResponse response = blockingStub.decrypt(request);
+        return response.getDecryptedText();
+    }
+
+
+    public static void main(String[] args) {
+
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("127.0.0.1", 9090)
+                .usePlaintext()
+                .build();
+
+        CryptoClient client = new CryptoClient(channel);
+        // String str = "{\"UPEXGMSGREALLOCATION\":{\"dateTime\":\"20250730121804\",\"altitude\":48,\"vec3\":23902,\"alarm\":{\"terminalLcdError\":0,\"earlyWarning\":0,\"terminalMainPowerUnderVoltage\":0,\"inOutRoute\":0,\"oilError\":0,\"overSpeed\":0,\"emergencyAlarm\":0,\"rolloverWarning\":0,\"illegalMove\":0,\"inOutArea\":0,\"gnssAntennaDisconnect\":0,\"laneDepartureError\":0,\"stopTimeout\":0,\"vssError\":0,\"ttsModuleError\":0,\"fatigueDriving\":0,\"gnssAntennaShortCircuit\":0,\"collisionRollover\":0,\"overspeedWarning\":0,\"cameraError\":0,\"illegalIgnition\":0,\"roadDrivingTimeout\":0,\"icModuleError\":0,\"banOnDrivingWarning\":0,\"stolen\":0,\"gnssModuleError\":0,\"cumulativeDrivingTimeout\":0,\"terminalMainPowerFailure\":0,\"driverFatigueMonitor\":0},\"msgId\":4610,\"encrypy\":0,\"vec2\":36,\"lon\":114.179001,\"vec1\":36,\"state\":{\"acc\":0,\"loadRating\":1,\"door\":0,\"laneDepartureWarning\":0,\"latLonEncryption\":0,\"electricCircuit\":0,\"location\":0,\"lon\":0,\"forwardCollisionWarning\":0,\"operation\":0,\"lat\":0,\"oilPath\":0},\"lat\":22.708228,\"direction\":343},\"DATATYPE\":4610,\"DATA\":\"AB4HB+kMEgQGzju5AVqABAAkACQAAF1eAVcAMABAAAMAAAAA\",\"UPEXGMSGREGISTER\":null,\"VEHICLENO\":\"粤BEJ546\",\"DATALEN\":36,\"VEHICLECOLOR\":2}";
+        // String encryptedHex = client.encrypt(str);
+        // System.out.println("Encrypted: " + encryptedHex);
+
+        // 测试解密
+        byte[] encryptedBytes = DataSecureUtils.hexStringToByteArray("C651358E0403910DF2A675124224A00D2A25C56F938602CA08CC1BFD82F528A9B4515977E540B8F3EE08F75778C4EA129D2D1970494EF1366C82AC017D9674D787E854D26DD50B12B3826016B8060DC58EFB51EC04EA36983799245BAAB73333271C91B9FAF9B472E3BA7304FE7045BF8FBCCCF3F50C7267999403FFC5E49ECE8C02A091785B02D9ED245E08FF5BD5F901506EB73F6685A5C1DDBBCA8043E18540BC6A2817598F32C69080911E17483D0C7DD99BD4A3F0FF9032751406C3B9038B49E6079542D3CE0AD054536B627BAFFB799D02ECDF19C9CF66080B012FFF0DB30276A91A2CF2632022CB97A5023432E1BC782D52C9A1A317360E222782718539BB8D779F567FEEF6A0EF9E6DA41ACE8D69AAF416FFBEA92D8BB983FFD516A1F0C83F935998D6DF6F032572EB3FD086E44806D7A69A2907C41BB8DCBA7DF65DB65F723E59CA7C1ACE422D1DACAA1162645AE48E31CC78435124571064DC12078A1CA83399045077BFD7F5F994C5C2BE4D0945450F9695C337AC0CF463CBDC69F197FF6D2972ED487480645DE7065EF5BE0471D0914AD4DA503AAB7BFBA7980994A27D56CB21CB2D278BBCD419EF32051C99332F6C2E38F20D5BC1F244893CDDEE6436621FD2C73263BCD75362268EFE390F45E9628D196F3E19C6158FCF4A8D5FDD83753A7CD4A42021A72E60D1AFE6EA0752D3E154727153F77A6D04FF61422206B7D38D90DFE4B13A00C7D5F2CD79ED98774A4437A5B4DDD274677104C0B3837052E0AE4BF175B0D3043083F5AEF523D65A2D81C8E0EA14415AB6488B90F8B55712B8E1F727C496B26A4277358D186B28082D5848DEE60C7F45A08CCF482FA7E18C26AD0E635D048FF2EC5E04A8F97AF660D5F8A9140AA914AFFA6C0B2F254807D269F46116DDEDE139DD2EAEA0CDFB62083318DBE8A6CB1C14EA59B01F50A235B6664446D6CEAAE5CC887190E729EBA761DF43675622D07183ED5A079D869B0667A08E3F73F50B2A35286A26A0D5FFC5302BBAC3DC347ED803CA9092F761FBAB3DCB089AD6C62726B1F94BA84953B11AC82616648E684836B4E73F17C3B19B9A4AE3ECB4E00DB33E6FC91B61FAF1F6939460B1E77BFA0B7EB701F074E19174CC294F596480A1DE8C0CEEF8D7AD15E3D758EC6F13A9DA8B02F85C253D4ED2A15B137DBDAD7034BE010D05119486E9B8B39FC949FBD8CEC7FB388F59867BC6FA4E35405703CB19B0700F2FA41B83A6AB91B54F829718D95D509E46F10D6530E061D2FA128B1514BC46CF87E35C2C078DF1FD6AE4A80041BF7277FC7A5EC924DD0F0DD357989A9702B4AFEE98473623D0110D9EE46848AC6E165179E53B33E0B69D53CE11CF4C555D7B6CD1161C0D5FE98AAAFB5014F93FD75FA61D62FE8D366BB6066E9BB6CA8F6B9EA70DA8193E3A32D1EBAD2ADC71708A49F1EDB8C39926BA95A0651DB6842BC08B4FC99995E9FB840F604474A2181DB384B24B3D5922EC0BF0BF55DBF96220F93FC82C1CC5126A13307C473CD876C72984A5D4899FD70847B29EB4E00F4E095467A0E5890B40F8B9A74347851B910BDD7A72FC2B4BBA859027DA65FDB53E94E8764C634726EED9C0605C932E");
+        String decrypted = client.decrypt(encryptedBytes);
+        System.out.println("Decrypted: " + decrypted);
+
+//        channel.shutdown();
+    }
+
+}
