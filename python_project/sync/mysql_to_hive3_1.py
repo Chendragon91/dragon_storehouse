@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import sys
 import pymysql
@@ -5,12 +6,12 @@ import datetime
 import tkinter as tk
 from tkinter import messagebox
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import lit
+from pyspark.sql.functions import col
 
 # -------------------------- 配置项（在此处修改库名和连接信息） --------------------------
 # 直接修改以下两个参数即可指定同步的库名
-MYSQL_DB = "gmall_09"  # MySQL数据库名
-HIVE_DB = "gmall_09"  # Hive数据库名
+MYSQL_DB = "gmall_01"  # MySQL数据库名
+HIVE_DB = "gmall_01"  # Hive数据库名
 
 DEFAULT_MYSQL_CONFIG = {
     "host": "192.168.142.130",
@@ -189,15 +190,36 @@ def sync_schema(mysql_db, hive_db, mysql_config, spark):
     return ddl_statements
 
 # -------------------------- 数据同步相关函数 --------------------------
-def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
-    """同步单表数据（解决dt列重复问题）"""
+def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark, overwrite=True):
+    """
+    同步单表数据（使用表中已有的dt列作为分区字段）
+
+    参数:
+        mysql_db: MySQL数据库名
+        hive_db: Hive数据库名
+        table_name: 表名
+        mysql_config: MySQL连接配置
+        spark: Spark会话
+        overwrite: 是否覆盖已存在的分区(默认True)
+    """
     conn = None
     try:
         conn = get_mysql_connection(mysql_config)
 
-        # 1. 获取表列名（排除dt列）
-        columns = get_table_columns(conn, mysql_db, table_name)
-        column_names = [col[0] for col in columns]
+        # 1. 获取表列名（包含dt列）
+        with conn.cursor() as cursor:
+            cursor.execute(f"""
+                SELECT COLUMN_NAME 
+                FROM INFORMATION_SCHEMA.COLUMNS
+                WHERE TABLE_SCHEMA='{mysql_db}' 
+                  AND TABLE_NAME='{table_name}'
+                ORDER BY ORDINAL_POSITION
+            """)
+            column_names = [col[0] for col in cursor.fetchall()]
+
+        # 确保表中有dt列
+        if 'dt' not in column_names:
+            raise Exception(f"表 {table_name} 中没有dt列，无法使用已有日期作为分区字段")
 
         # 2. 配置MySQL连接
         mysql_url = f"jdbc:mysql://{mysql_config['host']}:{mysql_config['port']}/{mysql_db}?useSSL=false&serverTimezone=UTC"
@@ -208,26 +230,58 @@ def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
             "fetchsize": "1000"
         }
 
-        # 3. 准备分区值和查询语句
-        dt = datetime.datetime.now().strftime("%Y%m%d")
-        query = f"(SELECT {','.join(column_names)}, '{dt}' as dt FROM {table_name}) as tmp"
-
-        # 4. 读取数据
+        # 3. 读取数据（直接使用原表数据，不添加任何新列）
+        query = f"(SELECT * FROM {table_name}) as tmp"
         df = spark.read.jdbc(url=mysql_url, table=query, properties=jdbc_properties)
 
-        # 5. 写入Hive
-        hdfs_path = f"/warehouse/{hive_db}/ods/ods_{table_name}/dt={dt}"
-        (df.write
-         .mode("overwrite")
-         .partitionBy("dt")
-         .option("path", hdfs_path)
-         .saveAsTable(f"{hive_db}.ods_{table_name}"))
+        # 4. 检查dt列是否存在且不为空
+        if 'dt' not in df.columns:
+            raise Exception(f"表 {table_name} 中没有dt列")
 
-        # 6. 验证分区
-        if not verify_partition(spark, hive_db, f"ods_{table_name}", dt):
-            raise Exception("分区验证失败")
+        # 5. 为每个不同的dt值创建分区
+        distinct_dts = [row.dt for row in df.select('dt').distinct().collect() if row.dt]
 
-        print(f"✅ 同步成功 | 表: {table_name} | 路径: {hdfs_path}")
+        for dt in distinct_dts:
+            try:
+                # 筛选当前分区的数据
+                partition_df = df.filter(df.dt == dt)
+
+                # 关键修改：从数据中排除dt列，因为dt是分区列，不应该在SELECT列表中出现
+                non_partition_columns = [c for c in partition_df.columns if c != 'dt']
+                data_to_insert = partition_df.select(*[col(c) for c in non_partition_columns])
+
+                # 写入模式选择
+                write_mode = "overwrite" if overwrite else "append"
+
+                # 写入Hive分区
+                hdfs_path = f"/warehouse/{hive_db}/ods/ods_{table_name}/dt={dt}"
+
+                # 在覆盖模式下，先删除已有分区
+                if overwrite:
+                    try:
+                        spark.sql(f"ALTER TABLE {hive_db}.ods_{table_name} DROP IF EXISTS PARTITION (dt='{dt}')")
+                    except:
+                        pass  # 如果分区不存在则忽略错误
+
+                # 关键修改：使用正确的INSERT语句，不包含dt列在SELECT中
+                data_to_insert.createOrReplaceTempView(f"temp_{table_name}")
+
+                columns_str = ", ".join(non_partition_columns)
+                spark.sql(f"""
+                    INSERT INTO TABLE {hive_db}.ods_{table_name} PARTITION(dt='{dt}')
+                    SELECT {columns_str} FROM temp_{table_name}
+                """)
+
+                # 验证分区
+                if not verify_partition(spark, hive_db, f"ods_{table_name}", dt):
+                    raise Exception(f"分区验证失败: dt={dt}")
+
+                print(f"✅ 同步成功 | 表: {table_name} | 分区: dt={dt} | 模式: {write_mode} | 路径: {hdfs_path}")
+
+            except Exception as e:
+                print(f"⚠️ 处理分区 dt={dt} 时出错: {str(e)}")
+                continue
+
         return True
 
     except Exception as e:
@@ -255,17 +309,18 @@ def verify_partition(spark, db, table, dt):
         print(f"❌ 验证失败: {str(e)}")
         return False
 
-def sync_all_data(mysql_db, hive_db, mysql_config, spark):
+def sync_all_data(mysql_db, hive_db, mysql_config, spark, overwrite=True):
     """同步所有表数据"""
     conn = None
     try:
         conn = get_mysql_connection(mysql_config)
         tables = get_mysql_tables(conn, mysql_db)
         print(f"\n===== 开始同步 {mysql_db} 到 {hive_db} 的数据，共 {len(tables)} 张表 =====")
+        print(f"===== 覆盖模式: {'是' if overwrite else '否'} =====")
 
         success_count = 0
         for table in tables:
-            if sync_table_data(mysql_db, hive_db, table, mysql_config, spark):
+            if sync_table_data(mysql_db, hive_db, table, mysql_config, spark, overwrite):
                 success_count += 1
             else:
                 print(f"⚠️ 表 {table} 同步失败，继续处理下一张表...")
@@ -318,8 +373,8 @@ def main():
         # 同步表结构
         sync_schema(MYSQL_DB, HIVE_DB, mysql_config, spark)
 
-        # 同步数据
-        if sync_all_data(MYSQL_DB, HIVE_DB, mysql_config, spark):
+        # 同步数据（默认使用覆盖模式）
+        if sync_all_data(MYSQL_DB, HIVE_DB, mysql_config, spark, overwrite=True):
             messagebox.showinfo("成功", "所有表结构和数据同步完成！")
         else:
             messagebox.showwarning("部分成功", "数据同步存在失败项，请查看日志！")

@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="add">
-      <change afterPath="$PROJECT_DIR$/java_module/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java_module/src/main/java/com/tcl/data_encryption/CryptoClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java_module/src/main/java/com/tcl/data_encryption/CryptoServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java_module/src/main/java/com/tcl/data_encryption/DataSecureUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java_module/src/test/java/TestDEcode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/01/Data-sync.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/01/a.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/01/simulated-data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/TCL_20250806.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/02/simulate-date.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/252ae64f-648d-46db-9341-6c26f2205065.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/252ae64f-648d-46db-9341-6c26f2205065.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/01/Data-sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/01/Data-sync.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/01/simulated-data.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/01/simulated-data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/sync/mysql_to_hive3_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/mysql_to_hive3_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,35 +72,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "C:/Users/24927/AppData/Roaming/JetBrains/IntelliJIdea2022.2/consoles/db/853a6dfa-4222-41ec-89dc-9f6aa19cd817",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDK",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4514609",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/24927/AppData/Roaming/JetBrains/IntelliJIdea2022.2/consoles/db/853a6dfa-4222-41ec-89dc-9f6aa19cd817&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4514609&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "hive",
-      "postgresql",
-      "sqlserver",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;hive&quot;,
+      &quot;postgresql&quot;,
+      &quot;sqlserver&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="python_project" sdk-home="D:\ANACONDA\envs\python_project\python.exe" working-directory="$PROJECT_DIR$">
@@ -125,25 +119,17 @@
       <recent name="D:\workspace\dragon_storehouse\python_project\Offline-pyspark\tms\ads" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\24927\AppData\Roaming\JetBrains\IntelliJIdea2022.2\consoles\db\853a6dfa-4222-41ec-89dc-9f6aa19cd817\02" />
+      <recent name="C:\Users\24927\AppData\Roaming\JetBrains\IntelliJIdea2022.2\consoles\db\853a6dfa-4222-41ec-89dc-9f6aa19cd817" />
       <recent name="C:\Users\24927\AppData\Roaming\JetBrains\IntelliJIdea2022.2\consoles\db\853a6dfa-4222-41ec-89dc-9f6aa19cd817\01" />
       <recent name="C:\Users\24927\AppData\Roaming\JetBrains\IntelliJIdea2022.2\consoles\db\853a6dfa-4222-41ec-89dc-9f6aa19cd817\09" />
       <recent name="C:\Users\24927\AppData\Roaming\JetBrains\IntelliJIdea2022.2\consoles\db\853a6dfa-4222-41ec-89dc-9f6aa19cd817\a" />
-      <recent name="C:\Users\24927\AppData\Roaming\JetBrains\IntelliJIdea2022.2\consoles\db\853a6dfa-4222-41ec-89dc-9f6aa19cd817\08" />
-      <recent name="D:\workspace\dragon_storehouse\java_module\src\main\java\com\tcl\data_encryption" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Data-sync">
-    <configuration name="TestDEcode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestDEcode" />
-      <module name="java_module" />
-      <shortenClasspath name="MANIFEST" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Python.mysql_to_hive3_1">
     <configuration default="true" type="Application" factoryName="Application">
       <shortenClasspath name="MANIFEST" />
       <method v="2">
@@ -216,6 +202,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="mysql_to_hive3_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/sync" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/sync/mysql_to_hive3_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="simulated-data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,11 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mysql_to_hive3_1" />
+        <item itemvalue="Python.simulated-data" />
         <item itemvalue="Python.Data-sync" />
         <item itemvalue="Python.a" />
-        <item itemvalue="Python.simulated-data" />
         <item itemvalue="Python.gmall_09_simulator" />
-        <item itemvalue="应用程序.TestDEcode" />
       </list>
     </recent_temporary>
   </component>
@@ -320,7 +328,15 @@
       <workItem from="1754267635402" duration="5093000" />
       <workItem from="1754292385216" duration="103000" />
       <workItem from="1754299358430" duration="11256000" />
-      <workItem from="1754352803194" duration="24654000" />
+      <workItem from="1754352803194" duration="26196000" />
+      <workItem from="1754447168822" duration="9933000" />
+      <workItem from="1754463708142" duration="344000" />
+      <workItem from="1754464072767" duration="10336000" />
+      <workItem from="1754476290036" duration="460000" />
+      <workItem from="1754476809286" duration="840000" />
+      <workItem from="1754477683505" duration="1072000" />
+      <workItem from="1754478797619" duration="2300000" />
+      <workItem from="1754481773586" duration="7174000" />
     </task>
     <task id="LOCAL-00001" summary="add python">
       <created>1752740355346</created>
@@ -532,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1754316061634</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="add">
+      <created>1754401921219</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1754401921219</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +612,7 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_cs_offer_activity_stats.coverage" NAME="dws_cs_offer_activity_stats 覆盖结果" MODIFIED="1753958267828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$gmall_simulator__1_.coverage" NAME="gmall_simulator (1) 覆盖结果" MODIFIED="1753943890499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_cs_service_performance_wide.coverage" NAME="dws_cs_service_performance_wide 覆盖结果" MODIFIED="1753964186588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08/dws" />
-    <SUITE FILE_PATH="coverage/dragon_storehouse$Data_sync.coverage" NAME="Data-sync 覆盖结果" MODIFIED="1754398789513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/01" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$Data_sync.coverage" NAME="Data-sync 覆盖结果" MODIFIED="1754462047483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/01" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_trans_deliver_suc_detail_inc.coverage" NAME="dwd_trans_deliver_suc_detail_inc 覆盖结果" MODIFIED="1753689310167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_cs_offer_time_analysis.coverage" NAME="dws_cs_offer_time_analysis 覆盖结果" MODIFIED="1753963706216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_order_stats.coverage" NAME="ads_order_stats 覆盖结果" MODIFIED="1753704081461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
@@ -622,6 +645,7 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_cs_offer_send_details.coverage" NAME="ads_cs_offer_send_details 覆盖结果" MODIFIED="1753964873623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_trans_order_stats_td.coverage" NAME="ads_trans_order_stats_td 覆盖结果" MODIFIED="1753704506128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$read_hive_tbl.coverage" NAME="read_hive_tbl 覆盖结果" MODIFIED="1754312078704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/09/machine-learning" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive3_1.coverage" NAME="mysql_to_hive3_1 覆盖结果" MODIFIED="1754481341368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_dispatch_nd.coverage" NAME="dws_trans_dispatch_nd 覆盖结果" MODIFIED="1753702498855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_dispatch_1d.coverage" NAME="dws_trans_dispatch_1d 覆盖结果" MODIFIED="1753702282939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dim_express_courier_full.coverage" NAME="dim_express_courier_full 覆盖结果" MODIFIED="1753414686868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dim" />
@@ -632,7 +656,7 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$dim_user_zip.coverage" NAME="dim_user_zip 覆盖结果" MODIFIED="1753670479200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dim" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$top250.coverage" NAME="豆瓣电影top250 覆盖结果" MODIFIED="1753707400915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/reptile" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dim_truck_driver_full.coverage" NAME="dim_truck_driver_full 覆盖结果" MODIFIED="1753502137994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dim" />
-    <SUITE FILE_PATH="coverage/dragon_storehouse$simulated_data.coverage" NAME="simulated-data 覆盖结果" MODIFIED="1754394562132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/01" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$simulated_data.coverage" NAME="simulated-data 覆盖结果" MODIFIED="1754481306085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/01" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_org_receive_1d.coverage" NAME="dws_trans_org_receive_1d 覆盖结果" MODIFIED="1753702898076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_bound_outbound_inc.coverage" NAME="dwd_bound_outbound_inc 覆盖结果" MODIFIED="1753671196010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_cs_offer_activity_detail.coverage" NAME="dwd_cs_offer_activity_detail 覆盖结果" MODIFIED="1753958113655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08/dwd" />

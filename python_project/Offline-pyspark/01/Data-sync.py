@@ -1,365 +1,428 @@
-import pymysql
-# 条件导入hive模块
-# 首先检查是否安装了必要的依赖
-import importlib
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+MySQL到Hive数据同步工具(增强版)
+"""
+
+import os
 import sys
+import logging
+import configparser
+import pymysql
+import datetime
+import time
+import subprocess
+import platform
+from typing import Dict, List, Tuple, Optional
+from pyspark.sql import SparkSession
 
-dependencies = {
-    'sasl': 'sasl',
-    'thrift': 'thrift',
-    'thrift_sasl': 'thrift-sasl',
-    'pyhive': 'pyhive[hive]'
-}
+# 配置日志格式
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('mysql_to_hive_sync.log'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
-missing_deps = []
-# 兼容Python 3.4以下版本的依赖检查
-for dep, package in dependencies.items():
-    try:
-        # 尝试导入模块
-        __import__(dep)
-    except ImportError:
-        missing_deps.append(package)
+class MySQLToHiveSync:
+    """MySQL到Hive数据同步工具类"""
 
-HIVE_AVAILABLE = False
-if not missing_deps:
-    try:
-        from pyhive import hive
-        HIVE_AVAILABLE = True
-    except ImportError:
-        HIVE_AVAILABLE = False
-        print("警告: 未安装pyhive，将跳过Hive数据同步")
-    except Exception as e:
-        HIVE_AVAILABLE = False
-        print(f"警告: Hive模块导入失败: {e}")
-else:
-    print(f"警告: 缺少Hive连接依赖: {', '.join(missing_deps)}")
-    print("请运行以下命令安装依赖:")
-    print(f"pip install {' '.join(missing_deps)}")
-    print("将跳过Hive数据同步")
+    def __init__(self, config_file: str = 'config.ini'):
+        """初始化配置"""
+        self.config_file = config_file
+        self.mysql_config = {}
+        self.hive_config = {}
+        self.sync_config = {}
 
-import traceback
-from datetime import datetime
+        # 先加载配置
+        self.load_config()
 
-# MySQL连接配置
-mysql_config = {
-    'user': 'root',
-    'password': 'root',
-    'host': 'cdh03',
-    'database': 'gmall_01',
-    'charset': 'utf8'
-}
+        # 确保MySQL JDBC驱动可用
+        self.ensure_mysql_jdbc_driver()
 
-# Hive连接配置（只有在hive可用时才使用）
-hive_config = {
-    'host': 'cdh01',
-    'port': 10000,
-    'database': 'gmall_01'
-}
+        # 然后创建Spark会话
+        self.spark = self.create_spark_session()
 
-# 日期范围
-date_range = ['2025-08-05', '2025-08-06', '2025-08-07']
+        # 最后确保HDFS路径存在
+        self.ensure_warehouse_structure()
 
-def sync_table_data(cursor, query, table_name, dt):
-    """执行查询并返回结果"""
-    try:
-        cursor.execute(query)
-        return cursor.fetchall()
-    except Exception as e:
-        print(f"查询{table_name}数据失败 (dt={dt}): {e}")
-        return []
+    def ensure_mysql_jdbc_driver(self):
+        """确保MySQL JDBC驱动可用"""
+        try:
+            # 检查是否已安装驱动
+            import jpype
+            jpype.startJVM()
+            try:
+                jpype.JClass('com.mysql.cj.jdbc.Driver')
+                logger.info("MySQL JDBC驱动已存在")
+            except Exception:
+                logger.warning("未找到MySQL JDBC驱动，尝试下载...")
+                # 尝试下载驱动
+                driver_url = 'https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.28/mysql-connector-java-8.0.28.jar'
+                driver_path = 'mysql-connector-java-8.0.28.jar'
 
-def insert_hive_data(cursor, insert_sql, values, table_name, dt):
-    """插入数据到Hive表"""
-    if cursor is None:
-        return False
-    try:
-        cursor.execute(insert_sql, values)
-        return True
-    except Exception as e:
-        print(f"插入{table_name}数据失败 (dt={dt}): {e}")
-        return False
+                if not os.path.exists(driver_path):
+                    try:
+                        import requests
+                        response = requests.get(driver_url)
+                        with open(driver_path, 'wb') as f:
+                            f.write(response.content)
+                        logger.info(f"已下载MySQL JDBC驱动到 {driver_path}")
+                    except Exception as e:
+                        logger.error(f"下载MySQL JDBC驱动失败: {str(e)}")
+                        logger.info("请手动下载MySQL JDBC驱动并放在当前目录")
 
-# 添加Spark相关配置和导入
-try:
-    from pyspark.sql import SparkSession
-    from pyspark.sql.types import StructType, StructField, StringType, IntegerType, FloatType, TimestampType, DecimalType
-    # 导入Python内置Decimal类型用于类型检查
-    from decimal import Decimal
-    SPARK_AVAILABLE = True
-except ImportError:
-    SPARK_AVAILABLE = False
-    print("警告: 未安装pyspark，将跳过Hive数据同步")
-except Exception as e:
-    SPARK_AVAILABLE = False
-    print(f"警告: Spark模块导入失败: {e}")
+            jpype.shutdownJVM()
+        except Exception as e:
+            logger.warning(f"检查MySQL JDBC驱动时出错: {str(e)}")
+            logger.info("假设驱动已存在或将会在运行时提供")
 
-# MySQL连接配置
-mysql_config = {
-    'user': 'root',
-    'password': 'root',
-    'host': 'cdh03',
-    'database': 'gmall_01',
-    'charset': 'utf8'
-}
-
-# Hive配置
-hive_config = {
-    'database': 'gmall_01',
-    'warehouse_dir': '/user/hive/warehouse',
-    'metastore_uri': f"thrift://cdh01:9083"
-}
-
-# 日期范围
-date_range = ['2025-08-05', '2025-08-06', '2025-08-07']
-
-def sync_table_data(cursor, query, table_name, dt):
-    """执行查询并返回结果"""
-    try:
-        cursor.execute(query)
-        return cursor.fetchall()
-    except Exception as e:
-        print(f"查询{table_name}数据失败 (dt={dt}): {e}")
-        return []
-
-def create_spark_session():
-    """创建Spark会话"""
-    try:
-        # 获取当前Python解释器路径
-        python_path = sys.executable
-        print(f"使用Python路径: {python_path}")
-
-        spark = SparkSession.builder \
-            .appName("DataSync") \
-            .config("spark.sql.warehouse.dir", hive_config['warehouse_dir']) \
-            .config("hive.metastore.uris", hive_config['metastore_uri']) \
-            .config("spark.pyspark.python", python_path) \
-            .config("spark.pyspark.driver.python", python_path) \
-            .enableHiveSupport() \
-            .getOrCreate()
-        print("成功创建Spark会话")
-        return spark
-    except Exception as e:
-        print(f"创建Spark会话失败: {e}")
-        return None
-
-def get_table_schema(table_name):
-    """获取表结构"""
-    schemas = {
-        'product_category': StructType([
-            StructField('category_id', StringType(), True),
-            StructField('category_name', StringType(), True),
-            StructField('parent_id', StringType(), True),
-            StructField('is_leaf', IntegerType(), True),
-            StructField('dt', StringType(), True)
-        ]),
-        'product_info': StructType([
-            StructField('product_id', StringType(), True),
-            StructField('product_name', StringType(), True),
-            StructField('category_id', StringType(), True),
-            # 将FloatType改为DecimalType
-            StructField('price', DecimalType(10, 2), True),
-            StructField('status', StringType(), True),
-            StructField('dt', StringType(), True)
-        ]),
-        'user_behavior': StructType([
-            StructField('log_id', StringType(), True),
-            StructField('user_id', StringType(), True),
-            StructField('visitor_id', StringType(), True),
-            StructField('product_id', StringType(), True),
-            StructField('behavior_type', StringType(), True),
-            StructField('behavior_time', TimestampType(), True),
-            StructField('stay_duration', IntegerType(), True),
-            StructField('terminal_type', StringType(), True),
-            StructField('page_type', StringType(), True),
-            StructField('click_behavior', StringType(), True),
-            StructField('dt', StringType(), True)
-        ]),
-        'order_info': StructType([
-            StructField('order_id', StringType(), True),
-            StructField('user_id', StringType(), True),
-            # 将FloatType改为DecimalType
-            StructField('payment_amount', DecimalType(10, 2), True),
-            StructField('payment_time', TimestampType(), True),
-            StructField('order_status', StringType(), True),
-            StructField('terminal_type', StringType(), True),
-            StructField('is_new_buyer', IntegerType(), True),
-            StructField('dt', StringType(), True)
-        ]),
-        'order_detail': StructType([
-            StructField('order_id', StringType(), True),
-            StructField('product_id', StringType(), True),
-            StructField('product_name', StringType(), True),
-            StructField('category_id', StringType(), True),
-            # 将FloatType改为DecimalType
-            StructField('price', DecimalType(10, 2), True),
-            StructField('quantity', IntegerType(), True),
-            StructField('dt', StringType(), True)
-        ]),
-        'micro_detail_visit': StructType([
-            StructField('visit_id', StringType(), True),
-            StructField('visitor_id', StringType(), True),
-            StructField('product_id', StringType(), True),
-            StructField('stay_duration', IntegerType(), True),
-            StructField('visit_time', TimestampType(), True),
-            StructField('dt', StringType(), True)
-        ]),
-        'order_refund': StructType([
-            StructField('refund_id', StringType(), True),
-            StructField('order_id', StringType(), True),
-            StructField('product_id', StringType(), True),
-            # 将FloatType改为DecimalType
-            StructField('refund_amount', DecimalType(10, 2), True),
-            StructField('refund_type', StringType(), True),
-            StructField('refund_time', TimestampType(), True),
-            StructField('dt', StringType(), True)
-        ]),
-        'marketing_activity': StructType([
-            StructField('activity_id', StringType(), True),
-            StructField('order_id', StringType(), True),
-            StructField('activity_type', StringType(), True),
-            # 将FloatType改为DecimalType
-            StructField('discount_amount', DecimalType(10, 2), True),
-            StructField('dt', StringType(), True)
-        ]),
-        'product_favorite': StructType([
-            StructField('fav_id', StringType(), True),
-            StructField('user_id', StringType(), True),
-            StructField('product_id', StringType(), True),
-            StructField('fav_time', TimestampType(), True),
-            StructField('is_cancel', IntegerType(), True)
-        ]),
-        'shopping_cart': StructType([
-            StructField('cart_id', StringType(), True),
-            StructField('user_id', StringType(), True),
-            StructField('product_id', StringType(), True),
-            StructField('quantity', IntegerType(), True),
-            StructField('cart_time', TimestampType(), True),
-            StructField('is_delete', IntegerType(), True)
-        ]),
-        'product_competitiveness': StructType([
-            StructField('product_id', StringType(), True),
-            StructField('score', FloatType(), True),
-            StructField('score_time', TimestampType(), True),
-            StructField('score_dimensions', StringType(), True)
-        ]),
-        'yearly_payment_snapshot': StructType([
-            StructField('product_id', StringType(), True),
-            StructField('year_payment_amount', FloatType(), True),
-            StructField('snapshot_date', StringType(), True)
-        ])
-    }
-    return schemas.get(table_name)
-
-def sync_data_to_hive():
-    """将MySQL数据同步到Hive ODS层"""
-    mysql_conn = None
-    mysql_cursor = None
-    spark = None
-
-    try:
-        # 连接MySQL
-        print("正在连接MySQL...")
-        mysql_conn = pymysql.connect(**mysql_config)
-        mysql_cursor = mysql_conn.cursor(pymysql.cursors.DictCursor)
-        print("MySQL连接成功")
-
-        # 检查是否可以连接Hive
-        hive_connected = False
-        if SPARK_AVAILABLE:
-            print("正在创建Spark会话...")
-            spark = create_spark_session()
-            if spark:
-                print("Hive连接成功")
-                hive_connected = True
-            else:
-                print("Spark会话创建失败，将跳过Hive数据同步")
-        else:
-            print("Spark功能不可用，将跳过Hive数据同步")
-
-        print("开始数据同步...")
-
-        # 使用统一的处理函数同步所有表
-        tables = [
-            'product_category',
-            'product_info',
-            'user_behavior',
-            'order_info',
-            'order_detail',
-            'micro_detail_visit',
-            'order_refund',
-            'marketing_activity',
-            'product_favorite',
-            'shopping_cart',
-            'product_competitiveness',
-            'yearly_payment_snapshot'
+    def ensure_warehouse_structure(self):
+        """确保HDFS仓库目录结构存在"""
+        base_paths = [
+            self.hive_config["hive_tmp_dir"],
+            f"/warehouse/{self.hive_config['database']}",
+            f"/warehouse/{self.hive_config['database']}/ods"
         ]
 
-        for table_name in tables:
-            print(f"同步{table_name}表...")
-            process_and_write_table(
-                table_name,
-                f"SELECT * FROM {table_name} WHERE dt='{{dt}}'",
-                date_range
+        for path in base_paths:
+            try:
+                self.ensure_hdfs_path(path)
+            except Exception as e:
+                logger.warning(f"无法确保路径 {path} 存在: {str(e)}")
+                # 继续尝试其他路径
+
+    def ensure_hdfs_path(self, path: str):
+        """确保HDFS路径存在（不修改已有目录的权限）"""
+        try:
+            hadoop = self.spark._jvm.org.apache.hadoop.fs.FileSystem.get(
+                self.spark._jsc.hadoopConfiguration()
             )
+            hdfs_path = self.spark._jvm.org.apache.hadoop.fs.Path(path)
 
-        def process_and_write_table(table_name, query, date_range):
-            for dt in date_range:
-                data = sync_table_data(
-                    mysql_cursor,
-                    query.format(dt=dt),
-                    table_name,
-                    dt
+            if not hadoop.exists(hdfs_path):
+                hadoop.mkdirs(hdfs_path)
+                # 只对新创建的目录设置权限
+                hadoop.setPermission(
+                    hdfs_path,
+                    self.spark._jvm.org.apache.hadoop.fs.permission.FsPermission("777")
                 )
-                print(f"从MySQL读取到 {len(data)} 条{table_name}数据 (dt={dt})")
+                logger.info(f"创建HDFS路径: {path}")
+            else:
+                logger.info(f"HDFS路径已存在: {path}")
 
-                if hive_connected:
-                    try:
-                        # 获取表结构
-                        schema = get_table_schema(table_name)
-                        if not schema:
-                            print(f"警告: 未找到{table_name}的表结构定义")
-                            continue
+        except Exception as e:
+            logger.warning(f"处理HDFS路径 {path} 时遇到问题: {str(e)}")
+            # 不抛出异常，继续执行
 
-                        # 处理数据
-                        processed_data = []
-                        for row in data:
-                            processed_row = dict(row)
-                            # 添加dt字段
-                            processed_row['dt'] = dt
-                            # 处理Decimal类型字段
-                            for field in schema.fields:
-                                field_name = field.name
-                                if field_name in processed_row and isinstance(processed_row[field_name], Decimal):
-                                    # 如果是Decimal类型，转换为float
-                                    processed_row[field_name] = float(processed_row[field_name])
-                            processed_data.append(processed_row)
+    def load_config(self):
+        """加载配置文件"""
+        if not os.path.exists(self.config_file):
+            raise FileNotFoundError(f"配置文件不存在: {self.config_file}")
 
-                        # 创建DataFrame
-                        df = spark.createDataFrame(processed_data, schema=schema)
+        config = configparser.ConfigParser()
+        config.read(self.config_file)
 
-                        # 写入Hive表，指定格式为hive
-                        df.write.format("hive").mode('append').partitionBy('dt').saveAsTable(f"{hive_config['database']}.ods_{table_name}")
-                        print(f"成功写入{len(data)}条数据到Hive表ods_{table_name} (dt={dt})")
-                    except Exception as e:
-                        print(f"写入Hive表失败 (dt={dt}): {e}")
+        # MySQL配置
+        self.mysql_config = {
+            "host": config.get('mysql', 'host'),
+            "port": config.getint('mysql', 'port'),
+            "user": config.get('mysql', 'user'),
+            "password": config.get('mysql', 'password'),
+            "database": config.get('mysql', 'database'),
+            "charset": config.get('mysql', 'charset', fallback='utf8mb4')
+        }
 
-        if hive_connected:
-            print("数据同步完成！")
-        else:
-            print("MySQL数据读取完成！Hive同步已跳过。")
+        # Hive配置
+        self.hive_config = {
+            "database": config.get('hive', 'database'),
+            "metastore_uris": config.get('hive', 'metastore_uris'),
+            "warehouse_dir": config.get('hive', 'warehouse_dir'),
+            "hdfs_default_fs": config.get('hive', 'hdfs_default_fs'),
+            "hive_tmp_dir": config.get('hive', 'hive_tmp_dir', fallback='/tmp/hive')
+        }
 
-    except Exception as e:
-        print(f"数据同步过程中出现错误: {e}")
-        traceback.print_exc()
-    finally:
-        if mysql_conn:
-            mysql_cursor.close()
-            mysql_conn.close()
-            print("MySQL连接已关闭")
-        if spark:
-            spark.stop()
-            print("Spark会话已关闭")
+        # 同步配置
+        self.sync_config = {
+            "sync_mode": config.get('sync', 'mode', fallback='full'),
+            "incremental_column": config.get('sync', 'incremental_column', fallback=None),
+            "partition_column": config.get('sync', 'partition_column', fallback='dt'),
+            "parallelism": config.getint('sync', 'parallelism', fallback=2),
+            "batch_size": config.getint('sync', 'batch_size', fallback=100),
+            "retry_times": config.getint('sync', 'retry_times', fallback=3)
+        }
 
+        logger.info("配置加载完成")
+
+    def create_spark_session(self) -> SparkSession:
+        """创建Spark会话"""
+        try:
+            # 检查是否存在MySQL JDBC驱动
+            driver_path = 'mysql-connector-java-8.0.28.jar'
+            extra_class_path = []
+            if os.path.exists(driver_path):
+                extra_class_path.append(os.path.abspath(driver_path))
+                logger.info(f"添加MySQL JDBC驱动到classpath: {driver_path}")
+
+            spark_builder = SparkSession.builder \
+                .appName(f"MySQL2Hive_Sync_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}") \
+                .config("spark.sql.warehouse.dir", self.hive_config["warehouse_dir"]) \
+                .config("hive.metastore.uris", self.hive_config["metastore_uris"]) \
+                .config("spark.hadoop.fs.defaultFS", self.hive_config["hdfs_default_fs"]) \
+                .config("spark.sql.sources.partitionOverwriteMode", "dynamic") \
+                .config("spark.sql.shuffle.partitions", str(self.sync_config["parallelism"]))
+
+            # 如果有额外的classpath，添加到配置中
+            if extra_class_path:
+                spark_builder = spark_builder.config("spark.driver.extraClassPath", ":".join(extra_class_path))
+                spark_builder = spark_builder.config("spark.executor.extraClassPath", ":".join(extra_class_path))
+
+            spark = spark_builder.enableHiveSupport().getOrCreate()
+
+            logger.info("Spark会话创建成功")
+            return spark
+        except Exception as e:
+            logger.error(f"创建Spark会话失败: {str(e)}")
+            raise
+
+    def get_mysql_connection(self):
+        """获取MySQL连接"""
+        return pymysql.connect(
+            host=self.mysql_config["host"],
+            port=self.mysql_config["port"],
+            user=self.mysql_config["user"],
+            password=self.mysql_config["password"],
+            database=self.mysql_config["database"],
+            charset=self.mysql_config["charset"]
+        )
+
+    def get_mysql_tables(self) -> List[str]:
+        """获取MySQL中所有表名"""
+        try:
+            with self.get_mysql_connection() as conn:
+                with conn.cursor() as cursor:
+                    cursor.execute(f"SHOW TABLES FROM {self.mysql_config['database']}")
+                    return [table[0] for table in cursor.fetchall()]
+        except Exception as e:
+            logger.error(f"获取MySQL表列表失败: {str(e)}")
+            raise
+
+    def sync_table_data(self, table_name: str) -> bool:
+        """同步单表数据"""
+        max_retry = self.sync_config["retry_times"]
+
+        for attempt in range(max_retry):
+            try:
+                # 获取增量条件(如果是增量同步)
+                incremental_condition = ""
+                if self.sync_config["sync_mode"] == "incremental" and self.sync_config["incremental_column"]:
+                    last_partition = self.get_max_partition_value(table_name)
+                    if last_partition:
+                        incremental_condition = f"WHERE {self.sync_config['incremental_column']} > '{last_partition}'"
+
+                # 获取表的列信息
+                columns, _ = self.get_table_metadata(table_name)
+                partition_column = self.sync_config['partition_column']
+
+                # 检查MySQL表是否已存在同名分区列
+                existing_partition_column = [col for col in columns if col[0] == partition_column]
+
+                if existing_partition_column:
+                    # 如果MySQL表中已存在同名分区列，需要明确指定列名并重命名分区列
+                    column_names = [col[0] for col in columns]
+                    # 构建SELECT子句，重命名冲突的分区列
+                    select_columns = []
+                    for col_name in column_names:
+                        if col_name == partition_column:
+                            select_columns.append(f"{col_name} AS original_{partition_column}")
+                        else:
+                            select_columns.append(col_name)
+                    select_clause = ", ".join(select_columns)
+
+                    query = f"""
+                        (SELECT 
+                            {select_clause}, 
+                            '{datetime.datetime.now().strftime("%Y%m%d")}' AS {partition_column} 
+                        FROM {table_name}
+                        {incremental_condition}
+                        ) tmp
+                    """
+                else:
+                    # 如果MySQL表中不存在同名分区列，直接使用*通配符
+                    query = f"""
+                        (SELECT 
+                            *, 
+                            '{datetime.datetime.now().strftime("%Y%m%d")}' AS {partition_column} 
+                        FROM {table_name}
+                        {incremental_condition}
+                        ) tmp
+                    """
+
+                # 读取MySQL数据
+                df = self.spark.read.format("jdbc") \
+                    .option("url", f"jdbc:mysql://{self.mysql_config['host']}:{self.mysql_config['port']}/{self.mysql_config['database']}?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull") \
+                    .option("dbtable", query) \
+                    .option("user", self.mysql_config["user"]) \
+                    .option("password", self.mysql_config["password"]) \
+                    .option("fetchsize", str(self.sync_config["batch_size"])) \
+                    .option("driver", "com.mysql.cj.jdbc.Driver") \
+                    .load()
+
+                # 写入Hive
+                df.write.mode("overwrite") \
+                    .option("compression", "snappy") \
+                    .partitionBy(partition_column) \
+                    .saveAsTable(f"{self.hive_config['database']}.ods_{table_name}")
+
+                logger.info(f"表 {table_name} 数据同步成功(尝试 {attempt+1}/{max_retry})")
+                return True
+
+            except Exception as e:
+                logger.warning(f"表 {table_name} 数据同步失败(尝试 {attempt+1}/{max_retry}): {str(e)}")
+                if attempt == max_retry - 1:
+                    logger.error(f"表 {table_name} 数据同步最终失败")
+                    return False
+                # 等待后重试
+                time.sleep(10 * (attempt + 1))
+
+        return False
+
+    def get_max_partition_value(self, table_name: str) -> Optional[str]:
+        """获取Hive表最大分区值"""
+        try:
+            # 检查表是否存在
+            df = self.spark.sql(f"""
+                SHOW TABLES IN {self.hive_config['database']} LIKE 'ods_{table_name}'
+            """)
+            if df.count() == 0:
+                return None
+
+            df = self.spark.sql(f"""
+                SHOW PARTITIONS {self.hive_config['database']}.ods_{table_name}
+            """)
+
+            if df.count() == 0:
+                return None
+
+            partitions = [row[0].split('=')[1] for row in df.collect()]
+            return max(partitions)
+        except Exception as e:
+            logger.warning(f"获取表 {table_name} 分区信息失败: {str(e)}")
+            return None
+
+    def get_table_metadata(self, table_name: str) -> Tuple[List[Tuple], str]:
+        """获取MySQL表元数据(列信息和表注释)"""
+        try:
+            with self.get_mysql_connection() as conn:
+                # 获取列信息
+                with conn.cursor() as cursor:
+                    cursor.execute(f"""
+                        SELECT COLUMN_NAME, DATA_TYPE, COLUMN_COMMENT 
+                        FROM INFORMATION_SCHEMA.COLUMNS 
+                        WHERE TABLE_SCHEMA='{self.mysql_config['database']}' 
+                          AND TABLE_NAME='{table_name}'
+                        ORDER BY ORDINAL_POSITION
+                    """)
+                    columns = cursor.fetchall()
+
+                # 获取表注释
+                with conn.cursor() as cursor:
+                    cursor.execute(f"""
+                        SELECT TABLE_COMMENT 
+                        FROM INFORMATION_SCHEMA.TABLES 
+                        WHERE TABLE_SCHEMA='{self.mysql_config['database']}' 
+                          AND TABLE_NAME='{table_name}'
+                    """)
+                    table_comment = cursor.fetchone()[0] or ""
+
+                return columns, table_comment
+        except Exception as e:
+            logger.error(f"获取表 {table_name} 元数据失败: {str(e)}")
+            raise
+
+    def sync_all_data(self) -> bool:
+        """同步所有表数据"""
+        try:
+            tables = self.get_mysql_tables()
+            logger.info(f"开始同步 {len(tables)} 张表数据")
+
+            success_count = 0
+            for table in tables:
+                if self.sync_table_data(table):
+                    success_count += 1
+
+            logger.info(f"数据同步完成，成功 {success_count}/{len(tables)}")
+            return success_count == len(tables)
+        except Exception as e:
+            logger.error(f"同步数据失败: {str(e)}")
+            return False
+
+    def run(self, skip_schema_sync=True, recover_corrupted=False):
+        """执行同步流程
+        :param skip_schema_sync: 是否跳过表结构同步
+        :param recover_corrupted: 是否尝试恢复损坏的表
+        """
+        try:
+            logger.info("同步任务开始")
+
+            # 1. 同步数据
+            if not self.sync_all_data():
+                raise Exception("数据同步失败")
+
+            logger.info("所有同步任务完成")
+            return True
+        except Exception as e:
+            logger.error(f"同步过程出错: {str(e)}")
+            return False
+        finally:
+            self.spark.stop()
 
 if __name__ == "__main__":
-    sync_data_to_hive()
+    # 示例配置文件内容
+    config_content = """
+[mysql]
+host = cdh03
+port = 3306
+user = root
+password = root
+database = gmall_01
+charset = utf8mb4
+
+[hive]
+database = gmall_01
+metastore_uris = thrift://cdh01:9083
+warehouse_dir = /user/hive/warehouse
+hdfs_default_fs = hdfs://cdh01:8020
+hive_tmp_dir = /tmp/hive
+
+[sync]
+mode = full
+incremental_column = behavior_time
+partition_column = dt
+parallelism = 2
+batch_size = 100
+retry_times = 3
+"""
+
+    # 如果配置文件不存在，则创建
+    if not os.path.exists('config.ini'):
+        with open('config.ini', 'w') as f:
+            f.write(config_content.strip())
+        logger.info("已创建示例配置文件 config.ini")
+
+    # 运行同步
+    try:
+        sync_tool = MySQLToHiveSync()
+        if sync_tool.run(skip_schema_sync=True):
+            logger.info("同步任务成功完成")
+            sys.exit(0)
+        else:
+            logger.error("同步任务失败")
+            sys.exit(1)
+    except Exception as e:
+        logger.error(f"程序运行出错: {str(e)}")
+        sys.exit(1)

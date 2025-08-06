@@ -142,7 +142,7 @@ def generate_mysql_data():
         page_types = ['detail', 'shop', 'micro_detail']
         terminal_types = ['pc', 'wireless']
 
-        total_behavior_records = 400000 * len(date_range)
+        total_behavior_records = 10000 * len(date_range)  # 从40万改为1万
         inserted_count = 0
 
         # 创建用户活跃度分布（20%的用户贡献80%的行为）
@@ -160,7 +160,7 @@ def generate_mysql_data():
             print(f"\n生成日期 {dt} 的用户行为数据...")
             behavior_data = []
 
-            for i in range(400000):  # 每天40万条
+            for i in range(10000):  # 从40万改为1万（每天1万条）
                 # 根据活跃度选择用户
                 if random.random() < 0.8:  # 80%概率选择活跃用户
                     user_id = random.choice(active_users)
@@ -215,8 +215,8 @@ def generate_mysql_data():
                     dt
                 ))
 
-                # 每收集10000条数据就批量插入一次
-                if len(behavior_data) >= 10000:
+                # 每收集1000条数据就批量插入一次（原为1万条）
+                if len(behavior_data) >= 1000:
                     batch_insert(cursor,
                                  "INSERT INTO user_behavior (log_id, user_id, visitor_id, product_id, behavior_type, behavior_time, stay_duration, terminal_type, page_type, click_behavior, dt) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
                                  behavior_data)
@@ -236,11 +236,11 @@ def generate_mysql_data():
 
         print("\n用户行为数据生成完成")
 
-        # 5. 生成订单数据（更真实的订单）
+        # 5. 生成订单数据（按比例从2000改为500）
         print("生成订单数据...")
         order_statuses = ['pending', 'paid', 'shipped', 'completed', 'cancelled']
 
-        total_orders = 2000 * len(date_range)
+        total_orders = 500 * len(date_range)  # 从2000改为500
         order_count = 0
 
         # 创建用户购买力分布
@@ -259,8 +259,8 @@ def generate_mysql_data():
             order_info_data = []
             order_detail_data = []
 
-            # 每天生成2000个订单
-            for order_num in range(1, 2001):
+            # 每天生成500个订单（原为2000）
+            for order_num in range(1, 501):
                 # 选择用户并根据用户类型设置订单金额
                 user_id = random.choice(users)
                 if user_id in high_value_users:
@@ -321,7 +321,7 @@ def generate_mysql_data():
                     ))
 
                 order_count += 1
-                if order_count % 200 == 0:  # 每200个订单更新一次进度
+                if order_count % 50 == 0:  # 每50个订单更新一次进度（原为200）
                     update_progress(order_count, total_orders, f"订单数据[{dt}]:")
 
             # 批量插入订单信息
@@ -338,9 +338,9 @@ def generate_mysql_data():
 
         print("\n订单数据生成完成")
 
-        # 6. 生成微详情访问数据
+        # 6. 生成微详情访问数据（从5万改为1250）
         print("生成微详情访问数据...")
-        total_visits = 50000 * len(date_range)
+        total_visits = 1250 * len(date_range)  # 从5万改为1250
         visit_count = 0
 
         for dt in date_range:
@@ -349,7 +349,7 @@ def generate_mysql_data():
             print(f"\n生成日期 {dt} 的微详情访问数据...")
             visit_data = []
 
-            for i in range(50000):  # 每天5万条微详情访问
+            for i in range(1250):  # 从5万改为1250（每天1250条）
                 visitor_id = random.choice(visitors)
                 product_id = random.choice(products)[0]
                 stay_duration = random.randint(5, 600)  # 更真实的停留时间
@@ -371,8 +371,8 @@ def generate_mysql_data():
                     dt
                 ))
 
-                # 每收集5000条数据就批量插入一次
-                if len(visit_data) >= 5000:
+                # 每收集125条数据就批量插入一次（原为5000）
+                if len(visit_data) >= 125:
                     batch_insert(cursor,
                                  "INSERT INTO micro_detail_visit (visit_id, visitor_id, product_id, stay_duration, visit_time, dt) VALUES (%s, %s, %s, %s, %s, %s)",
                                  visit_data)
@@ -392,7 +392,7 @@ def generate_mysql_data():
 
         print("\n微详情访问数据生成完成")
 
-        # 7. 生成退款数据
+        # 7. 生成退款数据（按订单比例自动调整）
         print("生成退款数据...")
         refund_types = ['only_refund', 'refund_return']
 
@@ -469,7 +469,7 @@ def generate_mysql_data():
 
         print("\n退款数据生成完成")
 
-        # 8. 生成营销活动数据
+        # 8. 生成营销活动数据（按订单比例自动调整）
         print("生成营销活动数据...")
         activity_types = ['juhuasuan', 'shuang11', '618', 'qingcang', 'new_user']
         activity_weights = [0.25, 0.15, 0.2, 0.25, 0.15]  # 各活动类型分布
@@ -522,9 +522,9 @@ def generate_mysql_data():
 
         print("\n营销活动数据生成完成")
 
-        # 9. 生成商品收藏数据
+        # 9. 生成商品收藏数据（从1万改为250）
         print("生成商品收藏数据...")
-        total_favorites = 10000 * len(date_range)
+        total_favorites = 250 * len(date_range)  # 从1万改为250
         fav_count = 0
 
         for dt in date_range:
@@ -533,7 +533,7 @@ def generate_mysql_data():
             print(f"\n生成日期 {dt} 的商品收藏数据...")
             favorite_data = []
 
-            for i in range(10000):  # 每天1万条收藏记录
+            for i in range(250):  # 从1万改为250（每天250条）
                 user_id = random.choice(users)
                 product_id = random.choice(products)[0]
 
@@ -557,8 +557,8 @@ def generate_mysql_data():
                     dt
                 ))
 
-                # 每收集1000条数据就批量插入一次
-                if len(favorite_data) >= 1000:
+                # 每收集25条数据就批量插入一次（原为1000）
+                if len(favorite_data) >= 25:
                     batch_insert(cursor,
                                  "INSERT INTO product_favorite (fav_id, user_id, product_id, fav_time, is_cancel, dt) VALUES (%s, %s, %s, %s, %s, %s)",
                                  favorite_data)
@@ -578,9 +578,9 @@ def generate_mysql_data():
 
         print("\n商品收藏数据生成完成")
 
-        # 10. 生成购物车数据
+        # 10. 生成购物车数据（从1.5万改为375）
         print("生成购物车数据...")
-        total_carts = 15000 * len(date_range)
+        total_carts = 375 * len(date_range)  # 从1.5万改为375
         cart_count = 0
 
         for dt in date_range:
@@ -589,7 +589,7 @@ def generate_mysql_data():
             print(f"\n生成日期 {dt} 的购物车数据...")
             cart_data = []
 
-            for i in range(15000):  # 每天1.5万条购物车记录
+            for i in range(375):  # 从1.5万改为375（每天375条）
                 user_id = random.choice(users)
                 product_id = random.choice(products)[0]
 
@@ -617,8 +617,8 @@ def generate_mysql_data():
                     dt
                 ))
 
-                # 每收集1500条数据就批量插入一次
-                if len(cart_data) >= 1500:
+                # 每收集37条数据就批量插入一次（原为1500）
+                if len(cart_data) >= 37:
                     batch_insert(cursor,
                                  "INSERT INTO shopping_cart (cart_id, user_id, product_id, quantity, cart_time, is_delete, dt) VALUES (%s, %s, %s, %s, %s, %s, %s)",
                                  cart_data)
@@ -638,7 +638,7 @@ def generate_mysql_data():
 
         print("\n购物车数据生成完成")
 
-        # 11. 生成商品竞争力评分数据
+        # 11. 生成商品竞争力评分数据（保持不变，因为与用户行为无关）
         print("生成商品竞争力评分数据...")
         score_dimensions = ['流量获取', '转化', '内容营销', '客户拉新', '服务质量']
 
@@ -685,7 +685,7 @@ def generate_mysql_data():
 
         print("\n商品竞争力评分数据生成完成")
 
-        # 12. 生成商品年累计支付金额快照数据
+        # 12. 生成商品年累计支付金额快照数据（保持不变）
         print("生成商品年累计支付金额快照数据...")
 
         for dt in date_range:
