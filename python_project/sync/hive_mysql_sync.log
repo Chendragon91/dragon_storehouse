@@ -1711,3 +1711,579 @@ mismatched input 'OFFSET' expecting {<EOF>, ';'}(line 3, pos 32)
 2025-08-02 11:04:47,045 - INFO - 表 ods_user_info 结构同步成功
 2025-08-02 11:04:47,585 - INFO - 表 ods_user_info 数据同步完成，记录数: 10000
 2025-08-02 11:04:47,587 - INFO - 表 ods_user_info 同步成功
+2025-08-07 16:46:35,208 - INFO - 发现 26 张待同步表
+2025-08-07 16:46:35,209 - INFO - 开始同步表 ads_category_ranking
+2025-08-07 16:46:35,512 - ERROR - 同步表 ads_category_ranking 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:35,512 - ERROR - 表 ads_category_ranking 同步失败，跳过继续处理其他表
+2025-08-07 16:46:35,512 - INFO - 开始同步表 ads_data_validation
+2025-08-07 16:46:35,666 - ERROR - 同步表 ads_data_validation 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:35,666 - ERROR - 表 ads_data_validation 同步失败，跳过继续处理其他表
+2025-08-07 16:46:35,666 - INFO - 开始同步表 ads_product_interval_analysis
+2025-08-07 16:46:35,874 - ERROR - 同步表 ads_product_interval_analysis 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:35,874 - ERROR - 表 ads_product_interval_analysis 同步失败，跳过继续处理其他表
+2025-08-07 16:46:35,874 - INFO - 开始同步表 ads_product_macro_monitor
+2025-08-07 16:46:36,055 - ERROR - 同步表 ads_product_macro_monitor 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:36,055 - ERROR - 表 ads_product_macro_monitor 同步失败，跳过继续处理其他表
+2025-08-07 16:46:36,055 - INFO - 开始同步表 ads_product_ranking
+2025-08-07 16:46:36,211 - ERROR - 同步表 ads_product_ranking 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:36,211 - ERROR - 表 ads_product_ranking 同步失败，跳过继续处理其他表
+2025-08-07 16:46:36,212 - INFO - 开始同步表 dwd_micro_detail_behavior
+2025-08-07 16:46:36,393 - ERROR - 同步表 dwd_micro_detail_behavior 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:36,393 - ERROR - 表 dwd_micro_detail_behavior 同步失败，跳过继续处理其他表
+2025-08-07 16:46:36,393 - INFO - 开始同步表 dwd_product_behavior_detail
+2025-08-07 16:46:36,524 - ERROR - 同步表 dwd_product_behavior_detail 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:36,524 - ERROR - 表 dwd_product_behavior_detail 同步失败，跳过继续处理其他表
+2025-08-07 16:46:36,524 - INFO - 开始同步表 dwd_product_daily_summary
+2025-08-07 16:46:36,702 - ERROR - 同步表 dwd_product_daily_summary 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:36,702 - ERROR - 表 dwd_product_daily_summary 同步失败，跳过继续处理其他表
+2025-08-07 16:46:36,702 - INFO - 开始同步表 dwd_product_stratification
+2025-08-07 16:46:36,857 - ERROR - 同步表 dwd_product_stratification 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:36,857 - ERROR - 表 dwd_product_stratification 同步失败，跳过继续处理其他表
+2025-08-07 16:46:36,857 - INFO - 开始同步表 dwd_product_trade_detail
+2025-08-07 16:46:37,054 - ERROR - 同步表 dwd_product_trade_detail 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:37,054 - ERROR - 表 dwd_product_trade_detail 同步失败，跳过继续处理其他表
+2025-08-07 16:46:37,054 - INFO - 开始同步表 dws_category_day_summary
+2025-08-07 16:46:37,272 - ERROR - 同步表 dws_category_day_summary 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:37,272 - ERROR - 表 dws_category_day_summary 同步失败，跳过继续处理其他表
+2025-08-07 16:46:37,273 - INFO - 开始同步表 dws_product_day_summary
+2025-08-07 16:46:37,448 - ERROR - 同步表 dws_product_day_summary 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:37,448 - ERROR - 表 dws_product_day_summary 同步失败，跳过继续处理其他表
+2025-08-07 16:46:37,448 - INFO - 开始同步表 dws_product_month_summary
+2025-08-07 16:46:37,632 - ERROR - 同步表 dws_product_month_summary 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:37,632 - ERROR - 表 dws_product_month_summary 同步失败，跳过继续处理其他表
+2025-08-07 16:46:37,632 - INFO - 开始同步表 dws_product_week_summary
+2025-08-07 16:46:37,885 - ERROR - 同步表 dws_product_week_summary 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:37,885 - ERROR - 表 dws_product_week_summary 同步失败，跳过继续处理其他表
+2025-08-07 16:46:37,885 - INFO - 开始同步表 ods_marketing_activity
+2025-08-07 16:46:38,062 - ERROR - 同步表 ods_marketing_activity 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:38,062 - ERROR - 表 ods_marketing_activity 同步失败，跳过继续处理其他表
+2025-08-07 16:46:38,062 - INFO - 开始同步表 ods_micro_detail_visit
+2025-08-07 16:46:38,221 - ERROR - 同步表 ods_micro_detail_visit 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:38,221 - ERROR - 表 ods_micro_detail_visit 同步失败，跳过继续处理其他表
+2025-08-07 16:46:38,221 - INFO - 开始同步表 ods_order_detail
+2025-08-07 16:46:38,387 - ERROR - 同步表 ods_order_detail 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:38,387 - ERROR - 表 ods_order_detail 同步失败，跳过继续处理其他表
+2025-08-07 16:46:38,387 - INFO - 开始同步表 ods_order_info
+2025-08-07 16:46:38,538 - ERROR - 同步表 ods_order_info 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:38,539 - ERROR - 表 ods_order_info 同步失败，跳过继续处理其他表
+2025-08-07 16:46:38,539 - INFO - 开始同步表 ods_order_refund
+2025-08-07 16:46:38,679 - ERROR - 同步表 ods_order_refund 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:38,680 - ERROR - 表 ods_order_refund 同步失败，跳过继续处理其他表
+2025-08-07 16:46:38,680 - INFO - 开始同步表 ods_product_category
+2025-08-07 16:46:38,863 - ERROR - 同步表 ods_product_category 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:38,864 - ERROR - 表 ods_product_category 同步失败，跳过继续处理其他表
+2025-08-07 16:46:38,864 - INFO - 开始同步表 ods_product_competitiveness
+2025-08-07 16:46:39,006 - ERROR - 同步表 ods_product_competitiveness 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:39,006 - ERROR - 表 ods_product_competitiveness 同步失败，跳过继续处理其他表
+2025-08-07 16:46:39,006 - INFO - 开始同步表 ods_product_favorite
+2025-08-07 16:46:39,171 - ERROR - 同步表 ods_product_favorite 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:39,171 - ERROR - 表 ods_product_favorite 同步失败，跳过继续处理其他表
+2025-08-07 16:46:39,171 - INFO - 开始同步表 ods_product_info
+2025-08-07 16:46:39,327 - ERROR - 同步表 ods_product_info 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:39,327 - ERROR - 表 ods_product_info 同步失败，跳过继续处理其他表
+2025-08-07 16:46:39,327 - INFO - 开始同步表 ods_shopping_cart
+2025-08-07 16:46:39,513 - ERROR - 同步表 ods_shopping_cart 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:39,513 - ERROR - 表 ods_shopping_cart 同步失败，跳过继续处理其他表
+2025-08-07 16:46:39,513 - INFO - 开始同步表 ods_user_behavior
+2025-08-07 16:46:39,714 - ERROR - 同步表 ods_user_behavior 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:39,715 - ERROR - 表 ods_user_behavior 同步失败，跳过继续处理其他表
+2025-08-07 16:46:39,715 - INFO - 开始同步表 ods_yearly_payment_snapshot
+2025-08-07 16:46:39,884 - ERROR - 同步表 ods_yearly_payment_snapshot 结构失败: (1049, "Unknown database 'gmall_01_ads'")
+2025-08-07 16:46:39,885 - ERROR - 表 ods_yearly_payment_snapshot 同步失败，跳过继续处理其他表
+2025-08-07 16:47:22,900 - INFO - 发现 26 张待同步表
+2025-08-07 16:47:22,900 - INFO - 开始同步表 ads_category_ranking
+2025-08-07 16:47:23,210 - INFO - 表 ads_category_ranking 结构同步成功
+2025-08-07 16:47:25,983 - INFO - 表 ads_category_ranking 数据同步完成，记录数: 48
+2025-08-07 16:47:25,983 - INFO - 表 ads_category_ranking 同步成功
+2025-08-07 16:47:25,983 - INFO - 开始同步表 ads_data_validation
+2025-08-07 16:47:26,154 - INFO - 表 ads_data_validation 结构同步成功
+2025-08-07 16:47:26,446 - INFO - 表 ads_data_validation 数据同步完成，记录数: 9
+2025-08-07 16:47:26,446 - INFO - 表 ads_data_validation 同步成功
+2025-08-07 16:47:26,446 - INFO - 开始同步表 ads_product_interval_analysis
+2025-08-07 16:47:26,629 - INFO - 表 ads_product_interval_analysis 结构同步成功
+2025-08-07 16:47:27,309 - INFO - 表 ads_product_interval_analysis 数据同步完成，记录数: 332
+2025-08-07 16:47:27,309 - INFO - 表 ads_product_interval_analysis 同步成功
+2025-08-07 16:47:27,309 - INFO - 开始同步表 ads_product_macro_monitor
+2025-08-07 16:47:27,464 - INFO - 表 ads_product_macro_monitor 结构同步成功
+2025-08-07 16:47:27,921 - INFO - 表 ads_product_macro_monitor 数据同步完成，记录数: 48
+2025-08-07 16:47:27,921 - INFO - 表 ads_product_macro_monitor 同步成功
+2025-08-07 16:47:27,921 - INFO - 开始同步表 ads_product_ranking
+2025-08-07 16:47:28,289 - INFO - 表 ads_product_ranking 结构同步成功
+2025-08-07 16:47:28,670 - INFO - 表 ads_product_ranking 数据同步完成，记录数: 48
+2025-08-07 16:47:28,671 - INFO - 表 ads_product_ranking 同步成功
+2025-08-07 16:47:28,671 - INFO - 开始同步表 dwd_micro_detail_behavior
+2025-08-07 16:47:29,053 - INFO - 表 dwd_micro_detail_behavior 结构同步成功
+2025-08-07 16:47:29,425 - INFO - 表 dwd_micro_detail_behavior 数据同步完成，记录数: 3750
+2025-08-07 16:47:29,425 - INFO - 表 dwd_micro_detail_behavior 同步成功
+2025-08-07 16:47:29,425 - INFO - 开始同步表 dwd_product_behavior_detail
+2025-08-07 16:47:29,593 - INFO - 表 dwd_product_behavior_detail 结构同步成功
+2025-08-07 16:47:30,923 - INFO - 表 dwd_product_behavior_detail 数据同步完成，记录数: 20051
+2025-08-07 16:47:30,926 - INFO - 表 dwd_product_behavior_detail 同步成功
+2025-08-07 16:47:30,927 - INFO - 开始同步表 dwd_product_daily_summary
+2025-08-07 16:47:31,106 - INFO - 表 dwd_product_daily_summary 结构同步成功
+2025-08-07 16:47:31,401 - INFO - 表 dwd_product_daily_summary 数据同步完成，记录数: 1500
+2025-08-07 16:47:31,402 - INFO - 表 dwd_product_daily_summary 同步成功
+2025-08-07 16:47:31,402 - INFO - 开始同步表 dwd_product_stratification
+2025-08-07 16:47:31,567 - INFO - 表 dwd_product_stratification 结构同步成功
+2025-08-07 16:47:31,841 - INFO - 表 dwd_product_stratification 数据同步完成，记录数: 1500
+2025-08-07 16:47:31,842 - INFO - 表 dwd_product_stratification 同步成功
+2025-08-07 16:47:31,842 - INFO - 开始同步表 dwd_product_trade_detail
+2025-08-07 16:47:32,006 - ERROR - 同步表 dwd_product_trade_detail 结构失败: (1067, "Invalid default value for 'payment_time'")
+2025-08-07 16:47:32,007 - ERROR - 表 dwd_product_trade_detail 同步失败，跳过继续处理其他表
+2025-08-07 16:47:32,007 - INFO - 开始同步表 dws_category_day_summary
+2025-08-07 16:47:32,167 - INFO - 表 dws_category_day_summary 结构同步成功
+2025-08-07 16:47:32,385 - INFO - 表 dws_category_day_summary 数据同步完成，记录数: 48
+2025-08-07 16:47:32,385 - INFO - 表 dws_category_day_summary 同步成功
+2025-08-07 16:47:32,385 - INFO - 开始同步表 dws_product_day_summary
+2025-08-07 16:47:32,537 - INFO - 表 dws_product_day_summary 结构同步成功
+2025-08-07 16:47:32,764 - INFO - 表 dws_product_day_summary 数据同步完成，记录数: 48
+2025-08-07 16:47:32,764 - INFO - 表 dws_product_day_summary 同步成功
+2025-08-07 16:47:32,764 - INFO - 开始同步表 dws_product_month_summary
+2025-08-07 16:47:32,969 - INFO - 表 dws_product_month_summary 结构同步成功
+2025-08-07 16:47:33,178 - ERROR - 同步表 dws_product_month_summary 数据失败: An error occurred while calling o153.collectToPython.
+: org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: hdfs://cdh01:8020/warehouse/gmall_01/dws/dws_product_day_summary/bdp_month=$%7Byear_month}
+	at org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:297)
+	at org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:239)
+	at org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:325)
+	at org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:205)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.UnionRDD.$anonfun$getPartitions$1(UnionRDD.scala:85)
+	at org.apache.spark.rdd.UnionRDD.$anonfun$getPartitions$1$adapted(UnionRDD.scala:85)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at org.apache.spark.rdd.UnionRDD.getPartitions(UnionRDD.scala:85)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:390)
+	at org.apache.spark.sql.Dataset.$anonfun$collectToPython$1(Dataset.scala:3519)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3687)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3685)
+	at org.apache.spark.sql.Dataset.collectToPython(Dataset.scala:3516)
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+
+2025-08-07 16:47:33,181 - ERROR - 同步表 dws_product_month_summary 数据失败: An error occurred while calling o153.collectToPython.
+: org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: hdfs://cdh01:8020/warehouse/gmall_01/dws/dws_product_day_summary/bdp_month=$%7Byear_month}
+	at org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:297)
+	at org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:239)
+	at org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:325)
+	at org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:205)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.UnionRDD.$anonfun$getPartitions$1(UnionRDD.scala:85)
+	at org.apache.spark.rdd.UnionRDD.$anonfun$getPartitions$1$adapted(UnionRDD.scala:85)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at org.apache.spark.rdd.UnionRDD.getPartitions(UnionRDD.scala:85)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:390)
+	at org.apache.spark.sql.Dataset.$anonfun$collectToPython$1(Dataset.scala:3519)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3687)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3685)
+	at org.apache.spark.sql.Dataset.collectToPython(Dataset.scala:3516)
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+
+2025-08-07 16:47:33,182 - ERROR - 表 dws_product_month_summary 同步失败，跳过继续处理其他表
+2025-08-07 16:47:33,182 - INFO - 开始同步表 dws_product_week_summary
+2025-08-07 16:47:33,360 - INFO - 表 dws_product_week_summary 结构同步成功
+2025-08-07 16:47:33,636 - ERROR - 同步表 dws_product_week_summary 数据失败: An error occurred while calling o160.collectToPython.
+: org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: hdfs://cdh01:8020/warehouse/gmall_01/dws/dws_product_day_summary/bdp_year_week=$%7Byear_week}
+	at org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:297)
+	at org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:239)
+	at org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:325)
+	at org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:205)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.UnionRDD.$anonfun$getPartitions$1(UnionRDD.scala:85)
+	at org.apache.spark.rdd.UnionRDD.$anonfun$getPartitions$1$adapted(UnionRDD.scala:85)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at org.apache.spark.rdd.UnionRDD.getPartitions(UnionRDD.scala:85)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:390)
+	at org.apache.spark.sql.Dataset.$anonfun$collectToPython$1(Dataset.scala:3519)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3687)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3685)
+	at org.apache.spark.sql.Dataset.collectToPython(Dataset.scala:3516)
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+
+2025-08-07 16:47:33,638 - ERROR - 同步表 dws_product_week_summary 数据失败: An error occurred while calling o160.collectToPython.
+: org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: hdfs://cdh01:8020/warehouse/gmall_01/dws/dws_product_day_summary/bdp_year_week=$%7Byear_week}
+	at org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:297)
+	at org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:239)
+	at org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:325)
+	at org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:205)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.UnionRDD.$anonfun$getPartitions$1(UnionRDD.scala:85)
+	at org.apache.spark.rdd.UnionRDD.$anonfun$getPartitions$1$adapted(UnionRDD.scala:85)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at org.apache.spark.rdd.UnionRDD.getPartitions(UnionRDD.scala:85)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:49)
+	at org.apache.spark.rdd.RDD.$anonfun$partitions$2(RDD.scala:300)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:296)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1030)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1029)
+	at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:390)
+	at org.apache.spark.sql.Dataset.$anonfun$collectToPython$1(Dataset.scala:3519)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:3687)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:3685)
+	at org.apache.spark.sql.Dataset.collectToPython(Dataset.scala:3516)
+	at sun.reflect.GeneratedMethodAccessor66.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+
+2025-08-07 16:47:33,638 - ERROR - 表 dws_product_week_summary 同步失败，跳过继续处理其他表
+2025-08-07 16:47:33,638 - INFO - 开始同步表 ods_marketing_activity
+2025-08-07 16:47:33,828 - INFO - 表 ods_marketing_activity 结构同步成功
+2025-08-07 16:47:34,046 - INFO - 表 ods_marketing_activity 数据同步完成，记录数: 262
+2025-08-07 16:47:34,046 - INFO - 表 ods_marketing_activity 同步成功
+2025-08-07 16:47:34,046 - INFO - 开始同步表 ods_micro_detail_visit
+2025-08-07 16:47:34,215 - INFO - 表 ods_micro_detail_visit 结构同步成功
+2025-08-07 16:47:34,501 - INFO - 表 ods_micro_detail_visit 数据同步完成，记录数: 3750
+2025-08-07 16:47:34,501 - INFO - 表 ods_micro_detail_visit 同步成功
+2025-08-07 16:47:34,501 - INFO - 开始同步表 ods_order_detail
+2025-08-07 16:47:34,659 - INFO - 表 ods_order_detail 结构同步成功
+2025-08-07 16:47:35,003 - INFO - 表 ods_order_detail 数据同步完成，记录数: 3480
+2025-08-07 16:47:35,004 - INFO - 表 ods_order_detail 同步成功
+2025-08-07 16:47:35,004 - INFO - 开始同步表 ods_order_info
+2025-08-07 16:47:35,201 - INFO - 表 ods_order_info 结构同步成功
+2025-08-07 16:47:35,450 - INFO - 表 ods_order_info 数据同步完成，记录数: 1500
+2025-08-07 16:47:35,450 - INFO - 表 ods_order_info 同步成功
+2025-08-07 16:47:35,450 - INFO - 开始同步表 ods_order_refund
+2025-08-07 16:47:35,617 - INFO - 表 ods_order_refund 结构同步成功
+2025-08-07 16:47:35,786 - INFO - 表 ods_order_refund 数据同步完成，记录数: 72
+2025-08-07 16:47:35,786 - INFO - 表 ods_order_refund 同步成功
+2025-08-07 16:47:35,786 - INFO - 开始同步表 ods_product_category
+2025-08-07 16:47:35,944 - INFO - 表 ods_product_category 结构同步成功
+2025-08-07 16:47:36,141 - INFO - 表 ods_product_category 数据同步完成，记录数: 48
+2025-08-07 16:47:36,141 - INFO - 表 ods_product_category 同步成功
+2025-08-07 16:47:36,141 - INFO - 开始同步表 ods_product_competitiveness
+2025-08-07 16:47:36,285 - INFO - 表 ods_product_competitiveness 结构同步成功
+2025-08-07 16:47:36,505 - INFO - 表 ods_product_competitiveness 数据同步完成，记录数: 1500
+2025-08-07 16:47:36,506 - INFO - 表 ods_product_competitiveness 同步成功
+2025-08-07 16:47:36,506 - INFO - 开始同步表 ods_product_favorite
+2025-08-07 16:47:36,649 - INFO - 表 ods_product_favorite 结构同步成功
+2025-08-07 16:47:36,857 - INFO - 表 ods_product_favorite 数据同步完成，记录数: 750
+2025-08-07 16:47:36,857 - INFO - 表 ods_product_favorite 同步成功
+2025-08-07 16:47:36,857 - INFO - 开始同步表 ods_product_info
+2025-08-07 16:47:37,006 - INFO - 表 ods_product_info 结构同步成功
+2025-08-07 16:47:37,247 - INFO - 表 ods_product_info 数据同步完成，记录数: 1500
+2025-08-07 16:47:37,247 - INFO - 表 ods_product_info 同步成功
+2025-08-07 16:47:37,247 - INFO - 开始同步表 ods_shopping_cart
+2025-08-07 16:47:37,396 - INFO - 表 ods_shopping_cart 结构同步成功
+2025-08-07 16:47:37,612 - INFO - 表 ods_shopping_cart 数据同步完成，记录数: 1125
+2025-08-07 16:47:37,612 - INFO - 表 ods_shopping_cart 同步成功
+2025-08-07 16:47:37,612 - INFO - 开始同步表 ods_user_behavior
+2025-08-07 16:47:37,819 - INFO - 表 ods_user_behavior 结构同步成功
+2025-08-07 16:47:39,199 - INFO - 表 ods_user_behavior 数据同步完成，记录数: 30000
+2025-08-07 16:47:39,205 - INFO - 表 ods_user_behavior 同步成功
+2025-08-07 16:47:39,205 - INFO - 开始同步表 ods_yearly_payment_snapshot
+2025-08-07 16:47:39,352 - INFO - 表 ods_yearly_payment_snapshot 结构同步成功
+2025-08-07 16:47:39,581 - INFO - 表 ods_yearly_payment_snapshot 数据同步完成，记录数: 1500
+2025-08-07 16:47:39,582 - INFO - 表 ods_yearly_payment_snapshot 同步成功
+2025-08-07 16:48:22,942 - INFO - 发现 37 张待同步表
+2025-08-07 16:48:22,943 - INFO - 开始同步表 ads_category_ranking
+2025-08-07 16:48:23,276 - INFO - 表 ads_category_ranking 结构同步成功
+2025-08-07 16:48:25,829 - INFO - 表 ads_category_ranking 数据同步完成，记录数: 36
+2025-08-07 16:48:25,829 - INFO - 表 ads_category_ranking 同步成功
+2025-08-07 16:48:25,830 - INFO - 开始同步表 ads_follow_product_analysis
+2025-08-07 16:48:26,014 - INFO - 表 ads_follow_product_analysis 结构同步成功
+2025-08-07 16:48:26,774 - INFO - 表 ads_follow_product_analysis 数据同步完成，记录数: 1956
+2025-08-07 16:48:26,775 - INFO - 表 ads_follow_product_analysis 同步成功
+2025-08-07 16:48:26,775 - INFO - 开始同步表 ads_my_follow_product_analysis
+2025-08-07 16:48:26,938 - INFO - 表 ads_my_follow_product_analysis 结构同步成功
+2025-08-07 16:48:27,681 - INFO - 表 ads_my_follow_product_analysis 数据同步完成，记录数: 8000
+2025-08-07 16:48:27,684 - INFO - 表 ads_my_follow_product_analysis 同步成功
+2025-08-07 16:48:27,684 - INFO - 开始同步表 ads_price_power_analysis
+2025-08-07 16:48:27,836 - INFO - 表 ads_price_power_analysis 结构同步成功
+2025-08-07 16:48:28,151 - INFO - 表 ads_price_power_analysis 数据同步完成，记录数: 565
+2025-08-07 16:48:28,152 - INFO - 表 ads_price_power_analysis 同步成功
+2025-08-07 16:48:28,152 - INFO - 开始同步表 ads_price_power_overview
+2025-08-07 16:48:28,334 - INFO - 表 ads_price_power_overview 结构同步成功
+2025-08-07 16:48:28,564 - INFO - 表 ads_price_power_overview 数据同步完成，记录数: 1
+2025-08-07 16:48:28,564 - INFO - 表 ads_price_power_overview 同步成功
+2025-08-07 16:48:28,564 - INFO - 开始同步表 ads_product_alert_summary
+2025-08-07 16:48:28,696 - INFO - 表 ads_product_alert_summary 结构同步成功
+2025-08-07 16:48:28,918 - INFO - 表 ads_product_alert_summary 数据同步完成，记录数: 235
+2025-08-07 16:48:28,919 - INFO - 表 ads_product_alert_summary 同步成功
+2025-08-07 16:48:28,919 - INFO - 开始同步表 ads_product_ranking
+2025-08-07 16:48:29,124 - INFO - 表 ads_product_ranking 结构同步成功
+2025-08-07 16:48:29,589 - INFO - 表 ads_product_ranking 数据同步完成，记录数: 2000
+2025-08-07 16:48:29,590 - INFO - 表 ads_product_ranking 同步成功
+2025-08-07 16:48:29,591 - INFO - 开始同步表 ads_search_keyword_top10
+2025-08-07 16:48:29,776 - INFO - 表 ads_search_keyword_top10 结构同步成功
+2025-08-07 16:48:30,007 - INFO - 表 ads_search_keyword_top10 数据同步完成，记录数: 10
+2025-08-07 16:48:30,007 - INFO - 表 ads_search_keyword_top10 同步成功
+2025-08-07 16:48:30,007 - INFO - 开始同步表 ads_sku_sales_top5
+2025-08-07 16:48:30,164 - INFO - 表 ads_sku_sales_top5 结构同步成功
+2025-08-07 16:48:30,471 - INFO - 表 ads_sku_sales_top5 数据同步完成，记录数: 1439
+2025-08-07 16:48:30,472 - INFO - 表 ads_sku_sales_top5 同步成功
+2025-08-07 16:48:30,472 - INFO - 开始同步表 ads_traffic_source_top10
+2025-08-07 16:48:30,639 - INFO - 表 ads_traffic_source_top10 结构同步成功
+2025-08-07 16:48:30,934 - INFO - 表 ads_traffic_source_top10 数据同步完成，记录数: 2000
+2025-08-07 16:48:30,935 - INFO - 表 ads_traffic_source_top10 同步成功
+2025-08-07 16:48:30,935 - INFO - 开始同步表 dwd_category_sales_detail
+2025-08-07 16:48:31,087 - INFO - 表 dwd_category_sales_detail 结构同步成功
+2025-08-07 16:48:31,348 - INFO - 表 dwd_category_sales_detail 数据同步完成，记录数: 36
+2025-08-07 16:48:31,348 - INFO - 表 dwd_category_sales_detail 同步成功
+2025-08-07 16:48:31,348 - INFO - 开始同步表 dwd_price_power_detail
+2025-08-07 16:48:31,534 - INFO - 表 dwd_price_power_detail 结构同步成功
+2025-08-07 16:48:31,868 - INFO - 表 dwd_price_power_detail 数据同步完成，记录数: 500
+2025-08-07 16:48:31,884 - INFO - 表 dwd_price_power_detail 同步成功
+2025-08-07 16:48:31,885 - INFO - 开始同步表 dwd_product_alert_detail
+2025-08-07 16:48:32,193 - INFO - 表 dwd_product_alert_detail 结构同步成功
+2025-08-07 16:48:32,489 - INFO - 表 dwd_product_alert_detail 数据同步完成，记录数: 300
+2025-08-07 16:48:32,489 - INFO - 表 dwd_product_alert_detail 同步成功
+2025-08-07 16:48:32,489 - INFO - 开始同步表 dwd_product_follow_detail
+2025-08-07 16:48:32,666 - INFO - 表 dwd_product_follow_detail 结构同步成功
+2025-08-07 16:48:32,939 - INFO - 表 dwd_product_follow_detail 数据同步完成，记录数: 2000
+2025-08-07 16:48:32,940 - INFO - 表 dwd_product_follow_detail 同步成功
+2025-08-07 16:48:32,940 - INFO - 开始同步表 dwd_product_sales_detail
+2025-08-07 16:48:33,111 - INFO - 表 dwd_product_sales_detail 结构同步成功
+2025-08-07 16:48:33,675 - INFO - 表 dwd_product_sales_detail 数据同步完成，记录数: 5000
+2025-08-07 16:48:33,678 - INFO - 表 dwd_product_sales_detail 同步成功
+2025-08-07 16:48:33,678 - INFO - 开始同步表 dwd_product_traffic_detail
+2025-08-07 16:48:33,840 - INFO - 表 dwd_product_traffic_detail 结构同步成功
+2025-08-07 16:48:34,138 - INFO - 表 dwd_product_traffic_detail 数据同步完成，记录数: 2000
+2025-08-07 16:48:34,139 - INFO - 表 dwd_product_traffic_detail 同步成功
+2025-08-07 16:48:34,139 - INFO - 开始同步表 dwd_search_keyword_detail
+2025-08-07 16:48:34,304 - INFO - 表 dwd_search_keyword_detail 结构同步成功
+2025-08-07 16:48:34,521 - INFO - 表 dwd_search_keyword_detail 数据同步完成，记录数: 1500
+2025-08-07 16:48:34,521 - INFO - 表 dwd_search_keyword_detail 同步成功
+2025-08-07 16:48:34,521 - INFO - 开始同步表 dwd_sku_sales_detail
+2025-08-07 16:48:34,654 - INFO - 表 dwd_sku_sales_detail 结构同步成功
+2025-08-07 16:48:34,914 - INFO - 表 dwd_sku_sales_detail 数据同步完成，记录数: 1439
+2025-08-07 16:48:34,914 - INFO - 表 dwd_sku_sales_detail 同步成功
+2025-08-07 16:48:34,914 - INFO - 开始同步表 dws_category_sales_d
+2025-08-07 16:48:35,092 - INFO - 表 dws_category_sales_d 结构同步成功
+2025-08-07 16:48:35,291 - INFO - 表 dws_category_sales_d 数据同步完成，记录数: 36
+2025-08-07 16:48:35,291 - INFO - 表 dws_category_sales_d 同步成功
+2025-08-07 16:48:35,291 - INFO - 开始同步表 dws_price_power_d
+2025-08-07 16:48:35,435 - INFO - 表 dws_price_power_d 结构同步成功
+2025-08-07 16:48:35,676 - INFO - 表 dws_price_power_d 数据同步完成，记录数: 500
+2025-08-07 16:48:35,676 - INFO - 表 dws_price_power_d 同步成功
+2025-08-07 16:48:35,677 - INFO - 开始同步表 dws_product_alert_d
+2025-08-07 16:48:35,846 - INFO - 表 dws_product_alert_d 结构同步成功
+2025-08-07 16:48:36,039 - INFO - 表 dws_product_alert_d 数据同步完成，记录数: 235
+2025-08-07 16:48:36,039 - INFO - 表 dws_product_alert_d 同步成功
+2025-08-07 16:48:36,039 - INFO - 开始同步表 dws_product_follow_d
+2025-08-07 16:48:36,201 - INFO - 表 dws_product_follow_d 结构同步成功
+2025-08-07 16:48:36,536 - INFO - 表 dws_product_follow_d 数据同步完成，记录数: 489
+2025-08-07 16:48:36,537 - INFO - 表 dws_product_follow_d 同步成功
+2025-08-07 16:48:36,537 - INFO - 开始同步表 dws_product_sales_d
+2025-08-07 16:48:36,694 - INFO - 表 dws_product_sales_d 结构同步成功
+2025-08-07 16:48:37,010 - INFO - 表 dws_product_sales_d 数据同步完成，记录数: 500
+2025-08-07 16:48:37,011 - INFO - 表 dws_product_sales_d 同步成功
+2025-08-07 16:48:37,011 - INFO - 开始同步表 dws_product_traffic_d
+2025-08-07 16:48:37,192 - INFO - 表 dws_product_traffic_d 结构同步成功
+2025-08-07 16:48:37,535 - INFO - 表 dws_product_traffic_d 数据同步完成，记录数: 2000
+2025-08-07 16:48:37,536 - INFO - 表 dws_product_traffic_d 同步成功
+2025-08-07 16:48:37,536 - INFO - 开始同步表 dws_search_keyword_d
+2025-08-07 16:48:37,690 - INFO - 表 dws_search_keyword_d 结构同步成功
+2025-08-07 16:48:37,984 - INFO - 表 dws_search_keyword_d 数据同步完成，记录数: 1500
+2025-08-07 16:48:37,985 - INFO - 表 dws_search_keyword_d 同步成功
+2025-08-07 16:48:37,985 - INFO - 开始同步表 dws_sku_sales_d
+2025-08-07 16:48:38,179 - INFO - 表 dws_sku_sales_d 结构同步成功
+2025-08-07 16:48:38,422 - INFO - 表 dws_sku_sales_d 数据同步完成，记录数: 1439
+2025-08-07 16:48:38,423 - INFO - 表 dws_sku_sales_d 同步成功
+2025-08-07 16:48:38,423 - INFO - 开始同步表 dws_traffic_source_d
+2025-08-07 16:48:38,560 - INFO - 表 dws_traffic_source_d 结构同步成功
+2025-08-07 16:48:38,769 - INFO - 表 dws_traffic_source_d 数据同步完成，记录数: 2000
+2025-08-07 16:48:38,770 - INFO - 表 dws_traffic_source_d 同步成功
+2025-08-07 16:48:38,770 - INFO - 开始同步表 ods_price_power_product
+2025-08-07 16:48:38,950 - ERROR - 同步表 ods_price_power_product 结构失败: (1067, "Invalid default value for 'update_time'")
+2025-08-07 16:48:38,950 - ERROR - 表 ods_price_power_product 同步失败，跳过继续处理其他表
+2025-08-07 16:48:38,950 - INFO - 开始同步表 ods_product_alert
+2025-08-07 16:48:39,121 - ERROR - 同步表 ods_product_alert 结构失败: (1067, "Invalid default value for 'update_time'")
+2025-08-07 16:48:39,122 - ERROR - 表 ods_product_alert 同步失败，跳过继续处理其他表
+2025-08-07 16:48:39,122 - INFO - 开始同步表 ods_product_conversion
+2025-08-07 16:48:39,292 - INFO - 表 ods_product_conversion 结构同步成功
+2025-08-07 16:48:40,001 - INFO - 表 ods_product_conversion 数据同步完成，记录数: 500
+2025-08-07 16:48:40,002 - INFO - 表 ods_product_conversion 同步成功
+2025-08-07 16:48:40,002 - INFO - 开始同步表 ods_product_follow
+2025-08-07 16:48:40,154 - ERROR - 同步表 ods_product_follow 结构失败: (1067, "Invalid default value for 'etl_time'")
+2025-08-07 16:48:40,154 - ERROR - 表 ods_product_follow 同步失败，跳过继续处理其他表
+2025-08-07 16:48:40,154 - INFO - 开始同步表 ods_product_info
+2025-08-07 16:48:40,324 - ERROR - 同步表 ods_product_info 结构失败: (1067, "Invalid default value for 'update_time'")
+2025-08-07 16:48:40,324 - ERROR - 表 ods_product_info 同步失败，跳过继续处理其他表
+2025-08-07 16:48:40,324 - INFO - 开始同步表 ods_product_sales
+2025-08-07 16:48:40,480 - ERROR - 同步表 ods_product_sales 结构失败: (1067, "Invalid default value for 'etl_time'")
+2025-08-07 16:48:40,480 - ERROR - 表 ods_product_sales 同步失败，跳过继续处理其他表
+2025-08-07 16:48:40,480 - INFO - 开始同步表 ods_product_sku
+2025-08-07 16:48:40,634 - ERROR - 同步表 ods_product_sku 结构失败: (1067, "Invalid default value for 'update_time'")
+2025-08-07 16:48:40,634 - ERROR - 表 ods_product_sku 同步失败，跳过继续处理其他表
+2025-08-07 16:48:40,634 - INFO - 开始同步表 ods_product_stock
+2025-08-07 16:48:40,854 - INFO - 表 ods_product_stock 结构同步成功
+2025-08-07 16:48:41,068 - INFO - 表 ods_product_stock 数据同步完成，记录数: 1500
+2025-08-07 16:48:41,068 - INFO - 表 ods_product_stock 同步成功
+2025-08-07 16:48:41,068 - INFO - 开始同步表 ods_product_traffic
+2025-08-07 16:48:41,229 - INFO - 表 ods_product_traffic 结构同步成功
+2025-08-07 16:48:41,474 - INFO - 表 ods_product_traffic 数据同步完成，记录数: 2000
+2025-08-07 16:48:41,474 - INFO - 表 ods_product_traffic 同步成功
+2025-08-07 16:48:41,474 - INFO - 开始同步表 ods_search_keyword
+2025-08-07 16:48:41,615 - INFO - 表 ods_search_keyword 结构同步成功
+2025-08-07 16:48:41,824 - INFO - 表 ods_search_keyword 数据同步完成，记录数: 1500
+2025-08-07 16:48:41,824 - INFO - 表 ods_search_keyword 同步成功

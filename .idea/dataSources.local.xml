@@ -41,6 +41,8 @@
           <node kind="schema">
             <name qname="gmall_01" />
             <name qname="gmall_02" />
+            <name qname="gmall_01_ads" />
+            <name qname="gmall_02_ads" />
           </node>
         </introspection-scope>
       </schema-mapping>

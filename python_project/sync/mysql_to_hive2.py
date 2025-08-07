@@ -9,15 +9,15 @@ from pyspark.sql.functions import lit
 
 # -------------------------- 配置项（在此处修改库名和连接信息） --------------------------
 # 直接修改以下两个参数即可指定同步的库名
-MYSQL_DB = "gmall_09"  # MySQL数据库名
-HIVE_DB = "gmall_09"  # Hive数据库名
+MYSQL_DB = "gmall_02"  # MySQL数据库名
+HIVE_DB = "gmall_02"  # Hive数据库名
 
 DEFAULT_MYSQL_CONFIG = {
     "host": "192.168.142.130",
     "port": 3306,
     "user": "root",
     "password": "root",
-    "database": MYSQL_DB  # 关联上面的MySQL库名  报的错是没连接到hive
+    "database": MYSQL_DB
 }
 
 DEFAULT_HIVE_CONFIG = {
@@ -28,11 +28,17 @@ DEFAULT_HIVE_CONFIG = {
 
 # 定义各表的创建时间字段名
 CREATE_TIME_FIELDS = {
-    "product_score_main": "create_time",
-    "product_diagnosis_compare": "create_time"
-    # 可以根据需要添加更多表的创建时间字段映射
+    "price_power_product": "create_time",
+    "product_alert": "create_time",
+    "product_conversion": "etl_time",
+    "product_follow": "follow_time",
+    "product_info": "create_time",
+    "product_sales": "payment_time",
+    "product_sku": "create_time",
+    "product_stock": "etl_time",
+    "product_traffic": "etl_time",
+    "search_keyword": "etl_time"
 }
-
 
 # -------------------------- 工具函数 --------------------------
 def get_mysql_connection(mysql_config):
@@ -46,7 +52,6 @@ def get_mysql_connection(mysql_config):
         charset="utf8mb4"
     )
 
-
 def ensure_hdfs_path(spark, path):
     """确保HDFS路径存在"""
     fs = spark._jvm.org.apache.hadoop.fs.FileSystem.get(
@@ -56,13 +61,11 @@ def ensure_hdfs_path(spark, path):
     if not fs.exists(hdfs_path):
         fs.mkdirs(hdfs_path)
 
-
 def get_mysql_tables(conn, mysql_db):
     """获取MySQL库中所有表名"""
     with conn.cursor() as cursor:
         cursor.execute(f"SHOW TABLES FROM {mysql_db}")
         return [table[0] for table in cursor.fetchall()]
-
 
 def get_table_column_names(conn, mysql_db, table_name):
     """获取MySQL表的所有列名"""
@@ -74,7 +77,6 @@ def get_table_column_names(conn, mysql_db, table_name):
             ORDER BY ORDINAL_POSITION
         """)
         return [row[0] for row in cursor.fetchall()]
-
 
 # -------------------------- 建表相关函数 --------------------------
 def get_table_comment(conn, mysql_db, table_name):
@@ -88,7 +90,6 @@ def get_table_comment(conn, mysql_db, table_name):
         """)
         result = cursor.fetchone()
     return result[0] if result and result[0] else ""
-
 
 def get_table_columns(conn, mysql_db, table_name):
     """获取MySQL表字段信息"""
@@ -110,31 +111,17 @@ def get_table_columns(conn, mysql_db, table_name):
         """)
         return cursor.fetchall()
 
-
 def generate_hive_table_ddl(hive_db, table_name, columns, table_comment=""):
     """
     生成Hive外部表DDL语句，处理MySQL到Hive的类型映射
-
-    参数:
-        hive_db (str): Hive数据库名
-        table_name (str): 表名
-        columns (list): 列定义列表，每个元素为(列名, MySQL类型, 列注释)
-        table_comment (str): 表注释
-
-    返回:
-        str: 完整的Hive DDL语句
     """
-    # MySQL到Hive类型映射字典
     type_map = {
-        # 字符串类型
         'varchar': 'STRING',
         'char': 'STRING',
         'text': 'STRING',
         'longtext': 'STRING',
         'mediumtext': 'STRING',
         'tinytext': 'STRING',
-
-        # 数值类型
         'tinyint': 'TINYINT',
         'smallint': 'SMALLINT',
         'int': 'INT',
@@ -143,19 +130,13 @@ def generate_hive_table_ddl(hive_db, table_name, columns, table_comment=""):
         'float': 'FLOAT',
         'double': 'DOUBLE',
         'decimal': 'DECIMAL',
-
-        # 布尔类型
         'boolean': 'BOOLEAN',
         'tinyint(1)': 'BOOLEAN',
-
-        # 日期时间类型
         'date': 'DATE',
         'datetime': 'TIMESTAMP',
         'timestamp': 'TIMESTAMP',
         'time': 'STRING',
         'year': 'INT',
-
-        # 二进制类型
         'blob': 'BINARY',
         'longblob': 'BINARY',
         'mediumblob': 'BINARY',
@@ -167,28 +148,26 @@ def generate_hive_table_ddl(hive_db, table_name, columns, table_comment=""):
     column_defs = []
     for col in columns:
         col_name, mysql_type, col_comment = col
+        if col_name.lower() == 'dt':  # 跳过dt列，因为它是分区列
+            continue
+
         escaped_comment = col_comment.replace("'", "''").replace("\n", " ") if col_comment else ""
         comment_clause = f" COMMENT '{escaped_comment}'" if escaped_comment else ""
 
-        # 处理类型映射
         mysql_type_lower = mysql_type.lower()
         hive_type = type_map.get(mysql_type_lower, 'STRING')
 
-        # 特殊处理decimal类型
         if mysql_type_lower.startswith('decimal'):
             precision_scale = mysql_type[mysql_type.index('('):] if '(' in mysql_type else '(10,2)'
             hive_type = f'DECIMAL{precision_scale}'
-
-        # 特殊处理带长度的varchar/char
         elif mysql_type_lower.startswith(('varchar(', 'char(')):
-            hive_type = 'STRING'  # Hive不保留长度信息
+            hive_type = 'STRING'
 
         column_defs.append(f"    `{col_name}` {hive_type}{comment_clause}")
 
     formatted_columns = ",\n".join(column_defs)
     escaped_table_comment = table_comment.replace("'", "''").replace("\n", " ") if table_comment else ""
 
-    # 确保HDFS路径
     hdfs_location = f"/warehouse/{hive_db}/ods/ods_{table_name}"
 
     return f"""
@@ -225,7 +204,6 @@ def sync_schema(mysql_db, hive_db, mysql_config, spark):
                 create_ddl = generate_hive_table_ddl(hive_db, table, columns, table_comment)
                 ddl_statements.append(create_ddl)
 
-                # 确保HDFS路径存在
                 hdfs_path = f"/warehouse/{hive_db}/ods/ods_{table}"
                 ensure_hdfs_path(spark, hdfs_path)
 
@@ -246,12 +224,11 @@ def sync_schema(mysql_db, hive_db, mysql_config, spark):
 
     return ddl_statements
 
-
 # -------------------------- 数据同步相关函数 --------------------------
 def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
     """同步单表数据（使用创建时间作为分区）"""
     try:
-        # 1. 配置MySQL连接（8.x驱动）
+        # 1. 配置MySQL连接
         mysql_url = f"jdbc:mysql://{mysql_config['host']}:{mysql_config['port']}/{mysql_db}?useSSL=false&serverTimezone=UTC"
         jdbc_properties = {
             "user": mysql_config["user"],
@@ -260,13 +237,25 @@ def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
             "fetchsize": "1000"
         }
 
-        # 2. 确定创建时间字段
-        create_time_field = CREATE_TIME_FIELDS.get(table_name, "create_time")
-
-        # 3. 获取表的所有列名，排除dt字段（因为dt是分区字段）
+        # 2. 获取表的所有列名，排除dt字段
         conn = get_mysql_connection(mysql_config)
         try:
             column_names = get_table_column_names(conn, mysql_db, table_name)
+
+            # 3. 确定分区时间字段
+            if table_name in CREATE_TIME_FIELDS:
+                create_time_field = CREATE_TIME_FIELDS[table_name]
+            else:
+                # 查找第一个日期类型字段作为分区字段
+                cursor = conn.cursor()
+                cursor.execute(f"""
+                    SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS 
+                    WHERE TABLE_SCHEMA='{mysql_db}' AND TABLE_NAME='{table_name}'
+                    AND DATA_TYPE IN ('datetime','date','timestamp')
+                    ORDER BY ORDINAL_POSITION LIMIT 1
+                """)
+                time_field = cursor.fetchone()
+                create_time_field = time_field[0] if time_field else "CURRENT_TIMESTAMP()"
         finally:
             conn.close()
 
@@ -274,9 +263,8 @@ def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
         data_columns = [col for col in column_names if col.lower() != 'dt']
         columns_str = ", ".join([f"`{col}`" for col in data_columns])
 
-        # 5. 构造查询语句，使用创建时间字段生成分区值
-        query = f"""(
-            SELECT {columns_str}, 
+        # 5. 构造查询语句
+        query = f"""(SELECT {columns_str}, 
                    DATE_FORMAT({create_time_field}, '%Y%m%d') as dt 
             FROM {table_name}
             WHERE {create_time_field} IS NOT NULL
@@ -292,27 +280,26 @@ def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
         hdfs_base_path = f"/warehouse/{hive_db}/ods/ods_{table_name}"
         ensure_hdfs_path(spark, hdfs_base_path)
 
-        # 8. 写入Hive（使用指定路径）
+        # 8. 写入Hive
         print(f"[INFO] 正在写入数据到Hive表 {hive_db}.ods_{table_name}...")
         (df.write
          .mode("overwrite")
          .partitionBy("dt")
-         .option("path", hdfs_base_path)  # 显式指定HDFS路径
+         .option("path", hdfs_base_path)
          .saveAsTable(f"{hive_db}.ods_{table_name}"))
 
-        # 9. 强制刷新表元数据
+        # 9. 刷新表元数据
         spark.sql(f"MSCK REPAIR TABLE {hive_db}.ods_{table_name}")
 
         # 10. 验证分区
         partitions = spark.sql(f"SHOW PARTITIONS {hive_db}.ods_{table_name}").collect()
         partition_count = len(partitions)
         print(f"[SUCCESS] 表 {mysql_db}.{table_name} 数据同步至 {hive_db}.ods_{table_name} 完成")
-        print(f"   - 使用创建时间字段: {create_time_field}")
+        print(f"   - 使用时间字段: {create_time_field}")
         print(f"   - 总记录数: {record_count}")
         print(f"   - 生成分区数量: {partition_count}")
         print(f"   - HDFS路径: {hdfs_base_path}")
         if partition_count > 0:
-            # 显示前几个分区作为示例
             sample_partitions = [p[0] for p in partitions[:3]]
             print(f"   - 示例分区: {', '.join(sample_partitions)}")
 
@@ -321,7 +308,6 @@ def sync_table_data(mysql_db, hive_db, table_name, mysql_config, spark):
     except Exception as e:
         print(f"[ERROR] 表 {table_name} 数据同步失败：{str(e)}")
         return False
-
 
 def sync_all_data(mysql_db, hive_db, mysql_config, spark):
     """同步所有表数据"""
@@ -347,7 +333,6 @@ def sync_all_data(mysql_db, hive_db, mysql_config, spark):
         if conn:
             conn.close()
 
-
 # -------------------------- Spark会话配置 --------------------------
 def create_spark_session(hive_config):
     """创建Spark会话"""
@@ -370,7 +355,6 @@ def create_spark_session(hive_config):
         .config("spark.sql.hive.convertMetastoreParquet", "false") \
         .enableHiveSupport() \
         .getOrCreate()
-
 
 # -------------------------- 主函数 --------------------------
 def main():
@@ -403,9 +387,7 @@ def main():
     finally:
         if 'spark' in locals():
             spark.stop()
-        # 确保程序正常退出
         sys.exit(0)
-
 
 if __name__ == "__main__":
     main()

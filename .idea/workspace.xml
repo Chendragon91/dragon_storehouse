@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="add">
-      <change afterPath="$PROJECT_DIR$/docs/TCL_20250806.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/02/simulate-date.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/TCL_20250807.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/252ae64f-648d-46db-9341-6c26f2205065.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/252ae64f-648d-46db-9341-6c26f2205065.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/01/Data-sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/01/Data-sync.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/01/simulated-data.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/01/simulated-data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/02/simulate-date.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/02/simulate-date.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/sync/hive_mysql_sync.log" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/hive_mysql_sync.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/sync/hive_to_mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/hive_to_mysql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/sync/mysql_to_hive2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/mysql_to_hive2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/sync/mysql_to_hive3.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/mysql_to_hive3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python_project/sync/mysql_to_hive3_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/mysql_to_hive3_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,14 +131,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mysql_to_hive3_1">
+  <component name="RunManager" selected="Python.hive_to_mysql">
     <configuration default="true" type="Application" factoryName="Application">
       <shortenClasspath name="MANIFEST" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Data-sync" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="hive_to_mysql" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,12 +146,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/01" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/sync" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/01/Data-sync.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/sync/hive_to_mysql.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,7 +160,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mysql_to_hive2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -166,12 +168,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/01" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/sync" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/01/a.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/sync/mysql_to_hive2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,7 +182,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gmall_09_simulator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mysql_to_hive3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -188,12 +190,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/09" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/sync" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/09/gmall_09_simulator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/sync/mysql_to_hive3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -224,7 +226,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="simulated-data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="simulate-date" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -232,12 +234,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/01" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_project/Offline-pyspark/02" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/01/simulated-data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_project/Offline-pyspark/02/simulate-date.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -248,11 +250,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.hive_to_mysql" />
+        <item itemvalue="Python.mysql_to_hive2" />
+        <item itemvalue="Python.simulate-date" />
+        <item itemvalue="Python.mysql_to_hive3" />
         <item itemvalue="Python.mysql_to_hive3_1" />
-        <item itemvalue="Python.simulated-data" />
-        <item itemvalue="Python.Data-sync" />
-        <item itemvalue="Python.a" />
-        <item itemvalue="Python.gmall_09_simulator" />
       </list>
     </recent_temporary>
   </component>
@@ -336,7 +338,8 @@
       <workItem from="1754476809286" duration="840000" />
       <workItem from="1754477683505" duration="1072000" />
       <workItem from="1754478797619" duration="2300000" />
-      <workItem from="1754481773586" duration="7174000" />
+      <workItem from="1754481773586" duration="7901000" />
+      <workItem from="1754528654437" duration="27399000" />
     </task>
     <task id="LOCAL-00001" summary="add python">
       <created>1752740355346</created>
@@ -555,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1754401921219</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add">
+      <created>1754490678085</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1754490678085</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +613,7 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$1.coverage" NAME="1 覆盖结果" MODIFIED="1754046824414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$a__1_.coverage" NAME="a (1) 覆盖结果" MODIFIED="1754315755114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/09/machine-learning" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_trade_order_process_inc.coverage" NAME="dwd_trade_order_process_inc 覆盖结果" MODIFIED="1753674459495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
-    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive3.coverage" NAME="mysql_to_hive3 覆盖结果" MODIFIED="1754046558698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive3.coverage" NAME="mysql_to_hive3 覆盖结果" MODIFIED="1754533878121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_coupon_stats.coverage" NAME="ads_coupon_stats 覆盖结果" MODIFIED="1752829300141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_new_order_user_stats.coverage" NAME="ads_new_order_user_stats 覆盖结果" MODIFIED="1752890348118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/gmall/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_trans_order_stats.coverage" NAME="ads_trans_order_stats 覆盖结果" MODIFIED="1753704351496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
@@ -622,8 +632,9 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_cs_offer_send_detail.coverage" NAME="dwd_cs_offer_send_detail 覆盖结果" MODIFIED="1753958050540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08/dwd" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_cs_offer_trend_analysis.coverage" NAME="ads_cs_offer_trend_analysis 覆盖结果" MODIFIED="1753964901514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_trans_trans_finish_inc.coverage" NAME="dwd_trans_trans_finish_inc 覆盖结果" MODIFIED="1753694491907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
-    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive2.coverage" NAME="mysql_to_hive2 覆盖结果" MODIFIED="1754045780427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive2.coverage" NAME="mysql_to_hive2 覆盖结果" MODIFIED="1754551020842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$hive_to_mysql_CSV.coverage" NAME="hive_to_mysql_CSV 覆盖结果" MODIFIED="1754102030268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$simulate_date.coverage" NAME="simulate-date 覆盖结果" MODIFIED="1754551009368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/02" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_org_receive_nd.coverage" NAME="dws_trans_org_receive_nd 覆盖结果" MODIFIED="1753702968507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_express_province_stats.coverage" NAME="ads_express_province_stats 覆盖结果" MODIFIED="1753446688767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../桌面" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dim_truck_full.coverage" NAME="dim_truck_full 覆盖结果" MODIFIED="1753502307149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dim" />
@@ -645,7 +656,7 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_cs_offer_send_details.coverage" NAME="ads_cs_offer_send_details 覆盖结果" MODIFIED="1753964873623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/08/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_trans_order_stats_td.coverage" NAME="ads_trans_order_stats_td 覆盖结果" MODIFIED="1753704506128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$read_hive_tbl.coverage" NAME="read_hive_tbl 覆盖结果" MODIFIED="1754312078704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/09/machine-learning" />
-    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive3_1.coverage" NAME="mysql_to_hive3_1 覆盖结果" MODIFIED="1754481341368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive3_1.coverage" NAME="mysql_to_hive3_1 覆盖结果" MODIFIED="1754533215052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_dispatch_nd.coverage" NAME="dws_trans_dispatch_nd 覆盖结果" MODIFIED="1753702498855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_dispatch_1d.coverage" NAME="dws_trans_dispatch_1d 覆盖结果" MODIFIED="1753702282939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dim_express_courier_full.coverage" NAME="dim_express_courier_full 覆盖结果" MODIFIED="1753414686868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dim" />
@@ -682,7 +693,7 @@
     <SUITE FILE_PATH="coverage/dragon_storehouse$dim_region_full.coverage" NAME="dim_region_full 覆盖结果" MODIFIED="1753500322373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dim" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$ads_shift_stats.coverage" NAME="ads_shift_stats 覆盖结果" MODIFIED="1753704213029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/ads" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dim_activity_full.coverage" NAME="dim_activity_full 覆盖结果" MODIFIED="1752744112511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Offline-pyspark/gmall/dim" />
-    <SUITE FILE_PATH="coverage/dragon_storehouse$hive_to_mysql.coverage" NAME="hive_to_mysql 覆盖结果" MODIFIED="1754103800245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
+    <SUITE FILE_PATH="coverage/dragon_storehouse$hive_to_mysql.coverage" NAME="hive_to_mysql 覆盖结果" MODIFIED="1754556493254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/sync" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$mysql_to_hive.coverage" NAME="mysql_to_hive 覆盖结果" MODIFIED="1754045396899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/09" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dws_trans_dispatch_td.coverage" NAME="dws_trans_dispatch_td 覆盖结果" MODIFIED="1753702525676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dws" />
     <SUITE FILE_PATH="coverage/dragon_storehouse$dwd_trade_order_detail_inc.coverage" NAME="dwd_trade_order_detail_inc 覆盖结果" MODIFIED="1753674062756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_project/Offline-pyspark/tms/dwd" />
