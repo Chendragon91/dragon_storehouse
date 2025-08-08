@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="add">
-      <change afterPath="$PROJECT_DIR$/docs/TCL_20250807.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/252ae64f-648d-46db-9341-6c26f2205065.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/252ae64f-648d-46db-9341-6c26f2205065.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/853a6dfa-4222-41ec-89dc-9f6aa19cd817.xml" afterDir="false" />
+    <list default="true" id="d4b1a004-a6c3-490f-9467-f5ec69fa755c" name="更改" comment="    add··">
+      <change afterPath="$PROJECT_DIR$/docs/TCL_20250808.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/02/simulate-date.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/Offline-pyspark/02/simulate-date.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/sync/hive_mysql_sync.log" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/hive_mysql_sync.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/sync/hive_to_mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/hive_to_mysql.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/sync/mysql_to_hive2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/mysql_to_hive2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/sync/mysql_to_hive3.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/mysql_to_hive3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/sync/mysql_to_hive3_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_project/sync/mysql_to_hive3_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_project/Offline-pyspark/01/a.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,7 +331,9 @@
       <workItem from="1754477683505" duration="1072000" />
       <workItem from="1754478797619" duration="2300000" />
       <workItem from="1754481773586" duration="7901000" />
-      <workItem from="1754528654437" duration="27399000" />
+      <workItem from="1754528654437" duration="27686000" />
+      <workItem from="1754577375729" duration="410000" />
+      <workItem from="1754613010936" duration="15414000" />
     </task>
     <task id="LOCAL-00001" summary="add python">
       <created>1752740355346</created>
@@ -565,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1754490678085</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="    add··">
+      <created>1754577093172</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1754577093172</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +604,8 @@
     <MESSAGE value="a" />
     <MESSAGE value="sqlserver_cdc" />
     <MESSAGE value="add" />
-    <option name="LAST_COMMIT_MESSAGE" value="add" />
+    <MESSAGE value="    add··" />
+    <option name="LAST_COMMIT_MESSAGE" value="    add··" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
